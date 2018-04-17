@@ -99,8 +99,8 @@ def load_data(cfg):
 
     elif mode == 'dev':
         f_raw = cfg.dev_raw
-        f_ref = cfg.dev_ref
-        hasY = True
+        f_ref = None
+        hasY = False
 
     elif mode == 'test':
         f_raw = cfg.test_raw
@@ -137,7 +137,7 @@ def process_batch(cfg, batch):
     mode = cfg.local_mode
 
     hasY = True
-    if mode=='test': hasY = False
+    if mode!='train': hasY = False
 
     Raw_X = []
     X = []

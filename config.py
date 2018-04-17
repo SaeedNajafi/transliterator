@@ -20,8 +20,7 @@ class Configuration(object):
     train_raw = './data/' + 'train.raw'
     train_ref = './data/' + 'train.ref'
     dev_raw = './data/' + 'dev.raw'
-    dev_ref = './data/' + 'dev.ref'
-    dev_xml = './data/' + 'dev.ref.xml'
+    dev_ref_xml = './data/' + 'dev.ref.xml'
 
     """ Model Type """
     #Conditional Random Field
