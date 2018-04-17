@@ -206,42 +206,35 @@ def process_batch(cfg, batch):
     return B
 
 def pad(cfg, B):
-    #Dynamically select max sequence length for the current batch.
-    B['src_max_len'] = max(B['x_len'])
-
-    if B['y_len']!=None:
-        B['trg_max_len'] = max(B['y_len'])
-    else:
-        B['trg_max_len'] = None
-
+    
     #Pad x with src_pad_id
     for word in B['x']:
-        pad_lst = [cfg.src_pad_id] * (B['src_max_len']-len(word))
+        pad_lst = [cfg.src_pad_id] * (cfg.max_length-len(word))
         word.extend(pad_lst)
 
     #Pad raw_x with pad
     for word in B['raw_x']:
-        pad_lst = [cfg.pad] * (B['src_max_len']-len(word))
+        pad_lst = [cfg.pad] * (cfg.max_length-len(word))
         word.extend(pad_lst)
 
     #Pad x_mask with 0.0
     for word in B['x_mask']:
-        pad_lst = [0.0] * (B['src_max_len']-len(word))
+        pad_lst = [0.0] * (cfg.max_length-len(word))
         word.extend(pad_lst)
 
     if B['y'] is not None:
         #Pad y with trg_pad_id
         for word in B['y']:
-            pad_lst = [cfg.trg_pad_id] * (B['trg_max_len']-len(word))
+            pad_lst = [cfg.trg_pad_id] * (cfg.max_length-len(word))
             word.extend(pad_lst)
 
         #Pad raw_y with pad
         for word in B['raw_y']:
-            pad_lst = [cfg.pad] * (B['trg_max_len']-len(word))
+            pad_lst = [cfg.pad] * (cfg.max_length-len(word))
             word.extend(pad_lst)
 
         #Pad y_mask with 0.0
         for word in B['y_mask']:
-            pad_lst = [0.0] * (B['trg_max_len']-len(word))
+            pad_lst = [0.0] * (cfg.max_length-len(word))
             word.extend(pad_lst)
     return

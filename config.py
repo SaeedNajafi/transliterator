@@ -1,15 +1,16 @@
 class Configuration(object):
     """Model hyperparams and data information"""
-    h_units = 200
-    src_em_size = 100
-    trg_em_size = 100
+    h_units = 256
+    src_em_size = 128
+    trg_em_size = 128
     dropout = 0.5
     learning_rate = 0.0005
     actor_step_size = 0.5
     max_gradient_norm = 5.
-    max_epochs = 128
+    max_epochs = 256
+    max_length = 64
     early_stopping = 10
-    batch_size = 32
+    batch_size = 64
     seed = 125
 
     """path to different files"""
@@ -50,8 +51,8 @@ class Configuration(object):
     #n_step = 4
 
     #Attention type for decoder RNNs
-    #atten = 'no-attention'
-    atten = 'general'
+    #atten = 'hard-monotonic'
+    atten = 'soft-general'
 
     #For inference in decoder RNNs, we have greedy search or beam search.
     #Specify the beam size.
