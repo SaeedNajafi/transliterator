@@ -262,7 +262,6 @@ class MLDecoder(nn.Module):
 
         Y = Variable(cfg.B['y'].cuda()) if hasCuda else Variable(cfg.B['y'])
 
-
         Y_ems = self.trg_em(Y)
 
         #Create a variable for initial hidden vector of RNN.
@@ -332,66 +331,9 @@ class MLDecoder(nn.Module):
         loss = -1 * torch.mean(torch.mean(objective, dim=1), dim=0)
         return loss
 
-    def greedy(self, H):
-        cfg = self.cfg
-
-        #zero the pad vector
-        self.trg_em.weight.data[cfg.trg_pad_id].fill_(0.0)
-
-        #Create a variable for initial hidden vector of RNN.
-        zeros = torch.zeros(cfg.d_batch_size, cfg.h_units)
-        h0 = Variable(zeros.cuda()) if hasCuda else Variable(zeros)
-
-        #Create a variable for the initial previous tag.
-        zeros = torch.zeros(cfg.d_batch_size, cfg.trg_em_size)
-        Go_symbol = Variable(zeros.cuda()) if hasCuda else Variable(zeros)
-
-        if cfg.atten=='soft-general':
-            #global general attention as https://nlp.stanford.edu/pubs/emnlp15_attn.pdf
-            states_mapped = torch.mm(H.view(-1, cfg.h_units), self.atten_W).view(-1, cfg.max_length, cfg.h_units)
-
-        Scores = []
-        for i in range(cfg.max_length):
-            Hi = H[:,i,:]
-
-            if i==0:
-                prev_output = Go_symbol
-                h = h0
-                c = h0
-                context = h0
-
-            input = torch.cat((prev_output, context), dim=1)
-
-            output, c = self.dec_rnn(input, (h, c))
-
-            if cfg.atten=='hard-monotonic':
-                context = Hi
-                output_context = torch.cat((output, context), dim=1)
-                score = self.affine(output_context)
-
-            elif cfg.atten=='soft-general':
-                atten_scores = torch.sum(states_mapped * output.view(-1, 1, cfg.h_units).expand(-1, cfg.max_length, cfg.h_units), dim=2)
-                atten = nn.functional.softmax(atten_scores, dim=1)
-                context = torch.sum(atten.view(-1, cfg.max_length, 1).expand(-1, cfg.max_length, cfg.h_units) * H, dim=1)
-                score = self.affine(nn.functional.tanh(self.atten_affine(torch.cat((output, context), dim=1))))
-
-            Scores.append(score)
-
-            #For the next step
-            h = output
-
-            _, gen_idx = nn.functional.softmax(score, dim=1).max(dim=1)
-            generated_prev_output = self.trg_em(gen_idx)
-            prev_output = generated_prev_output
-
-
-        log_probs = nn.functional.log_softmax(torch.stack(Scores, dim=1), dim=2)
-        log_p, preds = log_probs.max(dim=2)
-        return preds, log_p
-
     def beam(self, H):
         cfg = self.cfg
-        beamsize = cfg.beamsize
+        beamsize = cfg.nbest
 
         #zero the pad vector
         self.trg_em.weight.data[cfg.trg_pad_id].fill_(0.0)
@@ -487,8 +429,8 @@ class MLDecoder(nn.Module):
                 new_y = torch.gather(y_c, 1, maxidx)
                 old_y = torch.gather(prev_y, 1, which_old_ids)
                 isvalid = -1.0 * torch.eq(new_y, cfg.trg_pad_id).float() + 1.0
-                maski= isvalid.view(-1, 1).expand(-1, beamsize)
-                old_y = maski * old_y + (1.0-maski) * prev_y
+                maski= isvalid.view(-1, 1).expand(-1, beamsize).long()
+                old_y = maski * old_y + (1-maski) * prev_y
                 beam.append(old_y)
                 prev_y = new_y
                 h = torch.gather(h_c, 1, which_old_ids.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
@@ -497,6 +439,9 @@ class MLDecoder(nn.Module):
 
         beam.append(new_y)
         preds = torch.stack(beam, dim=2)
-        #!!Returning individual log probs is not implemented.!!
+        #!!Returning individual log probs for each time step is not implemented.!!
+        #instead we return the prev_lprob which has the overall score for each output of the beam.
+        confidence = prev_lprob
+        #confidence is of size (batch size, beam size)
         #preds is of size (batch size, beam size, max length)
-        return preds, None
+        return preds, confidence

@@ -57,95 +57,35 @@ def batch_to_tensors(cfg, in_B):
     cfg.B = o_B
     return
 
-def save_predictions(cfg, batch, preds, f):
+def save_predictions(cfg, batch, preds, confidence, f):
     """Saves predictions to the provided file stream."""
+    nbest = cfg.nbest
     w_idx = 0
     for pred in preds:
-        w = ''.join(batch['raw_x'][w_idx])
-        end_idx = pred.index(cfg.trg_end_id)
-        target = []
-        for id in range(0, end_idx):
-            target.append(cfg.data['trg_id_ch'][pred[id]])
+        w = batch['raw_x'][w_idx]
+        for rank in range(nbest):
+            end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
+            target = []
+            #do not print end symbol
+            for id in range(0, end_idx):
+                target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
-        target_w = ''.join(target)
-        to_write = w + '\t' + target_w + '\n'
-        f.write(to_write.encode('utf-8'))
+            target_w = ''.join(target)
+            to_write = w + '\t' + target_w + str(rank) + '\t' + str(confidence[w_idx][rank]) + '\n'
+            f.write(to_write.encode('utf-8'))
         w_idx += 1
-
     return
 
-#Recursive Levenshtein Distance Function in Python
-def LD(str1, str2):
-    m = np.zeros([len(str2)+1, len(str1)+1])
-    for x in xrange(1, len(str2) + 1):
-        m[x][0] = m[x-1][0] + 1
-    for y in xrange(1, len(str1) + 1):
-        m[0][y] = m[0][y-1] + 1
-    for x in xrange(1, len(str2) + 1):
-        for y in xrange(1, len(str1) + 1):
-            if str1[y-1] == str2[x-1]:
-                dg = 0
-            else:
-                dg = 1
-            m[x][y] = min(m[x-1][y] + 1, m[x][y-1] + 1, m[x-1][y-1] + dg)
-    return int(m[len(str2)][len(str1)])
-
-def avg_edit_distance(ref_file, pred_file):
-    ref_lines = open(ref_file, 'r').readlines()
-    pred_lines = open(pred_file, 'r').readlines()
-
-    if len(ref_lines)!=len(pred_lines):
-        print "INFO: Wrong number of lines in reference and prediction files"
-        exit()
-
-    dist = 0.0
-    for index in range(len(ref_lines)):
-        ref_line = ref_lines[index].strip()
-        pred_line = pred_lines[index].strip()
-        if len(ref_line)!=0 and len(pred_line)!=0:
-            GYs = ref_line.split('\t')
-            y = pred_line.split('\t')[1]
-            cost = 0.0
-            for gy in GYs:
-                ref = list(gy.decode('utf8'))
-                pred = list(y.decode('utf8'))
-                cost += LD(ref, pred)
-
-            dist = dist + cost/float(len(GYs))
-
-
-        edit_distance = dist/float(index)
-    return edit_distance
-
-def accuracy(ref_file, pred_file):
-    #Top1 Accuracy
-    ref_lines = open(ref_file, 'r').readlines()
-    pred_lines = open(pred_file, 'r').readlines()
-
-    if len(ref_lines)!=len(pred_lines):
-        print "INFO: Wrong number of lines in reference and prediction files"
-        exit()
-
-    total = 0.0
-    correct = 0.0
-    for index in range(len(ref_lines)):
-        ref_line = ref_lines[index].strip()
-        pred_line = pred_lines[index].strip()
-        if len(ref_line)!=0 and len(pred_line)!=0:
-            GYs = ref_line.split('\t')
-            y = pred_line.split('\t')[1]
-            total += 1
-            for gy in GYs:
-                if list(gy.decode('utf8'))==list(y.decode('utf8')):
-                    correct += 1
-                    break
-
-    return float(correct/total) * 100
-
 def evaluate(cfg, ref_file, pred_file):
-    error =100 - accuracy(ref_file, pred_file)
-    edit_distance = avg_edit_distance(ref_file, pred_file)
-    return error/200.0 + edit_distance/0.5
+    pred_file_xml = pred_file + '.xml'
+    os.system("python %s %s %s" % ('./evaluate/XMLize.py', pred_file, pred_file_xml))
+    os.system("python %s -i %s -t %s > %s" % ('./evaluate/news_evaluation.py', pred_file_xml, ref_file, 'temp.score' + cfg.model_type))
+    result_lines = [line.strip() for line in codecs.open('temp.score' + cfg.model_type, 'r', 'utf8')]
+    acc = float(result_lines[0].split('\t')[1])
+    mean_fscore = float(result_lines[1].split('\t')[1])
+    mrr = float(result_lines[2].split('\t')[1])
+    map_ref = float(result_lines[3].split('\t')[1])
+    return acc * 0.25 + mean_fscore * 0.25 + mrr * 0.25 + map_ref * 0.25
 
 def run_epoch(cfg):
     cfg.local_mode = 'train'
@@ -255,14 +195,13 @@ def predict(cfg, o_file):
         batch_to_tensors(cfg, batch)
         H = encoder()
         if cfg.model_type=='CRF':
-            preds = crf.predict(H)
+            preds, confidence = crf.predict(H)
         else:
-            if cfg.search=='greedy':
-                preds = mldecoder.greedy(H)[0].cpu().data.numpy()
-            elif cfg.search=='beam':
-                preds = mldecoder.beam(H)[0][:,0,:].cpu().data.numpy()
+            p, c = mldecoder.beam(H)
+            preds = p.cpu().data.numpy()
+            confidence = c.cpu().data.numpy()
 
-        save_predictions(cfg, batch, preds, f)
+        save_predictions(cfg, batch, preds, confidence, f)
 
     f.close()
     return
@@ -301,6 +240,7 @@ def run_model(mode, path, in_file, o_file):
         crf = CRF(cfg)
         c_opt = optim.Adam(ifilter(lambda p: p.requires_grad, crf.parameters()), lr=cfg.learning_rate)
         if hasCuda: crf.cuda()
+        cfg.nbest = 1
 
     elif cfg.model_type=='TF-RNN':
         mldecoder = MLDecoder(cfg)
@@ -326,7 +266,7 @@ def run_model(mode, path, in_file, o_file):
         if hasCuda: mldecoder.cuda()
         cfg.mldecoder_type = 'TF'
         rltrain = RLTrain(cfg)
-        r_opt = optim.Adam(ifilter(lambda p: p.requires_grad, rltrain.parameters()), lr=cfg.learning_rate)
+        r_opt = optim.Adam(ifilter(lambda p: p.requires_grad, rltrain.parameters()), lr=cfg.learning_rate, weight_decay=0.001)
         if hasCuda: rltrain.cuda()
         cfg.rltrain_type = 'BR'
         #For RL, the network should be pre-trained with teacher forced ML decoder.
@@ -339,7 +279,7 @@ def run_model(mode, path, in_file, o_file):
         if hasCuda: mldecoder.cuda()
         cfg.mldecoder_type = 'TF'
         rltrain = RLTrain(cfg)
-        r_opt = optim.Adam(ifilter(lambda p: p.requires_grad, rltrain.parameters()), lr=cfg.learning_rate)
+        r_opt = optim.Adam(ifilter(lambda p: p.requires_grad, rltrain.parameters()), lr=cfg.learning_rate, weight_decay=0.001)
         if hasCuda: rltrain.cuda()
         cfg.rltrain_type = 'AC'
         #For RL, the network should be pre-trained with teacher forced ML decoder.
@@ -347,7 +287,7 @@ def run_model(mode, path, in_file, o_file):
         mldecoder.load_state_dict(torch.load(path + 'TF-RNN' + '_predictor'))
 
     if mode=='train':
-        o_file = './temp.predicted'
+        o_file = './temp.predicted_' + cfg.model_type
         best_val_cost = float('inf')
         best_val_epoch = 0
         first_start = time.time()
@@ -368,8 +308,8 @@ def run_model(mode, path, in_file, o_file):
             run_epoch(cfg)
             print '\nValidation:'
             predict(cfg, o_file)
-            val_cost = evaluate(cfg, cfg.dev_ref, o_file)
-            print 'Validation score:{}'.format(1.000000000 - val_cost)
+            val_cost = 1.0 - evaluate(cfg, cfg.dev_ref_xml, o_file)
+            print 'Validation score:{}'.format(1.0- val_cost)
             if val_cost < best_val_cost:
                 best_val_cost = val_cost
                 best_val_epoch = epoch

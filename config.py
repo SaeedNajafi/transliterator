@@ -10,7 +10,7 @@ class Configuration(object):
     max_epochs = 256
     max_length = 64
     early_stopping = 10
-    batch_size = 64
+    batch_size = 32
     seed = 125
 
     """path to different files"""
@@ -21,7 +21,7 @@ class Configuration(object):
     train_ref = './data/' + 'train.ref'
     dev_raw = './data/' + 'dev.raw'
     dev_ref = './data/' + 'dev.ref'
-
+    dev_xml = './data/' + 'dev.ref.xml'
 
     """ Model Type """
     #Conditional Random Field
@@ -54,8 +54,5 @@ class Configuration(object):
     #atten = 'hard-monotonic'
     atten = 'soft-general'
 
-    #For inference in decoder RNNs, we have greedy search or beam search.
-    #Specify the beam size.
-    search = 'greedy'
-    #search = 'beam'
-    #beamsize = 10
+    #nbest results
+    nbest = 10

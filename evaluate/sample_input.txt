@@ -1,0 +1,10 @@
+ABARBANEL	阿巴巴纳尔	1
+ABARBANEL	阿巴巴内尔	2
+ABARBANEL	阿巴班尔	3
+ABARBANEL	阿巴本尔	4
+ABARBANEL	阿巴巴尼尔	5
+ABARBANEL	阿巴班埃尔	6
+Saeed	سعید	1	0.9
+Saeed	سسعید	3	0.7
+Saeed	سسسعید	2	0.8
+

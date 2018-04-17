@@ -62,8 +62,6 @@ class RLTrain(nn.Module):
             print "INFO: 0 <= discount factor < 1 !"
             exit()
 
-        #We do not apply any dropout layer as this is a regression model
-        #and the optimizer will apply L2 regularization on the weights.
         H1 = nn.functional.leaky_relu(self.layer1(in_S))
         H2 = nn.functional.leaky_relu(self.layer2(H1))
         H3 = nn.functional.sigmoid(self.layer3(H2))
@@ -75,7 +73,6 @@ class RLTrain(nn.Module):
         return v.view(cfg.d_batch_size, cfg.max_length)
 
     #least square loss for V.
-    #L2 regularization will be done by optimizer.
     def V_loss(self, Returns, prev_V):
         """
             Returns are the temporal difference or monte carlo returns calculated for

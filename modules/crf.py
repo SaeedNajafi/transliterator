@@ -10,6 +10,8 @@ class CRF(nn.Module):
     """
     This module uses linear-chain CRF for training, and Viterbi algorithm for decoding.
     Modified and adapted based on: https://github.com/kmkurn/pytorch-crf/blob/master/src/torchcrf/__init__.py
+
+    For transliteration, we let the decoder to decode until the end of the padded sequence.
     """
     def __init__(self, cfg):
         super(CRF, self).__init__()
@@ -140,6 +142,7 @@ class CRF(nn.Module):
 
         #scores are emission scores for each tag at each step.
         scores = self.affine(context)
+
         numerator_score = self.numerator_score(scores)
         log_Z = self.partition_score(scores)
         crf_log_likelihood = numerator_score - log_Z
@@ -179,12 +182,15 @@ class CRF(nn.Module):
         emissions = scores.data
 
         best_tags = []
+        confidence = []
         for i in range(cfg.d_batch_size):
             emission = emissions[i]
             seq_length_i = cfg.max_length
-            best_tags.append(self.viterbi_decode(emission[0:seq_length_i]))
+            t, s = self.viterbi_decode(emission[0:seq_length_i])
+            best_tags.append(t)
+            confidence.append(s)
 
-        return best_tags
+        return best_tags, confidence
 
     def viterbi_decode(self, emission):
         seq_length = emission.size(0)
@@ -219,7 +225,7 @@ class CRF(nn.Module):
 
         #Find the tag which maximizes the score at the last timestep; this is our best tag
         #for the last timestep
-        _, best_last_tag = viterbi_score.max(0)
+        tag_scores, best_last_tag = viterbi_score.max(0)
         best_tags = [best_last_tag[0]]
 
         #We trace back where the best last tag comes from, append that to our best tag
@@ -230,7 +236,7 @@ class CRF(nn.Module):
 
         #Reverse the order because we start from the last timestep
         best_tags.reverse()
-        return best_tags
+        return (best_tags, tag_scores[0])
 
     @staticmethod
     def log_sum_exp(tensor, dim):

@@ -109,7 +109,6 @@ def load_data(cfg):
 
 
     batch = []
-    counter = 0
     fd_raw = open(f_raw, 'r')
     if hasY: fd_ref = open(f_ref, 'r')
 
@@ -153,14 +152,14 @@ def process_batch(cfg, batch):
     for (in_W, out_W) in batch:
 
         #in_W is one word.
-        Raw_X.append(list(in_W))
+        Raw_X.append(in_W)
         X_chars = map_chars_to_ids(cfg, in_W, 'src')
         X.append(X_chars)
         X_Len.append(len(X_chars))
 
         if hasY:
             #out_W is one word.
-            Raw_Y.append(list(out_W))
+            Raw_Y.append(out_W)
             Y_chars = map_chars_to_ids(cfg, out_W, 'trg')
             Y.append(Y_chars)
             Y_Len.append(len(Y_chars))
@@ -206,15 +205,9 @@ def process_batch(cfg, batch):
     return B
 
 def pad(cfg, B):
-    
     #Pad x with src_pad_id
     for word in B['x']:
         pad_lst = [cfg.src_pad_id] * (cfg.max_length-len(word))
-        word.extend(pad_lst)
-
-    #Pad raw_x with pad
-    for word in B['raw_x']:
-        pad_lst = [cfg.pad] * (cfg.max_length-len(word))
         word.extend(pad_lst)
 
     #Pad x_mask with 0.0
@@ -226,11 +219,6 @@ def pad(cfg, B):
         #Pad y with trg_pad_id
         for word in B['y']:
             pad_lst = [cfg.trg_pad_id] * (cfg.max_length-len(word))
-            word.extend(pad_lst)
-
-        #Pad raw_y with pad
-        for word in B['raw_y']:
-            pad_lst = [cfg.pad] * (cfg.max_length-len(word))
             word.extend(pad_lst)
 
         #Pad y_mask with 0.0
