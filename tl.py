@@ -64,10 +64,10 @@ def save_predictions(cfg, batch, preds, confidence, f):
     for pred in preds:
         w = batch['raw_x'][w_idx]
         for rank in range(nbest):
-            end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
+            #end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
             target = []
             #do not print end symbol
-            for id in range(0, end_idx):
+            for id in range(0, cfg.max_length):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
             target_w = ''.join(target)
@@ -338,7 +338,7 @@ def run_model(mode, path, in_file, o_file):
         print 'Total training time:{} seconds'.format(time.time() - first_start)
 
     elif mode=='test':
-	cfg.batch_size = 1
+	cfg.batch_size = 1024
         encoder.load_state_dict(torch.load(path + cfg.model_type + '_encoder'))
         if cfg.model_type=='CRF': crf.load_state_dict(torch.load(path + cfg.model_type + '_predictor'))
         elif cfg.model_type=='TF-RNN' or cfg.model_type=='SS-RNN' or cfg.model_type=='DS-RNN':
