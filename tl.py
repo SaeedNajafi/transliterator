@@ -71,7 +71,9 @@ def save_predictions(cfg, batch, preds, confidence, f):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
             target_w = ''.join(target)
-            to_write = w + '\t' + target_w + str(rank) + '\t' + str(confidence[w_idx][rank]) + '\n'
+	    if target_w==' ' or target_w=='':
+		target_w = 'EMPTY'
+            to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
             f.write(to_write.encode('utf-8'))
         w_idx += 1
     return
@@ -79,13 +81,14 @@ def save_predictions(cfg, batch, preds, confidence, f):
 def evaluate(cfg, ref_file, pred_file):
     pred_file_xml = pred_file + '.xml'
     os.system("python %s %s %s" % ('./evaluate/XMLize.py', pred_file, pred_file_xml))
-    os.system("python %s -i %s -t %s > %s" % ('./evaluate/news_evaluation.py', pred_file_xml, ref_file, 'temp.score' + cfg.model_type))
-    result_lines = [line.strip() for line in codecs.open('temp.score' + cfg.model_type, 'r', 'utf8')]
+    os.system("python %s -i %s -t %s > %s" % ('./evaluate/news_evaluation.py', pred_file_xml, ref_file, 'temp.score_' + cfg.model_type))
+    result_lines = [line.strip() for line in codecs.open('temp.score_' + cfg.model_type, 'r', 'utf8')]
     acc = float(result_lines[0].split('\t')[1])
     mean_fscore = float(result_lines[1].split('\t')[1])
     mrr = float(result_lines[2].split('\t')[1])
     map_ref = float(result_lines[3].split('\t')[1])
-    return acc * 0.25 + mean_fscore * 0.25 + mrr * 0.25 + map_ref * 0.25
+    #return acc * 0.25 + mean_fscore * 0.25 + mrr * 0.25 + map_ref * 0.25
+    return acc
 
 def run_epoch(cfg):
     cfg.local_mode = 'train'
@@ -199,9 +202,9 @@ def predict(cfg, o_file):
         else:
             p, c = mldecoder.beam(H)
             preds = p.cpu().data.numpy()
-            confidence = c.cpu().data.numpy()
+            confidence = np.exp(c.cpu().data.numpy())
 
-        save_predictions(cfg, batch, preds, confidence, f)
+        save_predictions(cfg, batch, preds.tolist(), confidence.tolist(), f)
 
     f.close()
     return
@@ -292,6 +295,7 @@ def run_model(mode, path, in_file, o_file):
         best_val_epoch = 0
         first_start = time.time()
         epoch=0
+	cfg.true_batch_size = cfg.batch_size
         while (epoch < cfg.max_epochs):
             print
             print 'Model:{} | Epoch:{}'.format(cfg.model_type, epoch)
@@ -305,7 +309,9 @@ def run_model(mode, path, in_file, o_file):
                 cfg.greedy_bias = np.minimum(10**8, (2)**epoch)
 
             start = time.time()
+	    cfg.batch_size = cfg.true_batch_size
             run_epoch(cfg)
+	    cfg.batch_size = 1024
             print '\nValidation:'
             predict(cfg, o_file)
             val_cost = 1.0 - evaluate(cfg, cfg.dev_ref_xml, o_file)
@@ -332,6 +338,7 @@ def run_model(mode, path, in_file, o_file):
         print 'Total training time:{} seconds'.format(time.time() - first_start)
 
     elif mode=='test':
+	cfg.batch_size = 1
         encoder.load_state_dict(torch.load(path + cfg.model_type + '_encoder'))
         if cfg.model_type=='CRF': crf.load_state_dict(torch.load(path + cfg.model_type + '_predictor'))
         elif cfg.model_type=='TF-RNN' or cfg.model_type=='SS-RNN' or cfg.model_type=='DS-RNN':
