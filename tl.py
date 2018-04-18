@@ -35,12 +35,12 @@ def batch_to_tensors(cfg, in_B):
     o_B = {}
     o_B['x'] = torch.LongTensor(in_B['x'])
     o_B['x_len'] = torch.LongTensor(in_B['x_len'])
-    o_B['x_mask'] = torch.LongTensor(in_B['x_mask'])
+    o_B['x_mask'] = torch.FloatTensor(in_B['x_mask'])
 
     if in_B['y'] is not None:
         o_B['y'] = torch.LongTensor(in_B['y'])
         o_B['y_len'] = torch.LongTensor(in_B['y_len'])
-        o_B['y_mask'] = torch.LongTensor(in_B['y_mask'])
+        o_B['y_mask'] = torch.FloatTensor(in_B['y_mask'])
     else:
         o_B['y'] = None
         o_B['y_len'] = None

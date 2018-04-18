@@ -37,7 +37,7 @@ class MLDecoder(nn.Module):
 
             self.atten_affine = nn.Linear(
                                 2 * cfg.h_units,
-                                config.h_units,
+                                cfg.h_units,
                                 bias=True
                                 )
 
@@ -66,7 +66,7 @@ class MLDecoder(nn.Module):
             if 'weight' in name:
                 init.xavier_uniform(param)
 
-        if cfg.atten=='soft-general':
+        if self.cfg.atten=='soft-general':
             init.xavier_uniform(self.atten_W)
 
         return

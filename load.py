@@ -8,7 +8,7 @@ def load_embeddings(cfg):
 
     #Defining some constants.
     cfg.end = 'ENDENDEND'
-    cg.pad = 'PADPADPAD'
+    cfg.pad = 'PADPADPAD'
     cfg.unk = 'UNKUNKUNK'
 
     #Creates random vectors for source and target characters.
@@ -66,14 +66,14 @@ def load_embeddings(cfg):
     return
 
 def map_chars_to_ids(cfg, word, src_or_trg):
-    if src_or_trg='src':
+    if src_or_trg=='src':
         ch_id = cfg.data['src_ch_id']
 
-    elif src_or_trg='trg':
+    elif src_or_trg=='trg':
         ch_id = cfg.data['trg_ch_id']
 
     lst = []
-    for ch in list(word):
+    for ch in list(word.decode('utf-8')):
         if ch in ch_id:
             lst.append(ch_id[ch])
         else:
@@ -81,7 +81,8 @@ def map_chars_to_ids(cfg, word, src_or_trg):
             print "INFO: Could not find the following char and replaced it with the unk char: ", ch
 
     #add end symbol
-    return lst.append(ch_id[cfg.end])
+    lst.append(ch_id[cfg.end])
+    return lst
 
 def load_data(cfg):
     """ Loads train, dev or test data. """
@@ -151,7 +152,6 @@ def process_batch(cfg, batch):
 
     for (in_Word, out_Word) in batch:
         in_W = in_Word.replace("   ", "_@_").replace(" ","").replace("_@_", " ")
-
         #in_W is one word.
         Raw_X.append(in_W)
         X_chars = map_chars_to_ids(cfg, in_W, 'src')
