@@ -4,7 +4,7 @@
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 import sys
-
+import collections
 
 in_f = open(sys.argv[1], 'r') #Input Tab Separated File:
 out_f = open(sys.argv[2], 'w') #Output XML File:
@@ -43,7 +43,7 @@ Comments = 'Default'
 TaskID = 'Default'
 
 def to_xml():
-    dic = {}
+    dic = collections.OrderedDict()
     for line in in_f.readlines():
         line = line.strip().decode('utf-8')
         if len(line)!=0: #ignore newline
