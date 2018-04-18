@@ -7,9 +7,9 @@ def load_embeddings(cfg):
     cfg.data = {}
 
     #Defining some constants.
-    cfg.end = 'ENDENDEND'
-    cfg.pad = 'PADPADPAD'
-    cfg.unk = 'UNKUNKUNK'
+    cfg.end = 'ENDEND'
+    cfg.pad = 'PADPAD'
+    cfg.unk = 'UNKUNK'
 
     #Creates random vectors for source and target characters.
     f = open(cfg.src_alphabet, 'r')
