@@ -2,8 +2,8 @@ import sys
 
 in_file = open(sys.argv[1], 'r')
 
-src_file = open('src.alphabet', 'w')
-trg_file = open('trg.alphabet', 'w')
+src_file = open(sys.argv[2], 'w')
+trg_file = open(sys.argv[3], 'w')
 
 lines = in_file.readlines()
 

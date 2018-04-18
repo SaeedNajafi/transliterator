@@ -428,9 +428,9 @@ class MLDecoder(nn.Module):
                 which_old_ids = torch.remainder(maxidx, beamsize).long()
                 new_y = torch.gather(y_c, 1, maxidx)
                 old_y = torch.gather(prev_y, 1, which_old_ids)
-                isvalid = -1.0 * torch.eq(new_y, cfg.trg_pad_id).float() + 1.0
-                maski= isvalid.view(-1, 1).expand(-1, beamsize).long()
-                old_y = maski * old_y + (1-maski) * prev_y
+                #isvalid = -1.0 * torch.eq(new_y, cfg.trg_pad_id).float() + 1.0
+                #maski= isvalid.long()
+                #old_y = maski * old_y + (1-maski) * prev_y
                 beam.append(old_y)
                 prev_y = new_y
                 h = torch.gather(h_c, 1, which_old_ids.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
