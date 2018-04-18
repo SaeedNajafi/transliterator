@@ -347,9 +347,13 @@ class MLDecoder(nn.Module):
         zeros = torch.zeros(cfg.d_batch_size, cfg.trg_em_size)
         Go_symbol = Variable(zeros.cuda()) if hasCuda else Variable(zeros)
 
-	very_negative = torch.zeros(cfg.d_batch_size)
+        very_negative = torch.zeros(cfg.d_batch_size)
         V_Neg = Variable(very_negative.cuda()) if hasCuda else Variable(very_negative)
         V_Neg.data.fill_(-10**10)
+
+        pads = torch.zeros(cfg.d_batch_size)
+        Pads = Variable(pads.cuda()) if hasCuda else Variable(pads)
+        Pads.data.fill_(cfg.trg_pad_id)
 
         lprob_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize)
         lprob_c = Variable(lprob_candidates.cuda()) if hasCuda else Variable(lprob_candidates)
@@ -393,19 +397,21 @@ class MLDecoder(nn.Module):
                     score = self.affine(nn.functional.tanh(self.atten_affine(torch.cat((output, temp_context), dim=1))))
 
                 log_prob = nn.functional.log_softmax(score, dim=1)
+                log_prob.data[:, cfg.trg_pad_id] = V_Neg.data #never select pad
                 kprob, kidx = torch.topk(log_prob, beamsize, dim=1, largest=True, sorted=True)
 
-                #For the next time step.
+                #For the time step > 1
                 h = torch.stack([output] * beamsize, dim=1)
                 c = torch.stack([temp_c] * beamsize, dim=1)
                 context = torch.stack([temp_context] * beamsize, dim=1)
-
                 prev_y = kidx
                 prev_lprob = kprob
 
             else:
                 isEnd = torch.eq(prev_y, cfg.trg_end_id).long()
                 isEnd_f = isEnd.float()
+                isPad = torch.eq(prev_y, cfg.trg_pad_id).long()
+                isPad_f = isPad.float()
                 prev_output = self.trg_em(prev_y)
                 for b in range(beamsize):
                     input = torch.cat((prev_output[:,b,:], context[:,b,:]), dim=1)
@@ -423,20 +429,23 @@ class MLDecoder(nn.Module):
                         score = self.affine(nn.functional.tanh(self.atten_affine(torch.cat((output, temp_context), dim=1))))
 
                     log_prob = nn.functional.log_softmax(score, dim=1)
+                    log_prob.data[:, cfg.trg_pad_id] = V_Neg.data #never select pad
                     kprob, kidx = torch.topk(log_prob, beamsize, dim=1, largest=True, sorted=True)
-		    h_c[:,b,:] = output
+                    h_c[:,b,:] = output
                     c_c[:,b,:] = temp_c
                     context_c[:,b,:] = temp_context
+
                     for bb in range(beamsize):
+                        isEnd_c[:,beamsize*b + bb] = isEnd_f[:,b] + isPad_f[:,b]
                         new_lprob = prev_lprob[:,b] + (1.0 - isEnd_c[:,beamsize*b + bb]) * kprob[:,bb]
                         normalized_new_lprob = torch.div(new_lprob, i+1)
                         final_new_lprob = isEnd_f[:,b] * normalized_new_lprob + (1.0 - isEnd_f[:,b]) * new_lprob
-                        isEnd_c[:,beamsize*b + bb] = isEnd_f[:,b]
                         lprob_c[:,beamsize*b + bb] = final_new_lprob
-                        y_c[:,beamsize*b + bb] = kidx[:,bb]
-		    for bb in range(1, beamsize):
-			lprob_c.data[:,beamsize*b + bb].add_((isEnd_c[:,beamsize*b + bb] * V_Neg).data)
-  
+                        y_c[:,beamsize*b + bb] = (1.0 - isEnd_c[:,beamsize*b + bb]) * kidx[:,bb] + isEnd_c[:,beamsize*b + bb] * Pads
+
+                    for bb in range(1, beamsize):
+                        lprob_c[:,beamsize*b + bb] = lprob_c[:,beamsize*b + bb] + isEnd_c[:,beamsize*b + bb] * V_Neg
+
                 formalized_lprob_c = torch.div(lprob_c, i+1)
                 _, maxidx = torch.topk(isEnd_c * lprob_c + (1.0-isEnd_c) * formalized_lprob_c, beamsize, dim=1, largest=True, sorted=True)
 
