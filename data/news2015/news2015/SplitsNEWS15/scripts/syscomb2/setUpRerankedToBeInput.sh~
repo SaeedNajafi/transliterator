@@ -1,0 +1,9 @@
+# this script sets up the output of a reranked system to be ready to be the input to additional reranking (basically just adds a column of dumby ranks
+
+fileIn=$1
+
+cut -f 1,2 $fileIn > tmp
+cut -f 3 $fileIn > tmp2
+dumbyRank.py $fileIn > dumby
+paste tmp dumby > tmp3
+paste tmp3 tmp2

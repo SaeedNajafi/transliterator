@@ -1,0 +1,94 @@
+#!/usr/bin/env python3
+
+from collections import defaultdict
+from optparse import OptionParser
+from os import path
+from string import punctuation
+from sys import argv
+from xml.etree import ElementTree
+
+import re
+
+
+def errordie(msg):
+    print(path.basename(argv[0]), ': error: ', msg, sep = '')
+    exit()
+
+parser = OptionParser(usage = 'usage: %prog [options args] DATA.xml')
+parser.add_option('-d', '--hindi-normalization', action = 'store_true', dest =
+                  'hindi', default = False, help = 'do Hindi normalization')
+parser.add_option('-n', '--nospacemismatch', action = 'store_true', dest =
+                  'nospacemm', default = False, help =
+                  "ignore NEWS data that has a word count mismatch")
+parser.add_option('-p', '--handle-punctuation', action='store_true',
+                  dest='handlepunc', default=False, help=
+                  'Process the punctuation (specific to Hindi data)')
+parser.add_option('-s', '--splitwords', action = 'store_true', dest =
+                  'splitwords', default = False, help =
+                  'split NEWS strings into separate words')
+
+(options, args) = parser.parse_args()
+if options.splitwords:
+    options.nospacemm = True
+
+if len(args) == 0:
+    errordie('no XML file specified')
+elif len(args) == 1:
+    datafile = args[0]
+elif len(args) > 1:
+    errordie('too many arguments')
+
+withAndWO = re.compile("['#^]")
+smartReplace = [(re.compile('/'), ' '),
+                (re.compile(',([^ ])'), r', \1'),
+                (re.compile('_'), '#'),
+                (re.compile('[' + withAndWO.sub('', re.sub('-', '',
+                                                           punctuation)) +
+                            ']'), '')]
+hindi = [(re.compile(chr(0x0958)), chr(0x0915) + chr(0x093C)),
+         (re.compile(chr(0x0959)), chr(0x0916) + chr(0x093C)),
+         (re.compile(chr(0x095A)), chr(0x0917) + chr(0x093C)),
+         (re.compile(chr(0x095B)), chr(0x091C) + chr(0x093C)),
+         (re.compile(chr(0x095C)), chr(0x0921) + chr(0x093C)),
+         (re.compile(chr(0x095D)), chr(0x0922) + chr(0x093C)),
+         (re.compile(chr(0x095E)), chr(0x092E) + chr(0x093C)),
+         (re.compile(chr(0x095F)), chr(0x092F) + chr(0x093C))]
+         #(re.compile(chr(0x200D)), '')] # not sure about this one
+
+transliterations = defaultdict(set)
+tree = ElementTree.parse(datafile)
+corpus = tree.getroot()
+for tlset in corpus:
+    src = tlset[0].text.strip().lower()
+    if options.handlepunc:
+        for cre, sub in smartReplace:
+            src = cre.sub(sub, src)
+    srcs = src.split(' ')
+    for entry in tlset[1:]:
+        trg = entry.text.strip().lower()
+        if options.handlepunc:
+            for cre, sub in smartReplace:
+                trg = cre.sub(sub, trg)
+        if options.hindi:
+            for cre, sub in hindi:
+                trg = cre.sub(sub, trg)
+        trgs = trg.split(' ')
+        if not options.nospacemm or len(srcs) == len(trgs):
+            if options.splitwords:
+                for s, t in zip(srcs, trgs):
+                    transliterations[s].add(t)
+                    if options.handlepunc:
+                        transliterations[withAndWO.sub('',
+                                                       s)].add(withAndWO.sub('',
+                                                                             t))
+            else:
+                transliterations[src].add(trg)
+                if options.handlepunc:
+                    transliterations[withAndWO.sub('',
+                                                   src)].add(withAndWO.sub('',
+                                                                           trg))
+
+for entry in sorted(transliterations):
+    for transliteration in sorted(transliterations[entry]):
+        #print(' '.join(entry), ' '.join(transliteration), sep = '\t')
+        print("\t".join((entry, transliteration))

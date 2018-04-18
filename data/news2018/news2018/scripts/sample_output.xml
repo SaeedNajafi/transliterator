@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransliterationTaskResults Comments="Default" GroupID="Default" RunID="Default" RunType="Default" SourceLang="Default" TargetLang="Default" TaskID="Default">
+   <Name ID="1">
+      <SourceName>
+         ABARBANEL
+      </SourceName>
+      <TargetName ID="1">
+         阿巴巴纳尔
+      </TargetName>
+      <TargetName ID="2">
+         阿巴巴内尔
+      </TargetName>
+      <TargetName ID="3">
+         阿巴班尔
+      </TargetName>
+      <TargetName ID="4">
+         阿巴本尔
+      </TargetName>
+      <TargetName ID="5">
+         阿巴巴尼尔
+      </TargetName>
+      <TargetName ID="6">
+         阿巴班埃尔
+      </TargetName>
+   </Name>
+   <Name ID="2">
+      <SourceName>
+         Saeed
+      </SourceName>
+      <TargetName ID="1">
+         سعید
+      </TargetName>
+      <TargetName ID="2">
+         سسسعید
+      </TargetName>
+      <TargetName ID="3">
+         سسعید
+      </TargetName>
+   </Name>
+</TransliterationTaskResults>

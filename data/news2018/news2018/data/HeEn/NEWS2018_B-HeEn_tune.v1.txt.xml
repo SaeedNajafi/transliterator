@@ -1,0 +1,4003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransliterationTaskResults Comments="Default" GroupID="Default" RunID="Default" RunType="Default" SourceLang="Default" TargetLang="Default" TaskID="Default">
+   <Name ID="1">
+      <SourceName>ח'יגאב</SourceName>
+      <TargetName ID="1">hijab</TargetName>
+   </Name>
+   <Name ID="2">
+      <SourceName>קודג'ו</SourceName>
+      <TargetName ID="1">kodjo</TargetName>
+   </Name>
+   <Name ID="3">
+      <SourceName>סליבי</SourceName>
+      <TargetName ID="1">salibi</TargetName>
+   </Name>
+   <Name ID="4">
+      <SourceName>דיטר</SourceName>
+      <TargetName ID="1">dieter</TargetName>
+   </Name>
+   <Name ID="5">
+      <SourceName>לאואל</SourceName>
+      <TargetName ID="1">lawal</TargetName>
+   </Name>
+   <Name ID="6">
+      <SourceName>טוטמא</SourceName>
+      <TargetName ID="1">totma</TargetName>
+   </Name>
+   <Name ID="7">
+      <SourceName>אגאתא</SourceName>
+      <TargetName ID="1">agatha</TargetName>
+   </Name>
+   <Name ID="8">
+      <SourceName>אתולוג'י</SourceName>
+      <TargetName ID="1">ethology</TargetName>
+   </Name>
+   <Name ID="9">
+      <SourceName>סאלינקו</SourceName>
+      <TargetName ID="1">salenko</TargetName>
+   </Name>
+   <Name ID="10">
+      <SourceName>נאקאטא</SourceName>
+      <TargetName ID="1">nakata</TargetName>
+   </Name>
+   <Name ID="11">
+      <SourceName>לחד</SourceName>
+      <TargetName ID="1">lahad</TargetName>
+   </Name>
+   <Name ID="12">
+      <SourceName>צ'ילמבי</SourceName>
+      <TargetName ID="1">chilembe</TargetName>
+   </Name>
+   <Name ID="13">
+      <SourceName>יושצ'נקו</SourceName>
+      <TargetName ID="1">yushchenko</TargetName>
+   </Name>
+   <Name ID="14">
+      <SourceName>מאצ'לאס</SourceName>
+      <TargetName ID="1">machlas</TargetName>
+   </Name>
+   <Name ID="15">
+      <SourceName>אנונסיאטא</SourceName>
+      <TargetName ID="1">annunziata</TargetName>
+   </Name>
+   <Name ID="16">
+      <SourceName>ואיט</SourceName>
+      <TargetName ID="1">white</TargetName>
+   </Name>
+   <Name ID="17">
+      <SourceName>גולדמאן</SourceName>
+      <TargetName ID="1">goldman</TargetName>
+   </Name>
+   <Name ID="18">
+      <SourceName>ראינר</SourceName>
+      <TargetName ID="1">rainer</TargetName>
+   </Name>
+   <Name ID="19">
+      <SourceName>קראיסלר</SourceName>
+      <TargetName ID="1">chrysler</TargetName>
+   </Name>
+   <Name ID="20">
+      <SourceName>בראזאוסקאס</SourceName>
+      <TargetName ID="1">brazauskas</TargetName>
+   </Name>
+   <Name ID="21">
+      <SourceName>פאלה</SourceName>
+      <TargetName ID="1">palais</TargetName>
+   </Name>
+   <Name ID="22">
+      <SourceName>עאיל</SourceName>
+      <TargetName ID="1">ayil</TargetName>
+   </Name>
+   <Name ID="23">
+      <SourceName>ואיז</SourceName>
+      <TargetName ID="1">weisz</TargetName>
+   </Name>
+   <Name ID="24">
+      <SourceName>קט</SourceName>
+      <TargetName ID="1">cat</TargetName>
+   </Name>
+   <Name ID="25">
+      <SourceName>הראנט</SourceName>
+      <TargetName ID="1">hrant</TargetName>
+   </Name>
+   <Name ID="26">
+      <SourceName>לירוי</SourceName>
+      <TargetName ID="1">leroy</TargetName>
+   </Name>
+   <Name ID="27">
+      <SourceName>בייבל</SourceName>
+      <TargetName ID="1">bejbl</TargetName>
+   </Name>
+   <Name ID="28">
+      <SourceName>אובאמא</SourceName>
+      <TargetName ID="1">obama</TargetName>
+   </Name>
+   <Name ID="29">
+      <SourceName>דובינסקי</SourceName>
+      <TargetName ID="1">dubinski</TargetName>
+   </Name>
+   <Name ID="30">
+      <SourceName>סאנז</SourceName>
+      <TargetName ID="1">sanz</TargetName>
+   </Name>
+   <Name ID="31">
+      <SourceName>נאסר</SourceName>
+      <TargetName ID="1">naser</TargetName>
+   </Name>
+   <Name ID="32">
+      <SourceName>פאזיקאס</SourceName>
+      <TargetName ID="1">fazekas</TargetName>
+   </Name>
+   <Name ID="33">
+      <SourceName>מיליבא</SourceName>
+      <TargetName ID="1">mileva</TargetName>
+   </Name>
+   <Name ID="34">
+      <SourceName>טירים</SourceName>
+      <TargetName ID="1">terim</TargetName>
+   </Name>
+   <Name ID="35">
+      <SourceName>לאברונינקו</SourceName>
+      <TargetName ID="1">lavronenko</TargetName>
+   </Name>
+   <Name ID="36">
+      <SourceName>מונזא</SourceName>
+      <TargetName ID="1">monza</TargetName>
+   </Name>
+   <Name ID="37">
+      <SourceName>מומו</SourceName>
+      <TargetName ID="1">mommu</TargetName>
+   </Name>
+   <Name ID="38">
+      <SourceName>בומדין</SourceName>
+      <TargetName ID="1">boumediene</TargetName>
+   </Name>
+   <Name ID="39">
+      <SourceName>קייב</SourceName>
+      <TargetName ID="1">kiev</TargetName>
+   </Name>
+   <Name ID="40">
+      <SourceName>קלינג</SourceName>
+      <TargetName ID="1">kling</TargetName>
+   </Name>
+   <Name ID="41">
+      <SourceName>ניקולודיס</SourceName>
+      <TargetName ID="1">nikoloudis</TargetName>
+   </Name>
+   <Name ID="42">
+      <SourceName>רתרפורד</SourceName>
+      <TargetName ID="1">rutherford</TargetName>
+   </Name>
+   <Name ID="43">
+      <SourceName>קורסי</SourceName>
+      <TargetName ID="1">curci</TargetName>
+   </Name>
+   <Name ID="44">
+      <SourceName>ראמאזוטי</SourceName>
+      <TargetName ID="1">ramazzotti</TargetName>
+   </Name>
+   <Name ID="45">
+      <SourceName>מרניסי</SourceName>
+      <TargetName ID="1">mernissi</TargetName>
+   </Name>
+   <Name ID="46">
+      <SourceName>איופאן</SourceName>
+      <TargetName ID="1">iofan</TargetName>
+   </Name>
+   <Name ID="47">
+      <SourceName>הנקין</SourceName>
+      <TargetName ID="1">henkin</TargetName>
+   </Name>
+   <Name ID="48">
+      <SourceName>סיגורני</SourceName>
+      <TargetName ID="1">sigourney</TargetName>
+   </Name>
+   <Name ID="49">
+      <SourceName>דודק</SourceName>
+      <TargetName ID="1">dudek</TargetName>
+   </Name>
+   <Name ID="50">
+      <SourceName>לוסין</SourceName>
+      <TargetName ID="1">leucine</TargetName>
+   </Name>
+   <Name ID="51">
+      <SourceName>רחמן</SourceName>
+      <TargetName ID="1">rahman</TargetName>
+   </Name>
+   <Name ID="52">
+      <SourceName>פוזי</SourceName>
+      <TargetName ID="1">posey</TargetName>
+   </Name>
+   <Name ID="53">
+      <SourceName>בילין</SourceName>
+      <TargetName ID="1">beilin</TargetName>
+   </Name>
+   <Name ID="54">
+      <SourceName>לילי</SourceName>
+      <TargetName ID="1">lilli</TargetName>
+   </Name>
+   <Name ID="55">
+      <SourceName>אוגוסטא</SourceName>
+      <TargetName ID="1">augusta</TargetName>
+   </Name>
+   <Name ID="56">
+      <SourceName>סושא</SourceName>
+      <TargetName ID="1">sucha</TargetName>
+   </Name>
+   <Name ID="57">
+      <SourceName>ויטאליס</SourceName>
+      <TargetName ID="1">vitalis</TargetName>
+   </Name>
+   <Name ID="58">
+      <SourceName>באסק</SourceName>
+      <TargetName ID="1">busk</TargetName>
+   </Name>
+   <Name ID="59">
+      <SourceName>טורנאטורי</SourceName>
+      <TargetName ID="1">tornatore</TargetName>
+   </Name>
+   <Name ID="60">
+      <SourceName>וודקוק</SourceName>
+      <TargetName ID="1">woodcock</TargetName>
+   </Name>
+   <Name ID="61">
+      <SourceName>קאתי</SourceName>
+      <TargetName ID="1">kathy</TargetName>
+   </Name>
+   <Name ID="62">
+      <SourceName>ווסט</SourceName>
+      <TargetName ID="1">west</TargetName>
+   </Name>
+   <Name ID="63">
+      <SourceName>מאטו</SourceName>
+      <TargetName ID="1">mato</TargetName>
+   </Name>
+   <Name ID="64">
+      <SourceName>מאלכאז</SourceName>
+      <TargetName ID="1">malkhaz</TargetName>
+   </Name>
+   <Name ID="65">
+      <SourceName>אולימפיק</SourceName>
+      <TargetName ID="1">olympic</TargetName>
+   </Name>
+   <Name ID="66">
+      <SourceName>ביליני</SourceName>
+      <TargetName ID="1">bellini</TargetName>
+   </Name>
+   <Name ID="67">
+      <SourceName>טאיפיי</SourceName>
+      <TargetName ID="1">taipei</TargetName>
+   </Name>
+   <Name ID="68">
+      <SourceName>זאמברוטא</SourceName>
+      <TargetName ID="1">zambrotta</TargetName>
+   </Name>
+   <Name ID="69">
+      <SourceName>וינצ'ינזו</SourceName>
+      <TargetName ID="1">vincenzo</TargetName>
+   </Name>
+   <Name ID="70">
+      <SourceName>סבירבנק</SourceName>
+      <TargetName ID="1">sberbank</TargetName>
+   </Name>
+   <Name ID="71">
+      <SourceName>הארלם</SourceName>
+      <TargetName ID="1">harlem</TargetName>
+   </Name>
+   <Name ID="72">
+      <SourceName>אף</SourceName>
+      <TargetName ID="1">f</TargetName>
+   </Name>
+   <Name ID="73">
+      <SourceName>פייזון</SourceName>
+      <TargetName ID="1">faison</TargetName>
+   </Name>
+   <Name ID="74">
+      <SourceName>רוברטסון</SourceName>
+      <TargetName ID="1">robertson</TargetName>
+   </Name>
+   <Name ID="75">
+      <SourceName>הושינו</SourceName>
+      <TargetName ID="1">hoshino</TargetName>
+   </Name>
+   <Name ID="76">
+      <SourceName>הארלו</SourceName>
+      <TargetName ID="1">harlow</TargetName>
+   </Name>
+   <Name ID="77">
+      <SourceName>זון</SourceName>
+      <TargetName ID="1">zune</TargetName>
+   </Name>
+   <Name ID="78">
+      <SourceName>טאקידא</SourceName>
+      <TargetName ID="1">takeda</TargetName>
+   </Name>
+   <Name ID="79">
+      <SourceName>ויליס</SourceName>
+      <TargetName ID="1">willis</TargetName>
+   </Name>
+   <Name ID="80">
+      <SourceName>גיב</SourceName>
+      <TargetName ID="1">gibb</TargetName>
+   </Name>
+   <Name ID="81">
+      <SourceName>דיקינסון</SourceName>
+      <TargetName ID="1">dickinson</TargetName>
+   </Name>
+   <Name ID="82">
+      <SourceName>ג'ונא</SourceName>
+      <TargetName ID="1">jonah</TargetName>
+   </Name>
+   <Name ID="83">
+      <SourceName>פוקויאמא</SourceName>
+      <TargetName ID="1">fukuyama</TargetName>
+   </Name>
+   <Name ID="84">
+      <SourceName>זוף</SourceName>
+      <TargetName ID="1">zoff</TargetName>
+   </Name>
+   <Name ID="85">
+      <SourceName>גיר</SourceName>
+      <TargetName ID="1">geir</TargetName>
+   </Name>
+   <Name ID="86">
+      <SourceName>הילאריון</SourceName>
+      <TargetName ID="1">hilarion</TargetName>
+   </Name>
+   <Name ID="87">
+      <SourceName>גוארין</SourceName>
+      <TargetName ID="1">guerin</TargetName>
+   </Name>
+   <Name ID="88">
+      <SourceName>פוקונישי</SourceName>
+      <TargetName ID="1">fukunishi</TargetName>
+   </Name>
+   <Name ID="89">
+      <SourceName>ג'אסירון</SourceName>
+      <TargetName ID="1">jasseron</TargetName>
+   </Name>
+   <Name ID="90">
+      <SourceName>קאטאלינסקי</SourceName>
+      <TargetName ID="1">katalinski</TargetName>
+   </Name>
+   <Name ID="91">
+      <SourceName>עליחאני</SourceName>
+      <TargetName ID="1">alikhani</TargetName>
+   </Name>
+   <Name ID="92">
+      <SourceName>דיראני</SourceName>
+      <TargetName ID="1">dirani</TargetName>
+   </Name>
+   <Name ID="93">
+      <SourceName>מאגדה</SourceName>
+      <TargetName ID="1">magda</TargetName>
+   </Name>
+   <Name ID="94">
+      <SourceName>רוטסון</SourceName>
+      <TargetName ID="1">rotson</TargetName>
+   </Name>
+   <Name ID="95">
+      <SourceName>מיניונא</SourceName>
+      <TargetName ID="1">mignogna</TargetName>
+   </Name>
+   <Name ID="96">
+      <SourceName>מטוואלי</SourceName>
+      <TargetName ID="1">metwalli</TargetName>
+   </Name>
+   <Name ID="97">
+      <SourceName>פורוג</SourceName>
+      <TargetName ID="1">forough</TargetName>
+   </Name>
+   <Name ID="98">
+      <SourceName>איבאנוביטש</SourceName>
+      <TargetName ID="1">ivanovic</TargetName>
+   </Name>
+   <Name ID="99">
+      <SourceName>אוק</SourceName>
+      <TargetName ID="1">uk</TargetName>
+   </Name>
+   <Name ID="100">
+      <SourceName>דאיאקלישן</SourceName>
+      <TargetName ID="1">diocletian</TargetName>
+   </Name>
+   <Name ID="101">
+      <SourceName>נאואז</SourceName>
+      <TargetName ID="1">nawaz</TargetName>
+   </Name>
+   <Name ID="102">
+      <SourceName>ג'טו</SourceName>
+      <TargetName ID="1">jettou</TargetName>
+   </Name>
+   <Name ID="103">
+      <SourceName>איסטא</SourceName>
+      <TargetName ID="1">issta</TargetName>
+   </Name>
+   <Name ID="104">
+      <SourceName>דארוי</SourceName>
+      <TargetName ID="1">darui</TargetName>
+   </Name>
+   <Name ID="105">
+      <SourceName>מקבראיד</SourceName>
+      <TargetName ID="1">mcbride</TargetName>
+   </Name>
+   <Name ID="106">
+      <SourceName>דארון</SourceName>
+      <TargetName ID="1">daron</TargetName>
+   </Name>
+   <Name ID="107">
+      <SourceName>לוקהד</SourceName>
+      <TargetName ID="1">lochhead</TargetName>
+   </Name>
+   <Name ID="108">
+      <SourceName>שחק</SourceName>
+      <TargetName ID="1">shahak</TargetName>
+   </Name>
+   <Name ID="109">
+      <SourceName>איפאמינונדאס</SourceName>
+      <TargetName ID="1">epaminondas</TargetName>
+   </Name>
+   <Name ID="110">
+      <SourceName>מוקרג'י</SourceName>
+      <TargetName ID="1">mukerji</TargetName>
+   </Name>
+   <Name ID="111">
+      <SourceName>קלאס</SourceName>
+      <TargetName ID="1">klas</TargetName>
+   </Name>
+   <Name ID="112">
+      <SourceName>הורט</SourceName>
+      <TargetName ID="1">hurt</TargetName>
+   </Name>
+   <Name ID="113">
+      <SourceName>הון</SourceName>
+      <TargetName ID="1">hon</TargetName>
+   </Name>
+   <Name ID="114">
+      <SourceName>זין</SourceName>
+      <TargetName ID="1">xin</TargetName>
+   </Name>
+   <Name ID="115">
+      <SourceName>בריטאן</SourceName>
+      <TargetName ID="1">britain</TargetName>
+   </Name>
+   <Name ID="116">
+      <SourceName>מילאניטש</SourceName>
+      <TargetName ID="1">miljanic</TargetName>
+   </Name>
+   <Name ID="117">
+      <SourceName>דילפי</SourceName>
+      <TargetName ID="1">delphi</TargetName>
+   </Name>
+   <Name ID="118">
+      <SourceName>חואילד</SourceName>
+      <TargetName ID="1">khuwaylid</TargetName>
+   </Name>
+   <Name ID="119">
+      <SourceName>קוזינקיביטש</SourceName>
+      <TargetName ID="1">kozynkevych</TargetName>
+   </Name>
+   <Name ID="120">
+      <SourceName>אדריאטיק</SourceName>
+      <TargetName ID="1">adriatic</TargetName>
+   </Name>
+   <Name ID="121">
+      <SourceName>איפטאר</SourceName>
+      <TargetName ID="1">iftar</TargetName>
+   </Name>
+   <Name ID="122">
+      <SourceName>ואלוורת</SourceName>
+      <TargetName ID="1">walworth</TargetName>
+   </Name>
+   <Name ID="123">
+      <SourceName>טאקאטוקי</SourceName>
+      <TargetName ID="1">takatoki</TargetName>
+   </Name>
+   <Name ID="124">
+      <SourceName>אוסאמה</SourceName>
+      <TargetName ID="1">osama</TargetName>
+   </Name>
+   <Name ID="125">
+      <SourceName>טאימא</SourceName>
+      <TargetName ID="1">tayma</TargetName>
+   </Name>
+   <Name ID="126">
+      <SourceName>בארניא</SourceName>
+      <TargetName ID="1">barnea</TargetName>
+   </Name>
+   <Name ID="127">
+      <SourceName>קאנטאבריא</SourceName>
+      <TargetName ID="1">cantabria</TargetName>
+   </Name>
+   <Name ID="128">
+      <SourceName>שיקיבו</SourceName>
+      <TargetName ID="1">shikibu</TargetName>
+   </Name>
+   <Name ID="129">
+      <SourceName>סאברי</SourceName>
+      <TargetName ID="1">saberi</TargetName>
+   </Name>
+   <Name ID="130">
+      <SourceName>יוקוס</SourceName>
+      <TargetName ID="1">yukos</TargetName>
+   </Name>
+   <Name ID="131">
+      <SourceName>קורנל</SourceName>
+      <TargetName ID="1">kornel</TargetName>
+   </Name>
+   <Name ID="132">
+      <SourceName>היראטא</SourceName>
+      <TargetName ID="1">hirata</TargetName>
+   </Name>
+   <Name ID="133">
+      <SourceName>סיביניק</SourceName>
+      <TargetName ID="1">sibenik</TargetName>
+   </Name>
+   <Name ID="134">
+      <SourceName>סטיפאני</SourceName>
+      <TargetName ID="1">stefani</TargetName>
+   </Name>
+   <Name ID="135">
+      <SourceName>מקטירנאן</SourceName>
+      <TargetName ID="1">mctiernan</TargetName>
+   </Name>
+   <Name ID="136">
+      <SourceName>שאקר</SourceName>
+      <TargetName ID="1">shaker</TargetName>
+   </Name>
+   <Name ID="137">
+      <SourceName>נחשון</SourceName>
+      <TargetName ID="1">nachshon</TargetName>
+   </Name>
+   <Name ID="138">
+      <SourceName>סארטג'י</SourceName>
+      <TargetName ID="1">saartjie</TargetName>
+   </Name>
+   <Name ID="139">
+      <SourceName>קרוידון</SourceName>
+      <TargetName ID="1">croydon</TargetName>
+   </Name>
+   <Name ID="140">
+      <SourceName>חוסאם</SourceName>
+      <TargetName ID="1">hussam</TargetName>
+   </Name>
+   <Name ID="141">
+      <SourceName>פרנאנדו</SourceName>
+      <TargetName ID="1">fernando</TargetName>
+   </Name>
+   <Name ID="142">
+      <SourceName>אירוקויס</SourceName>
+      <TargetName ID="1">iroquois</TargetName>
+   </Name>
+   <Name ID="143">
+      <SourceName>קולין</SourceName>
+      <TargetName ID="1">colleen</TargetName>
+   </Name>
+   <Name ID="144">
+      <SourceName>דוסלדורף</SourceName>
+      <TargetName ID="1">dusseldorf</TargetName>
+   </Name>
+   <Name ID="145">
+      <SourceName>יארקו</SourceName>
+      <TargetName ID="1">jarkko</TargetName>
+   </Name>
+   <Name ID="146">
+      <SourceName>פונטיין</SourceName>
+      <TargetName ID="1">fontaine</TargetName>
+   </Name>
+   <Name ID="147">
+      <SourceName>מינקובסקי</SourceName>
+      <TargetName ID="1">minkowski</TargetName>
+   </Name>
+   <Name ID="148">
+      <SourceName>אבישי</SourceName>
+      <TargetName ID="1">avishai</TargetName>
+   </Name>
+   <Name ID="149">
+      <SourceName>דיימוס</SourceName>
+      <TargetName ID="1">deimos</TargetName>
+   </Name>
+   <Name ID="150">
+      <SourceName>רושא</SourceName>
+      <TargetName ID="1">rocha</TargetName>
+   </Name>
+   <Name ID="151">
+      <SourceName>פארקאס</SourceName>
+      <TargetName ID="1">farkas</TargetName>
+   </Name>
+   <Name ID="152">
+      <SourceName>פליס</SourceName>
+      <TargetName ID="1">pless</TargetName>
+   </Name>
+   <Name ID="153">
+      <SourceName>הוגיז</SourceName>
+      <TargetName ID="1">hugues</TargetName>
+   </Name>
+   <Name ID="154">
+      <SourceName>מלאלאי</SourceName>
+      <TargetName ID="1">malalai</TargetName>
+   </Name>
+   <Name ID="155">
+      <SourceName>יויצ'י</SourceName>
+      <TargetName ID="1">yuichi</TargetName>
+   </Name>
+   <Name ID="156">
+      <SourceName>בדר</SourceName>
+      <TargetName ID="1">badr</TargetName>
+   </Name>
+   <Name ID="157">
+      <SourceName>סקולא</SourceName>
+      <TargetName ID="1">scola</TargetName>
+   </Name>
+   <Name ID="158">
+      <SourceName>קורייר</SourceName>
+      <TargetName ID="1">corriere</TargetName>
+   </Name>
+   <Name ID="159">
+      <SourceName>רוב</SourceName>
+      <TargetName ID="1">rob</TargetName>
+   </Name>
+   <Name ID="160">
+      <SourceName>רוג</SourceName>
+      <TargetName ID="1">rogge</TargetName>
+   </Name>
+   <Name ID="161">
+      <SourceName>גרובר</SourceName>
+      <TargetName ID="1">grover</TargetName>
+   </Name>
+   <Name ID="162">
+      <SourceName>גודייר</SourceName>
+      <TargetName ID="1">goodyear</TargetName>
+   </Name>
+   <Name ID="163">
+      <SourceName>שלוסברג</SourceName>
+      <TargetName ID="1">schlossberg</TargetName>
+   </Name>
+   <Name ID="164">
+      <SourceName>אריסטידיס</SourceName>
+      <TargetName ID="1">aristides</TargetName>
+   </Name>
+   <Name ID="165">
+      <SourceName>להיב</SourceName>
+      <TargetName ID="1">laheeb</TargetName>
+   </Name>
+   <Name ID="166">
+      <SourceName>קירוס</SourceName>
+      <TargetName ID="1">kyros</TargetName>
+   </Name>
+   <Name ID="167">
+      <SourceName>עין</SourceName>
+      <TargetName ID="1">ayn</TargetName>
+   </Name>
+   <Name ID="168">
+      <SourceName>ואנדנדייל</SourceName>
+      <TargetName ID="1">vandendaele</TargetName>
+   </Name>
+   <Name ID="169">
+      <SourceName>ריביסי</SourceName>
+      <TargetName ID="1">ribisi</TargetName>
+   </Name>
+   <Name ID="170">
+      <SourceName>קאלדירון</SourceName>
+      <TargetName ID="1">calderon</TargetName>
+   </Name>
+   <Name ID="171">
+      <SourceName>חירז</SourceName>
+      <TargetName ID="1">hirz</TargetName>
+   </Name>
+   <Name ID="172">
+      <SourceName>מלינדא</SourceName>
+      <TargetName ID="1">melinda</TargetName>
+   </Name>
+   <Name ID="173">
+      <SourceName>האבל</SourceName>
+      <TargetName ID="1">hubble</TargetName>
+   </Name>
+   <Name ID="174">
+      <SourceName>ואשינגטן</SourceName>
+      <TargetName ID="1">washington</TargetName>
+   </Name>
+   <Name ID="175">
+      <SourceName>מארקוס</SourceName>
+      <TargetName ID="1">markus</TargetName>
+   </Name>
+   <Name ID="176">
+      <SourceName>גלאסגו</SourceName>
+      <TargetName ID="1">glasgow</TargetName>
+   </Name>
+   <Name ID="177">
+      <SourceName>פרג'</SourceName>
+      <TargetName ID="1">faraj</TargetName>
+   </Name>
+   <Name ID="178">
+      <SourceName>ג'בוטנסקי</SourceName>
+      <TargetName ID="1">jabotinsky</TargetName>
+   </Name>
+   <Name ID="179">
+      <SourceName>יונלונג</SourceName>
+      <TargetName ID="1">yunlong</TargetName>
+   </Name>
+   <Name ID="180">
+      <SourceName>טאיט</SourceName>
+      <TargetName ID="1">tite</TargetName>
+   </Name>
+   <Name ID="181">
+      <SourceName>האקאבי</SourceName>
+      <TargetName ID="1">huckabee</TargetName>
+   </Name>
+   <Name ID="182">
+      <SourceName>ליאו</SourceName>
+      <TargetName ID="1">leo</TargetName>
+   </Name>
+   <Name ID="183">
+      <SourceName>קאתקארט</SourceName>
+      <TargetName ID="1">cathcart</TargetName>
+   </Name>
+   <Name ID="184">
+      <SourceName>פונד</SourceName>
+      <TargetName ID="1">pond</TargetName>
+   </Name>
+   <Name ID="185">
+      <SourceName>בדואן</SourceName>
+      <TargetName ID="1">bidouane</TargetName>
+   </Name>
+   <Name ID="186">
+      <SourceName>קאנא</SourceName>
+      <TargetName ID="1">canna</TargetName>
+   </Name>
+   <Name ID="187">
+      <SourceName>ג'אקה</SourceName>
+      <TargetName ID="1">jacquet</TargetName>
+   </Name>
+   <Name ID="188">
+      <SourceName>חסנל</SourceName>
+      <TargetName ID="1">hassanal</TargetName>
+   </Name>
+   <Name ID="189">
+      <SourceName>דימיטר</SourceName>
+      <TargetName ID="1">demeter</TargetName>
+   </Name>
+   <Name ID="190">
+      <SourceName>ויטולד</SourceName>
+      <TargetName ID="1">witold</TargetName>
+   </Name>
+   <Name ID="191">
+      <SourceName>רומי</SourceName>
+      <TargetName ID="1">romi</TargetName>
+   </Name>
+   <Name ID="192">
+      <SourceName>טום</SourceName>
+      <TargetName ID="1">tom</TargetName>
+   </Name>
+   <Name ID="193">
+      <SourceName>מאראט</SourceName>
+      <TargetName ID="1">marat</TargetName>
+   </Name>
+   <Name ID="194">
+      <SourceName>שמיר</SourceName>
+      <TargetName ID="1">shamir</TargetName>
+   </Name>
+   <Name ID="195">
+      <SourceName>פלמחים</SourceName>
+      <TargetName ID="1">palmachim</TargetName>
+   </Name>
+   <Name ID="196">
+      <SourceName>טמאס</SourceName>
+      <TargetName ID="1">tamas</TargetName>
+   </Name>
+   <Name ID="197">
+      <SourceName>מארצן</SourceName>
+      <TargetName ID="1">marcin</TargetName>
+   </Name>
+   <Name ID="198">
+      <SourceName>גודמאן</SourceName>
+      <TargetName ID="1">goodman</TargetName>
+   </Name>
+   <Name ID="199">
+      <SourceName>דיפלאנדר</SourceName>
+      <TargetName ID="1">deflandre</TargetName>
+   </Name>
+   <Name ID="200">
+      <SourceName>ואנגצ'וק</SourceName>
+      <TargetName ID="1">wangchuck</TargetName>
+   </Name>
+   <Name ID="201">
+      <SourceName>ראיטש</SourceName>
+      <TargetName ID="1">reitsch</TargetName>
+   </Name>
+   <Name ID="202">
+      <SourceName>אראד</SourceName>
+      <TargetName ID="1">arad</TargetName>
+   </Name>
+   <Name ID="203">
+      <SourceName>סומא</SourceName>
+      <TargetName ID="1">soma</TargetName>
+   </Name>
+   <Name ID="204">
+      <SourceName>אבראג'</SourceName>
+      <TargetName ID="1">abraj</TargetName>
+   </Name>
+   <Name ID="205">
+      <SourceName>מריאח</SourceName>
+      <TargetName ID="1">meriah</TargetName>
+   </Name>
+   <Name ID="206">
+      <SourceName>קויבאס</SourceName>
+      <TargetName ID="1">cuevas</TargetName>
+   </Name>
+   <Name ID="207">
+      <SourceName>רוזאלינד</SourceName>
+      <TargetName ID="1">rosalind</TargetName>
+   </Name>
+   <Name ID="208">
+      <SourceName>אלמאסזאדה</SourceName>
+      <TargetName ID="1">almaszadeh</TargetName>
+   </Name>
+   <Name ID="209">
+      <SourceName>ג'סי</SourceName>
+      <TargetName ID="1">jesse</TargetName>
+   </Name>
+   <Name ID="210">
+      <SourceName>חליל</SourceName>
+      <TargetName ID="1">khalil</TargetName>
+   </Name>
+   <Name ID="211">
+      <SourceName>גאלילאו</SourceName>
+      <TargetName ID="1">galileo</TargetName>
+   </Name>
+   <Name ID="212">
+      <SourceName>דאדלי</SourceName>
+      <TargetName ID="1">dudley</TargetName>
+   </Name>
+   <Name ID="213">
+      <SourceName>קודריא</SourceName>
+      <TargetName ID="1">codrea</TargetName>
+   </Name>
+   <Name ID="214">
+      <SourceName>נד</SourceName>
+      <TargetName ID="1">ned</TargetName>
+   </Name>
+   <Name ID="215">
+      <SourceName>וארן</SourceName>
+      <TargetName ID="1">warren</TargetName>
+   </Name>
+   <Name ID="216">
+      <SourceName>פיסטוני</SourceName>
+      <TargetName ID="1">pistone</TargetName>
+   </Name>
+   <Name ID="217">
+      <SourceName>דידיקינד</SourceName>
+      <TargetName ID="1">dedekind</TargetName>
+   </Name>
+   <Name ID="218">
+      <SourceName>סאורי</SourceName>
+      <TargetName ID="1">saori</TargetName>
+   </Name>
+   <Name ID="219">
+      <SourceName>קאסאנו</SourceName>
+      <TargetName ID="1">cassano</TargetName>
+   </Name>
+   <Name ID="220">
+      <SourceName>מאטסוי</SourceName>
+      <TargetName ID="1">matsui</TargetName>
+   </Name>
+   <Name ID="221">
+      <SourceName>קומאי</SourceName>
+      <TargetName ID="1">kumai</TargetName>
+   </Name>
+   <Name ID="222">
+      <SourceName>דאמארקוס</SourceName>
+      <TargetName ID="1">damarcus</TargetName>
+   </Name>
+   <Name ID="223">
+      <SourceName>איילה</SourceName>
+      <TargetName ID="1">ayala</TargetName>
+   </Name>
+   <Name ID="224">
+      <SourceName>נאוהירו</SourceName>
+      <TargetName ID="1">naohiro</TargetName>
+   </Name>
+   <Name ID="225">
+      <SourceName>מאטיראצי</SourceName>
+      <TargetName ID="1">materazzi</TargetName>
+   </Name>
+   <Name ID="226">
+      <SourceName>האלפורד</SourceName>
+      <TargetName ID="1">halford</TargetName>
+   </Name>
+   <Name ID="227">
+      <SourceName>לילהאמר</SourceName>
+      <TargetName ID="1">lillehammer</TargetName>
+   </Name>
+   <Name ID="228">
+      <SourceName>קארליבאך</SourceName>
+      <TargetName ID="1">carlebach</TargetName>
+   </Name>
+   <Name ID="229">
+      <SourceName>קליבר</SourceName>
+      <TargetName ID="1">kleiber</TargetName>
+   </Name>
+   <Name ID="230">
+      <SourceName>צ'מראן</SourceName>
+      <TargetName ID="1">chamran</TargetName>
+   </Name>
+   <Name ID="231">
+      <SourceName>יואב</SourceName>
+      <TargetName ID="1">yoav</TargetName>
+   </Name>
+   <Name ID="232">
+      <SourceName>סורינטו</SourceName>
+      <TargetName ID="1">sorrento</TargetName>
+   </Name>
+   <Name ID="233">
+      <SourceName>מאסינג</SourceName>
+      <TargetName ID="1">masing</TargetName>
+   </Name>
+   <Name ID="234">
+      <SourceName>ג'אוהר</SourceName>
+      <TargetName ID="1">jawhar</TargetName>
+   </Name>
+   <Name ID="235">
+      <SourceName>ג'ונדיאד</SourceName>
+      <TargetName ID="1">jundiaad</TargetName>
+   </Name>
+   <Name ID="236">
+      <SourceName>דימיריט</SourceName>
+      <TargetName ID="1">demerit</TargetName>
+   </Name>
+   <Name ID="237">
+      <SourceName>טימו</SourceName>
+      <TargetName ID="1">teemu</TargetName>
+   </Name>
+   <Name ID="238">
+      <SourceName>לביב</SourceName>
+      <TargetName ID="1">lviv</TargetName>
+   </Name>
+   <Name ID="239">
+      <SourceName>האן</SourceName>
+      <TargetName ID="1">han</TargetName>
+   </Name>
+   <Name ID="240">
+      <SourceName>האם</SourceName>
+      <TargetName ID="1">hamm</TargetName>
+   </Name>
+   <Name ID="241">
+      <SourceName>חאטמי</SourceName>
+      <TargetName ID="1">khatami</TargetName>
+   </Name>
+   <Name ID="242">
+      <SourceName>סטיפאנופולוס</SourceName>
+      <TargetName ID="1">stephanopoulos</TargetName>
+   </Name>
+   <Name ID="243">
+      <SourceName>קוסטאנזא</SourceName>
+      <TargetName ID="1">costanza</TargetName>
+   </Name>
+   <Name ID="244">
+      <SourceName>פלטייר</SourceName>
+      <TargetName ID="1">peltier</TargetName>
+   </Name>
+   <Name ID="245">
+      <SourceName>לוס</SourceName>
+      <TargetName ID="1">lous</TargetName>
+   </Name>
+   <Name ID="246">
+      <SourceName>ליטון</SourceName>
+      <TargetName ID="1">litton</TargetName>
+   </Name>
+   <Name ID="247">
+      <SourceName>גארנר</SourceName>
+      <TargetName ID="1">garner</TargetName>
+   </Name>
+   <Name ID="248">
+      <SourceName>גראציאני</SourceName>
+      <TargetName ID="1">graziani</TargetName>
+   </Name>
+   <Name ID="249">
+      <SourceName>קיוול</SourceName>
+      <TargetName ID="1">kewell</TargetName>
+   </Name>
+   <Name ID="250">
+      <SourceName>גליל</SourceName>
+      <TargetName ID="1">galil</TargetName>
+   </Name>
+   <Name ID="251">
+      <SourceName>היל</SourceName>
+      <TargetName ID="1">hill</TargetName>
+   </Name>
+   <Name ID="252">
+      <SourceName>קרבוניק</SourceName>
+      <TargetName ID="1">carbonic</TargetName>
+   </Name>
+   <Name ID="253">
+      <SourceName>מאזדא</SourceName>
+      <TargetName ID="1">mazda</TargetName>
+   </Name>
+   <Name ID="254">
+      <SourceName>בגין</SourceName>
+      <TargetName ID="1">begin</TargetName>
+   </Name>
+   <Name ID="255">
+      <SourceName>ולאסוב</SourceName>
+      <TargetName ID="1">vlasov</TargetName>
+   </Name>
+   <Name ID="256">
+      <SourceName>קריאטין</SourceName>
+      <TargetName ID="1">creatine</TargetName>
+   </Name>
+   <Name ID="257">
+      <SourceName>הומנבאד</SourceName>
+      <TargetName ID="1">homnabad</TargetName>
+   </Name>
+   <Name ID="258">
+      <SourceName>פראנסס</SourceName>
+      <TargetName ID="1">francis</TargetName>
+   </Name>
+   <Name ID="259">
+      <SourceName>לאזאריב</SourceName>
+      <TargetName ID="1">lazarev</TargetName>
+   </Name>
+   <Name ID="260">
+      <SourceName>סזוליק</SourceName>
+      <TargetName ID="1">szulik</TargetName>
+   </Name>
+   <Name ID="261">
+      <SourceName>פוסטר</SourceName>
+      <TargetName ID="1">foster</TargetName>
+   </Name>
+   <Name ID="262">
+      <SourceName>קדירוב</SourceName>
+      <TargetName ID="1">kadyrov</TargetName>
+   </Name>
+   <Name ID="263">
+      <SourceName>ברודי</SourceName>
+      <TargetName ID="1">brody</TargetName>
+   </Name>
+   <Name ID="264">
+      <SourceName>בודליר</SourceName>
+      <TargetName ID="1">baudelaire</TargetName>
+   </Name>
+   <Name ID="265">
+      <SourceName>מונוז</SourceName>
+      <TargetName ID="1">munoz</TargetName>
+   </Name>
+   <Name ID="266">
+      <SourceName>מונטאנייה</SourceName>
+      <TargetName ID="1">montagnier</TargetName>
+   </Name>
+   <Name ID="267">
+      <SourceName>גראינדר</SourceName>
+      <TargetName ID="1">grinder</TargetName>
+   </Name>
+   <Name ID="268">
+      <SourceName>שמעון</SourceName>
+      <TargetName ID="1">shimon</TargetName>
+   </Name>
+   <Name ID="269">
+      <SourceName>עסאקיר</SourceName>
+      <TargetName ID="1">asakir</TargetName>
+   </Name>
+   <Name ID="270">
+      <SourceName>אלפרד</SourceName>
+      <TargetName ID="1">alfred</TargetName>
+   </Name>
+   <Name ID="271">
+      <SourceName>פוקוי</SourceName>
+      <TargetName ID="1">fukui</TargetName>
+   </Name>
+   <Name ID="272">
+      <SourceName>בלקאן</SourceName>
+      <TargetName ID="1">balkan</TargetName>
+   </Name>
+   <Name ID="273">
+      <SourceName>הילאריו</SourceName>
+      <TargetName ID="1">hilario</TargetName>
+   </Name>
+   <Name ID="274">
+      <SourceName>פוטר</SourceName>
+      <TargetName ID="1">potter</TargetName>
+   </Name>
+   <Name ID="275">
+      <SourceName>אוסטראבא</SourceName>
+      <TargetName ID="1">ostrava</TargetName>
+   </Name>
+   <Name ID="276">
+      <SourceName>סוירי</SourceName>
+      <TargetName ID="1">sverre</TargetName>
+   </Name>
+   <Name ID="277">
+      <SourceName>פורי</SourceName>
+      <TargetName ID="1">faure</TargetName>
+   </Name>
+   <Name ID="278">
+      <SourceName>גיגיא</SourceName>
+      <TargetName ID="1">ghiggia</TargetName>
+   </Name>
+   <Name ID="279">
+      <SourceName>מנדל</SourceName>
+      <TargetName ID="1">mendel</TargetName>
+   </Name>
+   <Name ID="280">
+      <SourceName>מרבאח</SourceName>
+      <TargetName ID="1">merbah</TargetName>
+   </Name>
+   <Name ID="281">
+      <SourceName>אלגיפארי</SourceName>
+      <TargetName ID="1">alghifari</TargetName>
+   </Name>
+   <Name ID="282">
+      <SourceName>קולומבו</SourceName>
+      <TargetName ID="1">colombo</TargetName>
+   </Name>
+   <Name ID="283">
+      <SourceName>בידאטסו</SourceName>
+      <TargetName ID="1">bidatsu</TargetName>
+   </Name>
+   <Name ID="284">
+      <SourceName>בונא</SourceName>
+      <TargetName ID="1">bouna</TargetName>
+   </Name>
+   <Name ID="285">
+      <SourceName>קרויף</SourceName>
+      <TargetName ID="1">cruyff</TargetName>
+   </Name>
+   <Name ID="286">
+      <SourceName>טאנג'ו</SourceName>
+      <TargetName ID="1">tanju</TargetName>
+   </Name>
+   <Name ID="287">
+      <SourceName>היתרו</SourceName>
+      <TargetName ID="1">heathrow</TargetName>
+   </Name>
+   <Name ID="288">
+      <SourceName>ויטסטשג</SourceName>
+      <TargetName ID="1">witschge</TargetName>
+   </Name>
+   <Name ID="289">
+      <SourceName>איסלאם</SourceName>
+      <TargetName ID="1">islam</TargetName>
+   </Name>
+   <Name ID="290">
+      <SourceName>ליגיא</SourceName>
+      <TargetName ID="1">legia</TargetName>
+   </Name>
+   <Name ID="291">
+      <SourceName>גריס</SourceName>
+      <TargetName ID="1">gris</TargetName>
+   </Name>
+   <Name ID="292">
+      <SourceName>בונן</SourceName>
+      <TargetName ID="1">boonen</TargetName>
+   </Name>
+   <Name ID="293">
+      <SourceName>פוטוק</SourceName>
+      <TargetName ID="1">potok</TargetName>
+   </Name>
+   <Name ID="294">
+      <SourceName>דולף</SourceName>
+      <TargetName ID="1">dolph</TargetName>
+   </Name>
+   <Name ID="295">
+      <SourceName>באירם</SourceName>
+      <TargetName ID="1">bajram</TargetName>
+   </Name>
+   <Name ID="296">
+      <SourceName>סוכומי</SourceName>
+      <TargetName ID="1">sukhumi</TargetName>
+   </Name>
+   <Name ID="297">
+      <SourceName>מערוף</SourceName>
+      <TargetName ID="1">marouf</TargetName>
+   </Name>
+   <Name ID="298">
+      <SourceName>טרייסי</SourceName>
+      <TargetName ID="1">tracy</TargetName>
+   </Name>
+   <Name ID="299">
+      <SourceName>סביטקוביטש</SourceName>
+      <TargetName ID="1">cvetkovic</TargetName>
+   </Name>
+   <Name ID="300">
+      <SourceName>מוריסיו</SourceName>
+      <TargetName ID="1">mauricio</TargetName>
+   </Name>
+   <Name ID="301">
+      <SourceName>טהמאספ</SourceName>
+      <TargetName ID="1">tahmasp</TargetName>
+   </Name>
+   <Name ID="302">
+      <SourceName>הינצ'וז</SourceName>
+      <TargetName ID="1">henchoz</TargetName>
+   </Name>
+   <Name ID="303">
+      <SourceName>ספילינג</SourceName>
+      <TargetName ID="1">spelling</TargetName>
+   </Name>
+   <Name ID="304">
+      <SourceName>מישר</SourceName>
+      <TargetName ID="1">miescher</TargetName>
+   </Name>
+   <Name ID="305">
+      <SourceName>קומאר</SourceName>
+      <TargetName ID="1">kumar</TargetName>
+   </Name>
+   <Name ID="306">
+      <SourceName>טיטא</SourceName>
+      <TargetName ID="1">titta</TargetName>
+   </Name>
+   <Name ID="307">
+      <SourceName>אמאם</SourceName>
+      <TargetName ID="1">emam</TargetName>
+   </Name>
+   <Name ID="308">
+      <SourceName>גווארא</SourceName>
+      <TargetName ID="1">guevara</TargetName>
+   </Name>
+   <Name ID="309">
+      <SourceName>דהן</SourceName>
+      <TargetName ID="1">dehn</TargetName>
+   </Name>
+   <Name ID="310">
+      <SourceName>פילישא</SourceName>
+      <TargetName ID="1">felicia</TargetName>
+   </Name>
+   <Name ID="311">
+      <SourceName>ג'ירי</SourceName>
+      <TargetName ID="1">jiri</TargetName>
+   </Name>
+   <Name ID="312">
+      <SourceName>ג'וסף</SourceName>
+      <TargetName ID="1">josef</TargetName>
+   </Name>
+   <Name ID="313">
+      <SourceName>ביניטו</SourceName>
+      <TargetName ID="1">benito</TargetName>
+   </Name>
+   <Name ID="314">
+      <SourceName>ג'וניצ'י</SourceName>
+      <TargetName ID="1">junichi</TargetName>
+   </Name>
+   <Name ID="315">
+      <SourceName>פיטרז</SourceName>
+      <TargetName ID="1">peters</TargetName>
+   </Name>
+   <Name ID="316">
+      <SourceName>קאלאטש</SourceName>
+      <TargetName ID="1">kalac</TargetName>
+   </Name>
+   <Name ID="317">
+      <SourceName>קיראן</SourceName>
+      <TargetName ID="1">kieran</TargetName>
+   </Name>
+   <Name ID="318">
+      <SourceName>גויסדון</SourceName>
+      <TargetName ID="1">guesdon</TargetName>
+   </Name>
+   <Name ID="319">
+      <SourceName>ג'פירסון</SourceName>
+      <TargetName ID="1">jefferson</TargetName>
+   </Name>
+   <Name ID="320">
+      <SourceName>קאואסומי</SourceName>
+      <TargetName ID="1">kawasumi</TargetName>
+   </Name>
+   <Name ID="321">
+      <SourceName>פורויא</SourceName>
+      <TargetName ID="1">furuya</TargetName>
+   </Name>
+   <Name ID="322">
+      <SourceName>מדאח</SourceName>
+      <TargetName ID="1">maddah</TargetName>
+   </Name>
+   <Name ID="323">
+      <SourceName>טוגנדהאט</SourceName>
+      <TargetName ID="1">tugendhat</TargetName>
+   </Name>
+   <Name ID="324">
+      <SourceName>מיליקאמפס</SourceName>
+      <TargetName ID="1">millecamps</TargetName>
+   </Name>
+   <Name ID="325">
+      <SourceName>קרוזן</SourceName>
+      <TargetName ID="1">kruzen</TargetName>
+   </Name>
+   <Name ID="326">
+      <SourceName>וילקינז</SourceName>
+      <TargetName ID="1">wilkins</TargetName>
+   </Name>
+   <Name ID="327">
+      <SourceName>היקל</SourceName>
+      <TargetName ID="1">haeckel</TargetName>
+   </Name>
+   <Name ID="328">
+      <SourceName>קורילי</SourceName>
+      <TargetName ID="1">corelli</TargetName>
+   </Name>
+   <Name ID="329">
+      <SourceName>פדלאן</SourceName>
+      <TargetName ID="1">fadlan</TargetName>
+   </Name>
+   <Name ID="330">
+      <SourceName>האברקורן</SourceName>
+      <TargetName ID="1">haberkorn</TargetName>
+   </Name>
+   <Name ID="331">
+      <SourceName>אלמוג</SourceName>
+      <TargetName ID="1">almog</TargetName>
+   </Name>
+   <Name ID="332">
+      <SourceName>בירינג</SourceName>
+      <TargetName ID="1">bering</TargetName>
+   </Name>
+   <Name ID="333">
+      <SourceName>טראנקוילו</SourceName>
+      <TargetName ID="1">tranquillo</TargetName>
+   </Name>
+   <Name ID="334">
+      <SourceName>נפאל</SourceName>
+      <TargetName ID="1">nepal</TargetName>
+   </Name>
+   <Name ID="335">
+      <SourceName>ברודבנט</SourceName>
+      <TargetName ID="1">broadbent</TargetName>
+   </Name>
+   <Name ID="336">
+      <SourceName>דינג</SourceName>
+      <TargetName ID="1">deng</TargetName>
+   </Name>
+   <Name ID="337">
+      <SourceName>קויביק</SourceName>
+      <TargetName ID="1">quebec</TargetName>
+   </Name>
+   <Name ID="338">
+      <SourceName>אסטי</SourceName>
+      <TargetName ID="1">asti</TargetName>
+   </Name>
+   <Name ID="339">
+      <SourceName>פאפאפלוראטוס</SourceName>
+      <TargetName ID="1">papafloratos</TargetName>
+   </Name>
+   <Name ID="340">
+      <SourceName>קוזמין</SourceName>
+      <TargetName ID="1">cosmin</TargetName>
+   </Name>
+   <Name ID="341">
+      <SourceName>מזרחי</SourceName>
+      <TargetName ID="1">mizrahi</TargetName>
+   </Name>
+   <Name ID="342">
+      <SourceName>פאלוסקי</SourceName>
+      <TargetName ID="1">paloschi</TargetName>
+   </Name>
+   <Name ID="343">
+      <SourceName>אבטובאז</SourceName>
+      <TargetName ID="1">avtovaz</TargetName>
+   </Name>
+   <Name ID="344">
+      <SourceName>שינא</SourceName>
+      <TargetName ID="1">chynna</TargetName>
+   </Name>
+   <Name ID="345">
+      <SourceName>מוריאנטס</SourceName>
+      <TargetName ID="1">morientes</TargetName>
+   </Name>
+   <Name ID="346">
+      <SourceName>קובינו</SourceName>
+      <TargetName ID="1">cobeno</TargetName>
+   </Name>
+   <Name ID="347">
+      <SourceName>יוקי</SourceName>
+      <TargetName ID="1">yuki</TargetName>
+   </Name>
+   <Name ID="348">
+      <SourceName>דיגוק</SourceName>
+      <TargetName ID="1">degauque</TargetName>
+   </Name>
+   <Name ID="349">
+      <SourceName>שזר</SourceName>
+      <TargetName ID="1">shazar</TargetName>
+   </Name>
+   <Name ID="350">
+      <SourceName>סאייד</SourceName>
+      <TargetName ID="1">sayyid</TargetName>
+   </Name>
+   <Name ID="351">
+      <SourceName>ריוקיצ'י</SourceName>
+      <TargetName ID="1">ryokichi</TargetName>
+   </Name>
+   <Name ID="352">
+      <SourceName>מסארו</SourceName>
+      <TargetName ID="1">massaro</TargetName>
+   </Name>
+   <Name ID="353">
+      <SourceName>מאנינגר</SourceName>
+      <TargetName ID="1">manninger</TargetName>
+   </Name>
+   <Name ID="354">
+      <SourceName>מהרזאד</SourceName>
+      <TargetName ID="1">mehrzad</TargetName>
+   </Name>
+   <Name ID="355">
+      <SourceName>ריבאס</SourceName>
+      <TargetName ID="1">rivas</TargetName>
+   </Name>
+   <Name ID="356">
+      <SourceName>סימיונוב</SourceName>
+      <TargetName ID="1">semyonov</TargetName>
+   </Name>
+   <Name ID="357">
+      <SourceName>הייפליק</SourceName>
+      <TargetName ID="1">hayflick</TargetName>
+   </Name>
+   <Name ID="358">
+      <SourceName>בונגו</SourceName>
+      <TargetName ID="1">bongo</TargetName>
+   </Name>
+   <Name ID="359">
+      <SourceName>קאסיראגי</SourceName>
+      <TargetName ID="1">casiraghi</TargetName>
+   </Name>
+   <Name ID="360">
+      <SourceName>הינמאן</SourceName>
+      <TargetName ID="1">henman</TargetName>
+   </Name>
+   <Name ID="361">
+      <SourceName>גולן</SourceName>
+      <TargetName ID="1">golan</TargetName>
+   </Name>
+   <Name ID="362">
+      <SourceName>מוסעב</SourceName>
+      <TargetName ID="1">mosab</TargetName>
+   </Name>
+   <Name ID="363">
+      <SourceName>סקאח</SourceName>
+      <TargetName ID="1">skah</TargetName>
+   </Name>
+   <Name ID="364">
+      <SourceName>גולד</SourceName>
+      <TargetName ID="1">gould</TargetName>
+   </Name>
+   <Name ID="365">
+      <SourceName>אקויטיין</SourceName>
+      <TargetName ID="1">aquitaine</TargetName>
+   </Name>
+   <Name ID="366">
+      <SourceName>קראבילי</SourceName>
+      <TargetName ID="1">caravelli</TargetName>
+   </Name>
+   <Name ID="367">
+      <SourceName>מיוצ'י</SourceName>
+      <TargetName ID="1">meucci</TargetName>
+   </Name>
+   <Name ID="368">
+      <SourceName>קאפאק</SourceName>
+      <TargetName ID="1">capac</TargetName>
+   </Name>
+   <Name ID="369">
+      <SourceName>אתיין</SourceName>
+      <TargetName ID="1">ethane</TargetName>
+   </Name>
+   <Name ID="370">
+      <SourceName>טורילי</SourceName>
+      <TargetName ID="1">torelli</TargetName>
+   </Name>
+   <Name ID="371">
+      <SourceName>יושיו</SourceName>
+      <TargetName ID="1">yoshio</TargetName>
+   </Name>
+   <Name ID="372">
+      <SourceName>צ'יפוליני</SourceName>
+      <TargetName ID="1">cipollini</TargetName>
+   </Name>
+   <Name ID="373">
+      <SourceName>ליפי</SourceName>
+      <TargetName ID="1">lippi</TargetName>
+   </Name>
+   <Name ID="374">
+      <SourceName>פורטמאן</SourceName>
+      <TargetName ID="1">portman</TargetName>
+   </Name>
+   <Name ID="375">
+      <SourceName>נפר</SourceName>
+      <TargetName ID="1">knepper</TargetName>
+   </Name>
+   <Name ID="376">
+      <SourceName>מודירי</SourceName>
+      <TargetName ID="1">modiri</TargetName>
+   </Name>
+   <Name ID="377">
+      <SourceName>ליפא</SourceName>
+      <TargetName ID="1">lipa</TargetName>
+   </Name>
+   <Name ID="378">
+      <SourceName>האמפדן</SourceName>
+      <TargetName ID="1">hampden</TargetName>
+   </Name>
+   <Name ID="379">
+      <SourceName>בני</SourceName>
+      <TargetName ID="1">bene</TargetName>
+   </Name>
+   <Name ID="380">
+      <SourceName>גאלר</SourceName>
+      <TargetName ID="1">galler</TargetName>
+   </Name>
+   <Name ID="381">
+      <SourceName>בוקאי</SourceName>
+      <TargetName ID="1">bucaille</TargetName>
+   </Name>
+   <Name ID="382">
+      <SourceName>עאמיר</SourceName>
+      <TargetName ID="1">aamir</TargetName>
+   </Name>
+   <Name ID="383">
+      <SourceName>בארינבוים</SourceName>
+      <TargetName ID="1">barenboim</TargetName>
+   </Name>
+   <Name ID="384">
+      <SourceName>הילדבראנד</SourceName>
+      <TargetName ID="1">hildebrand</TargetName>
+   </Name>
+   <Name ID="385">
+      <SourceName>מיריי</SourceName>
+      <TargetName ID="1">mireille</TargetName>
+   </Name>
+   <Name ID="386">
+      <SourceName>חאצ'אטוריאן</SourceName>
+      <TargetName ID="1">khachaturian</TargetName>
+   </Name>
+   <Name ID="387">
+      <SourceName>פאיריטו</SourceName>
+      <TargetName ID="1">pairetto</TargetName>
+   </Name>
+   <Name ID="388">
+      <SourceName>דיקר</SourceName>
+      <TargetName ID="1">dekker</TargetName>
+   </Name>
+   <Name ID="389">
+      <SourceName>הינג</SourceName>
+      <TargetName ID="1">heng</TargetName>
+   </Name>
+   <Name ID="390">
+      <SourceName>אטיאס</SourceName>
+      <TargetName ID="1">attias</TargetName>
+   </Name>
+   <Name ID="391">
+      <SourceName>אלמאימני</SourceName>
+      <TargetName ID="1">almaimani</TargetName>
+   </Name>
+   <Name ID="392">
+      <SourceName>זוקורו</SourceName>
+      <TargetName ID="1">xucuru</TargetName>
+   </Name>
+   <Name ID="393">
+      <SourceName>מלקי</SourceName>
+      <TargetName ID="1">melki</TargetName>
+   </Name>
+   <Name ID="394">
+      <SourceName>שינדלר</SourceName>
+      <TargetName ID="1">schindler</TargetName>
+   </Name>
+   <Name ID="395">
+      <SourceName>אירשאיר</SourceName>
+      <TargetName ID="1">ayrshire</TargetName>
+   </Name>
+   <Name ID="396">
+      <SourceName>טאקיוצ'י</SourceName>
+      <TargetName ID="1">takeuchi</TargetName>
+   </Name>
+   <Name ID="397">
+      <SourceName>עלמי</SourceName>
+      <TargetName ID="1">alami</TargetName>
+   </Name>
+   <Name ID="398">
+      <SourceName>מורוזיביטש</SourceName>
+      <TargetName ID="1">morozevich</TargetName>
+   </Name>
+   <Name ID="399">
+      <SourceName>רוזאנא</SourceName>
+      <TargetName ID="1">rossana</TargetName>
+   </Name>
+   <Name ID="400">
+      <SourceName>דיטליב</SourceName>
+      <TargetName ID="1">detlev</TargetName>
+   </Name>
+   <Name ID="401">
+      <SourceName>טיצ'י</SourceName>
+      <TargetName ID="1">tichy</TargetName>
+   </Name>
+   <Name ID="402">
+      <SourceName>עפאר</SourceName>
+      <TargetName ID="1">afar</TargetName>
+   </Name>
+   <Name ID="403">
+      <SourceName>טאבי</SourceName>
+      <TargetName ID="1">tabi</TargetName>
+   </Name>
+   <Name ID="404">
+      <SourceName>קאטסוקי</SourceName>
+      <TargetName ID="1">katsuki</TargetName>
+   </Name>
+   <Name ID="405">
+      <SourceName>מידלטון</SourceName>
+      <TargetName ID="1">middleton</TargetName>
+   </Name>
+   <Name ID="406">
+      <SourceName>רוברידו</SourceName>
+      <TargetName ID="1">robredo</TargetName>
+   </Name>
+   <Name ID="407">
+      <SourceName>ברינדא</SourceName>
+      <TargetName ID="1">brenda</TargetName>
+   </Name>
+   <Name ID="408">
+      <SourceName>מוטסטיג</SourceName>
+      <TargetName ID="1">meutstege</TargetName>
+   </Name>
+   <Name ID="409">
+      <SourceName>מונקאיו</SourceName>
+      <TargetName ID="1">moncayo</TargetName>
+   </Name>
+   <Name ID="410">
+      <SourceName>בילירובין</SourceName>
+      <TargetName ID="1">bilirubin</TargetName>
+   </Name>
+   <Name ID="411">
+      <SourceName>באריטש</SourceName>
+      <TargetName ID="1">baric</TargetName>
+   </Name>
+   <Name ID="412">
+      <SourceName>דינאנט</SourceName>
+      <TargetName ID="1">dinant</TargetName>
+   </Name>
+   <Name ID="413">
+      <SourceName>לאיפזיג</SourceName>
+      <TargetName ID="1">leipzig</TargetName>
+   </Name>
+   <Name ID="414">
+      <SourceName>ביטאנקורט</SourceName>
+      <TargetName ID="1">betancourt</TargetName>
+   </Name>
+   <Name ID="415">
+      <SourceName>מקאבוי</SourceName>
+      <TargetName ID="1">mcavoy</TargetName>
+   </Name>
+   <Name ID="416">
+      <SourceName>טאופו</SourceName>
+      <TargetName ID="1">taupo</TargetName>
+   </Name>
+   <Name ID="417">
+      <SourceName>קומורא</SourceName>
+      <TargetName ID="1">komora</TargetName>
+   </Name>
+   <Name ID="418">
+      <SourceName>חגי</SourceName>
+      <TargetName ID="1">haggai</TargetName>
+   </Name>
+   <Name ID="419">
+      <SourceName>באראנקוילא</SourceName>
+      <TargetName ID="1">barranquilla</TargetName>
+   </Name>
+   <Name ID="420">
+      <SourceName>אינמארסאט</SourceName>
+      <TargetName ID="1">inmarsat</TargetName>
+   </Name>
+   <Name ID="421">
+      <SourceName>ג'ייקוב</SourceName>
+      <TargetName ID="1">jacob</TargetName>
+   </Name>
+   <Name ID="422">
+      <SourceName>גאבריאל</SourceName>
+      <TargetName ID="1">gabriele</TargetName>
+   </Name>
+   <Name ID="423">
+      <SourceName>נורברט</SourceName>
+      <TargetName ID="1">norbert</TargetName>
+   </Name>
+   <Name ID="424">
+      <SourceName>קאסטילא</SourceName>
+      <TargetName ID="1">castilla</TargetName>
+   </Name>
+   <Name ID="425">
+      <SourceName>מקלאקלאן</SourceName>
+      <TargetName ID="1">mclachlan</TargetName>
+   </Name>
+   <Name ID="426">
+      <SourceName>קאניו</SourceName>
+      <TargetName ID="1">canio</TargetName>
+   </Name>
+   <Name ID="427">
+      <SourceName>נואקשוט</SourceName>
+      <TargetName ID="1">nouakchott</TargetName>
+   </Name>
+   <Name ID="428">
+      <SourceName>שולז</SourceName>
+      <TargetName ID="1">sholes</TargetName>
+   </Name>
+   <Name ID="429">
+      <SourceName>יומי</SourceName>
+      <TargetName ID="1">yumi</TargetName>
+   </Name>
+   <Name ID="430">
+      <SourceName>דר</SourceName>
+      <TargetName ID="1">der</TargetName>
+   </Name>
+   <Name ID="431">
+      <SourceName>ריקא</SourceName>
+      <TargetName ID="1">rica</TargetName>
+   </Name>
+   <Name ID="432">
+      <SourceName>קורוסאוא</SourceName>
+      <TargetName ID="1">kurosawa</TargetName>
+   </Name>
+   <Name ID="433">
+      <SourceName>חלחול</SourceName>
+      <TargetName ID="1">halhul</TargetName>
+   </Name>
+   <Name ID="434">
+      <SourceName>אליוט</SourceName>
+      <TargetName ID="1">elliott</TargetName>
+   </Name>
+   <Name ID="435">
+      <SourceName>אלבאירק</SourceName>
+      <TargetName ID="1">albayrak</TargetName>
+   </Name>
+   <Name ID="436">
+      <SourceName>זאורי</SourceName>
+      <TargetName ID="1">zauri</TargetName>
+   </Name>
+   <Name ID="437">
+      <SourceName>דואי</SourceName>
+      <TargetName ID="1">dewey</TargetName>
+   </Name>
+   <Name ID="438">
+      <SourceName>האברמאס</SourceName>
+      <TargetName ID="1">habermas</TargetName>
+   </Name>
+   <Name ID="439">
+      <SourceName>פילסנר</SourceName>
+      <TargetName ID="1">felsner</TargetName>
+   </Name>
+   <Name ID="440">
+      <SourceName>ברוס</SourceName>
+      <TargetName ID="1">bruce</TargetName>
+   </Name>
+   <Name ID="441">
+      <SourceName>דאלמאט</SourceName>
+      <TargetName ID="1">dalmat</TargetName>
+   </Name>
+   <Name ID="442">
+      <SourceName>קוריגאן</SourceName>
+      <TargetName ID="1">corrigan</TargetName>
+   </Name>
+   <Name ID="443">
+      <SourceName>ברוק</SourceName>
+      <TargetName ID="1">brock</TargetName>
+   </Name>
+   <Name ID="444">
+      <SourceName>מארלין</SourceName>
+      <TargetName ID="1">marlene</TargetName>
+   </Name>
+   <Name ID="445">
+      <SourceName>קאופמאן</SourceName>
+      <TargetName ID="1">kaufman</TargetName>
+   </Name>
+   <Name ID="446">
+      <SourceName>בורדין</SourceName>
+      <TargetName ID="1">bordin</TargetName>
+   </Name>
+   <Name ID="447">
+      <SourceName>סולטאני</SourceName>
+      <TargetName ID="1">soltani</TargetName>
+   </Name>
+   <Name ID="448">
+      <SourceName>דוריקס</SourceName>
+      <TargetName ID="1">durix</TargetName>
+   </Name>
+   <Name ID="449">
+      <SourceName>מאהוט</SourceName>
+      <TargetName ID="1">mahut</TargetName>
+   </Name>
+   <Name ID="450">
+      <SourceName>וארנר</SourceName>
+      <TargetName ID="1">warner</TargetName>
+   </Name>
+   <Name ID="451">
+      <SourceName>מאקינדו</SourceName>
+      <TargetName ID="1">mcindoe</TargetName>
+   </Name>
+   <Name ID="452">
+      <SourceName>ראגיב</SourceName>
+      <TargetName ID="1">raghib</TargetName>
+   </Name>
+   <Name ID="453">
+      <SourceName>וולאדא</SourceName>
+      <TargetName ID="1">vlada</TargetName>
+   </Name>
+   <Name ID="454">
+      <SourceName>מוניקא</SourceName>
+      <TargetName ID="1">monica</TargetName>
+   </Name>
+   <Name ID="455">
+      <SourceName>טאמיל</SourceName>
+      <TargetName ID="1">tamil</TargetName>
+   </Name>
+   <Name ID="456">
+      <SourceName>טאמיט</SourceName>
+      <TargetName ID="1">tammet</TargetName>
+   </Name>
+   <Name ID="457">
+      <SourceName>בודארט</SourceName>
+      <TargetName ID="1">bodart</TargetName>
+   </Name>
+   <Name ID="458">
+      <SourceName>מייזונו</SourceName>
+      <TargetName ID="1">maezono</TargetName>
+   </Name>
+   <Name ID="459">
+      <SourceName>נולאן</SourceName>
+      <TargetName ID="1">nolan</TargetName>
+   </Name>
+   <Name ID="460">
+      <SourceName>ג'יצ'י</SourceName>
+      <TargetName ID="1">jiechi</TargetName>
+   </Name>
+   <Name ID="461">
+      <SourceName>מאלוני</SourceName>
+      <TargetName ID="1">maloney</TargetName>
+   </Name>
+   <Name ID="462">
+      <SourceName>אדבארד</SourceName>
+      <TargetName ID="1">edvard</TargetName>
+   </Name>
+   <Name ID="463">
+      <SourceName>קובריק</SourceName>
+      <TargetName ID="1">kubrick</TargetName>
+   </Name>
+   <Name ID="464">
+      <SourceName>זאיד</SourceName>
+      <TargetName ID="1">zaid</TargetName>
+   </Name>
+   <Name ID="465">
+      <SourceName>ארנון</SourceName>
+      <TargetName ID="1">arnon</TargetName>
+   </Name>
+   <Name ID="466">
+      <SourceName>מלקיאן</SourceName>
+      <TargetName ID="1">malakian</TargetName>
+   </Name>
+   <Name ID="467">
+      <SourceName>מיאמוטו</SourceName>
+      <TargetName ID="1">miyamoto</TargetName>
+   </Name>
+   <Name ID="468">
+      <SourceName>קומפטון</SourceName>
+      <TargetName ID="1">compton</TargetName>
+   </Name>
+   <Name ID="469">
+      <SourceName>בוטרוס</SourceName>
+      <TargetName ID="1">butrus</TargetName>
+   </Name>
+   <Name ID="470">
+      <SourceName>מובלי</SourceName>
+      <TargetName ID="1">mobley</TargetName>
+   </Name>
+   <Name ID="471">
+      <SourceName>קוסמו</SourceName>
+      <TargetName ID="1">cosmo</TargetName>
+   </Name>
+   <Name ID="472">
+      <SourceName>קנזאבורו</SourceName>
+      <TargetName ID="1">kenzaburo</TargetName>
+   </Name>
+   <Name ID="473">
+      <SourceName>קלאיסטרז</SourceName>
+      <TargetName ID="1">clijsters</TargetName>
+   </Name>
+   <Name ID="474">
+      <SourceName>פאולינא</SourceName>
+      <TargetName ID="1">paulina</TargetName>
+   </Name>
+   <Name ID="475">
+      <SourceName>דאמון</SourceName>
+      <TargetName ID="1">damon</TargetName>
+   </Name>
+   <Name ID="476">
+      <SourceName>זוקו</SourceName>
+      <TargetName ID="1">zoco</TargetName>
+   </Name>
+   <Name ID="477">
+      <SourceName>ג'אקומו</SourceName>
+      <TargetName ID="1">giacomo</TargetName>
+   </Name>
+   <Name ID="478">
+      <SourceName>גאלופ</SourceName>
+      <TargetName ID="1">gallup</TargetName>
+   </Name>
+   <Name ID="479">
+      <SourceName>סוהראב</SourceName>
+      <TargetName ID="1">sohrab</TargetName>
+   </Name>
+   <Name ID="480">
+      <SourceName>באקלי</SourceName>
+      <TargetName ID="1">buckley</TargetName>
+   </Name>
+   <Name ID="481">
+      <SourceName>רומולו</SourceName>
+      <TargetName ID="1">romulo</TargetName>
+   </Name>
+   <Name ID="482">
+      <SourceName>מוחמד</SourceName>
+      <TargetName ID="1">mohammad</TargetName>
+   </Name>
+   <Name ID="483">
+      <SourceName>דיבא</SourceName>
+      <TargetName ID="1">diba</TargetName>
+   </Name>
+   <Name ID="484">
+      <SourceName>קינוק</SourceName>
+      <TargetName ID="1">kinnock</TargetName>
+   </Name>
+   <Name ID="485">
+      <SourceName>יויצ'ירו</SourceName>
+      <TargetName ID="1">yoichiro</TargetName>
+   </Name>
+   <Name ID="486">
+      <SourceName>גוטהילף</SourceName>
+      <TargetName ID="1">gotthelf</TargetName>
+   </Name>
+   <Name ID="487">
+      <SourceName>קארמילו</SourceName>
+      <TargetName ID="1">carmelo</TargetName>
+   </Name>
+   <Name ID="488">
+      <SourceName>ג'מאלזאדה</SourceName>
+      <TargetName ID="1">jamalzadeh</TargetName>
+   </Name>
+   <Name ID="489">
+      <SourceName>מאריסקא</SourceName>
+      <TargetName ID="1">maresca</TargetName>
+   </Name>
+   <Name ID="490">
+      <SourceName>גרילי</SourceName>
+      <TargetName ID="1">greeley</TargetName>
+   </Name>
+   <Name ID="491">
+      <SourceName>ג'ויא</SourceName>
+      <TargetName ID="1">joya</TargetName>
+   </Name>
+   <Name ID="492">
+      <SourceName>קולמאר</SourceName>
+      <TargetName ID="1">colmar</TargetName>
+   </Name>
+   <Name ID="493">
+      <SourceName>גריקו</SourceName>
+      <TargetName ID="1">greco</TargetName>
+   </Name>
+   <Name ID="494">
+      <SourceName>ספיגלר</SourceName>
+      <TargetName ID="1">spiegler</TargetName>
+   </Name>
+   <Name ID="495">
+      <SourceName>סטראדיבאריוס</SourceName>
+      <TargetName ID="1">stradivarius</TargetName>
+   </Name>
+   <Name ID="496">
+      <SourceName>אירי</SourceName>
+      <TargetName ID="1">eri</TargetName>
+   </Name>
+   <Name ID="497">
+      <SourceName>ברגותי</SourceName>
+      <TargetName ID="1">barghouti</TargetName>
+   </Name>
+   <Name ID="498">
+      <SourceName>חולוסי</SourceName>
+      <TargetName ID="1">hulusi</TargetName>
+   </Name>
+   <Name ID="499">
+      <SourceName>נורילסק</SourceName>
+      <TargetName ID="1">norilsk</TargetName>
+   </Name>
+   <Name ID="500">
+      <SourceName>אונטייריו</SourceName>
+      <TargetName ID="1">ontario</TargetName>
+   </Name>
+   <Name ID="501">
+      <SourceName>קציר</SourceName>
+      <TargetName ID="1">katzir</TargetName>
+   </Name>
+   <Name ID="502">
+      <SourceName>טינג</SourceName>
+      <TargetName ID="1">ting</TargetName>
+   </Name>
+   <Name ID="503">
+      <SourceName>אברם</SourceName>
+      <TargetName ID="1">avram</TargetName>
+   </Name>
+   <Name ID="504">
+      <SourceName>דניסטר</SourceName>
+      <TargetName ID="1">dniester</TargetName>
+   </Name>
+   <Name ID="505">
+      <SourceName>אנדרוניקוס</SourceName>
+      <TargetName ID="1">andronicus</TargetName>
+   </Name>
+   <Name ID="506">
+      <SourceName>נסיבאמבי</SourceName>
+      <TargetName ID="1">nsibambi</TargetName>
+   </Name>
+   <Name ID="507">
+      <SourceName>ג'ימי</SourceName>
+      <TargetName ID="1">jimmy</TargetName>
+   </Name>
+   <Name ID="508">
+      <SourceName>מארט</SourceName>
+      <TargetName ID="1">mart</TargetName>
+   </Name>
+   <Name ID="509">
+      <SourceName>לאנדשטאינר</SourceName>
+      <TargetName ID="1">landsteiner</TargetName>
+   </Name>
+   <Name ID="510">
+      <SourceName>ג'אנוסקי</SourceName>
+      <TargetName ID="1">janowski</TargetName>
+   </Name>
+   <Name ID="511">
+      <SourceName>מאי</SourceName>
+      <TargetName ID="1">mai</TargetName>
+   </Name>
+   <Name ID="512">
+      <SourceName>דוביאס</SourceName>
+      <TargetName ID="1">dobias</TargetName>
+   </Name>
+   <Name ID="513">
+      <SourceName>מודנה</SourceName>
+      <TargetName ID="1">modena</TargetName>
+   </Name>
+   <Name ID="514">
+      <SourceName>קאבאנא</SourceName>
+      <TargetName ID="1">cavanna</TargetName>
+   </Name>
+   <Name ID="515">
+      <SourceName>דוקסא</SourceName>
+      <TargetName ID="1">doxa</TargetName>
+   </Name>
+   <Name ID="516">
+      <SourceName>ניליס</SourceName>
+      <TargetName ID="1">nellis</TargetName>
+   </Name>
+   <Name ID="517">
+      <SourceName>ווריאדיס</SourceName>
+      <TargetName ID="1">voreadis</TargetName>
+   </Name>
+   <Name ID="518">
+      <SourceName>סאנגויניטי</SourceName>
+      <TargetName ID="1">sanguinetti</TargetName>
+   </Name>
+   <Name ID="519">
+      <SourceName>מורסאל</SourceName>
+      <TargetName ID="1">mursal</TargetName>
+   </Name>
+   <Name ID="520">
+      <SourceName>דיטריך</SourceName>
+      <TargetName ID="1">dietrich</TargetName>
+   </Name>
+   <Name ID="521">
+      <SourceName>ג'וביאן</SourceName>
+      <TargetName ID="1">jovian</TargetName>
+   </Name>
+   <Name ID="522">
+      <SourceName>סיאק</SourceName>
+      <TargetName ID="1">sjaak</TargetName>
+   </Name>
+   <Name ID="523">
+      <SourceName>ריציטילי</SourceName>
+      <TargetName ID="1">rizzitelli</TargetName>
+   </Name>
+   <Name ID="524">
+      <SourceName>ראמון</SourceName>
+      <TargetName ID="1">ramon</TargetName>
+   </Name>
+   <Name ID="525">
+      <SourceName>הוסוקאוא</SourceName>
+      <TargetName ID="1">hosokawa</TargetName>
+   </Name>
+   <Name ID="526">
+      <SourceName>דאיקי</SourceName>
+      <TargetName ID="1">daiki</TargetName>
+   </Name>
+   <Name ID="527">
+      <SourceName>ענאיאטי</SourceName>
+      <TargetName ID="1">enayati</TargetName>
+   </Name>
+   <Name ID="528">
+      <SourceName>ריוטארו</SourceName>
+      <TargetName ID="1">ryutaro</TargetName>
+   </Name>
+   <Name ID="529">
+      <SourceName>שידיאק</SourceName>
+      <TargetName ID="1">chidiac</TargetName>
+   </Name>
+   <Name ID="530">
+      <SourceName>זייביאר</SourceName>
+      <TargetName ID="1">xavier</TargetName>
+   </Name>
+   <Name ID="531">
+      <SourceName>בודו</SourceName>
+      <TargetName ID="1">bodo</TargetName>
+   </Name>
+   <Name ID="532">
+      <SourceName>גבריאל</SourceName>
+      <TargetName ID="1">gavriel</TargetName>
+   </Name>
+   <Name ID="533">
+      <SourceName>לאזאר</SourceName>
+      <TargetName ID="1">lazare</TargetName>
+   </Name>
+   <Name ID="534">
+      <SourceName>לאמאר</SourceName>
+      <TargetName ID="1">lamar</TargetName>
+   </Name>
+   <Name ID="535">
+      <SourceName>נאיף</SourceName>
+      <TargetName ID="1">nayef</TargetName>
+   </Name>
+   <Name ID="536">
+      <SourceName>בודי</SourceName>
+      <TargetName ID="1">budi</TargetName>
+   </Name>
+   <Name ID="537">
+      <SourceName>פיין</SourceName>
+      <TargetName ID="1">paine</TargetName>
+   </Name>
+   <Name ID="538">
+      <SourceName>בוגוטא</SourceName>
+      <TargetName ID="1">bogota</TargetName>
+   </Name>
+   <Name ID="539">
+      <SourceName>סאגאנווסקי</SourceName>
+      <TargetName ID="1">saganowski</TargetName>
+   </Name>
+   <Name ID="540">
+      <SourceName>אוסואלד</SourceName>
+      <TargetName ID="1">oswald</TargetName>
+   </Name>
+   <Name ID="541">
+      <SourceName>בולעראס</SourceName>
+      <TargetName ID="1">boulares</TargetName>
+   </Name>
+   <Name ID="542">
+      <SourceName>סופר</SourceName>
+      <TargetName ID="1">sofer</TargetName>
+   </Name>
+   <Name ID="543">
+      <SourceName>מורילו</SourceName>
+      <TargetName ID="1">morello</TargetName>
+   </Name>
+   <Name ID="544">
+      <SourceName>קרן</SourceName>
+      <TargetName ID="1">keren</TargetName>
+   </Name>
+   <Name ID="545">
+      <SourceName>לאבאל</SourceName>
+      <TargetName ID="1">laval</TargetName>
+   </Name>
+   <Name ID="546">
+      <SourceName>פראנקו</SourceName>
+      <TargetName ID="1">franco</TargetName>
+   </Name>
+   <Name ID="547">
+      <SourceName>ריקדו</SourceName>
+      <TargetName ID="1">rikdo</TargetName>
+   </Name>
+   <Name ID="548">
+      <SourceName>נסרה</SourceName>
+      <TargetName ID="1">nasra</TargetName>
+   </Name>
+   <Name ID="549">
+      <SourceName>ג'ופ</SourceName>
+      <TargetName ID="1">jop</TargetName>
+   </Name>
+   <Name ID="550">
+      <SourceName>דאלידא</SourceName>
+      <TargetName ID="1">dalida</TargetName>
+   </Name>
+   <Name ID="551">
+      <SourceName>טאדיראן</SourceName>
+      <TargetName ID="1">tadiran</TargetName>
+   </Name>
+   <Name ID="552">
+      <SourceName>שארפ</SourceName>
+      <TargetName ID="1">sharpe</TargetName>
+   </Name>
+   <Name ID="553">
+      <SourceName>פאנדל</SourceName>
+      <TargetName ID="1">fandel</TargetName>
+   </Name>
+   <Name ID="554">
+      <SourceName>ליטל</SourceName>
+      <TargetName ID="1">little</TargetName>
+   </Name>
+   <Name ID="555">
+      <SourceName>קוינסלאנד</SourceName>
+      <TargetName ID="1">queensland</TargetName>
+   </Name>
+   <Name ID="556">
+      <SourceName>טלאס</SourceName>
+      <TargetName ID="1">tlass</TargetName>
+   </Name>
+   <Name ID="557">
+      <SourceName>טאיוו</SourceName>
+      <TargetName ID="1">taiwo</TargetName>
+   </Name>
+   <Name ID="558">
+      <SourceName>באודרילארד</SourceName>
+      <TargetName ID="1">baudrillard</TargetName>
+   </Name>
+   <Name ID="559">
+      <SourceName>גונטר</SourceName>
+      <TargetName ID="1">gunter</TargetName>
+   </Name>
+   <Name ID="560">
+      <SourceName>טאקאשי</SourceName>
+      <TargetName ID="1">takashi</TargetName>
+   </Name>
+   <Name ID="561">
+      <SourceName>איתן</SourceName>
+      <TargetName ID="1">eitan</TargetName>
+   </Name>
+   <Name ID="562">
+      <SourceName>ג'ון</SourceName>
+      <TargetName ID="1">jon</TargetName>
+   </Name>
+   <Name ID="563">
+      <SourceName>איתם</SourceName>
+      <TargetName ID="1">eitam</TargetName>
+   </Name>
+   <Name ID="564">
+      <SourceName>שוץ</SourceName>
+      <TargetName ID="1">schutz</TargetName>
+   </Name>
+   <Name ID="565">
+      <SourceName>ווטקה</SourceName>
+      <TargetName ID="1">wuttke</TargetName>
+   </Name>
+   <Name ID="566">
+      <SourceName>מוצארט</SourceName>
+      <TargetName ID="1">mozart</TargetName>
+   </Name>
+   <Name ID="567">
+      <SourceName>אליין</SourceName>
+      <TargetName ID="1">alain</TargetName>
+   </Name>
+   <Name ID="568">
+      <SourceName>טיגילס</SourceName>
+      <TargetName ID="1">teugels</TargetName>
+   </Name>
+   <Name ID="569">
+      <SourceName>קאסאי</SourceName>
+      <TargetName ID="1">kassai</TargetName>
+   </Name>
+   <Name ID="570">
+      <SourceName>סינא</SourceName>
+      <TargetName ID="1">senna</TargetName>
+   </Name>
+   <Name ID="571">
+      <SourceName>גוקדניז</SourceName>
+      <TargetName ID="1">gokdeniz</TargetName>
+   </Name>
+   <Name ID="572">
+      <SourceName>מיקימוטו</SourceName>
+      <TargetName ID="1">mikimoto</TargetName>
+   </Name>
+   <Name ID="573">
+      <SourceName>גורסל</SourceName>
+      <TargetName ID="1">gursel</TargetName>
+   </Name>
+   <Name ID="574">
+      <SourceName>פנקוסט</SourceName>
+      <TargetName ID="1">pancoast</TargetName>
+   </Name>
+   <Name ID="575">
+      <SourceName>מורטאז</SourceName>
+      <TargetName ID="1">murtaz</TargetName>
+   </Name>
+   <Name ID="576">
+      <SourceName>אלדייר</SourceName>
+      <TargetName ID="1">aldair</TargetName>
+   </Name>
+   <Name ID="577">
+      <SourceName>קאנדר</SourceName>
+      <TargetName ID="1">kander</TargetName>
+   </Name>
+   <Name ID="578">
+      <SourceName>סטויצ'קוב</SourceName>
+      <TargetName ID="1">stoichkov</TargetName>
+   </Name>
+   <Name ID="579">
+      <SourceName>נורמי</SourceName>
+      <TargetName ID="1">nurmi</TargetName>
+   </Name>
+   <Name ID="580">
+      <SourceName>לוקאס</SourceName>
+      <TargetName ID="1">lucas</TargetName>
+   </Name>
+   <Name ID="581">
+      <SourceName>זקאת</SourceName>
+      <TargetName ID="1">zakat</TargetName>
+   </Name>
+   <Name ID="582">
+      <SourceName>מארמאדוק</SourceName>
+      <TargetName ID="1">marmaduke</TargetName>
+   </Name>
+   <Name ID="583">
+      <SourceName>לוקאש</SourceName>
+      <TargetName ID="1">lukacs</TargetName>
+   </Name>
+   <Name ID="584">
+      <SourceName>נאקאזאוא</SourceName>
+      <TargetName ID="1">nakazawa</TargetName>
+   </Name>
+   <Name ID="585">
+      <SourceName>מולינגא</SourceName>
+      <TargetName ID="1">mulenga</TargetName>
+   </Name>
+   <Name ID="586">
+      <SourceName>קונדול</SourceName>
+      <TargetName ID="1">coundoul</TargetName>
+   </Name>
+   <Name ID="587">
+      <SourceName>פאיק</SourceName>
+      <TargetName ID="1">pike</TargetName>
+   </Name>
+   <Name ID="588">
+      <SourceName>לאפורטא</SourceName>
+      <TargetName ID="1">laporta</TargetName>
+   </Name>
+   <Name ID="589">
+      <SourceName>ספרי</SourceName>
+      <TargetName ID="1">safri</TargetName>
+   </Name>
+   <Name ID="590">
+      <SourceName>איבאנהו</SourceName>
+      <TargetName ID="1">ivanhoe</TargetName>
+   </Name>
+   <Name ID="591">
+      <SourceName>גוטפריד</SourceName>
+      <TargetName ID="1">gottfried</TargetName>
+   </Name>
+   <Name ID="592">
+      <SourceName>וולטא</SourceName>
+      <TargetName ID="1">volta</TargetName>
+   </Name>
+   <Name ID="593">
+      <SourceName>קוים</SourceName>
+      <TargetName ID="1">quim</TargetName>
+   </Name>
+   <Name ID="594">
+      <SourceName>ברק</SourceName>
+      <TargetName ID="1">barak</TargetName>
+   </Name>
+   <Name ID="595">
+      <SourceName>נלי</SourceName>
+      <TargetName ID="1">nelly</TargetName>
+   </Name>
+   <Name ID="596">
+      <SourceName>שילטון</SourceName>
+      <TargetName ID="1">shilton</TargetName>
+   </Name>
+   <Name ID="597">
+      <SourceName>חמידי</SourceName>
+      <TargetName ID="1">hemidi</TargetName>
+   </Name>
+   <Name ID="598">
+      <SourceName>דירואל</SourceName>
+      <TargetName ID="1">derwall</TargetName>
+   </Name>
+   <Name ID="599">
+      <SourceName>קאמפס</SourceName>
+      <TargetName ID="1">camps</TargetName>
+   </Name>
+   <Name ID="600">
+      <SourceName>אלעלואני</SourceName>
+      <TargetName ID="1">alalwani</TargetName>
+   </Name>
+   <Name ID="601">
+      <SourceName>וילניוס</SourceName>
+      <TargetName ID="1">vilnius</TargetName>
+   </Name>
+   <Name ID="602">
+      <SourceName>מולא</SourceName>
+      <TargetName ID="1">molla</TargetName>
+   </Name>
+   <Name ID="603">
+      <SourceName>בוגאלו</SourceName>
+      <TargetName ID="1">bugalo</TargetName>
+   </Name>
+   <Name ID="604">
+      <SourceName>בנג'אני</SourceName>
+      <TargetName ID="1">benjani</TargetName>
+   </Name>
+   <Name ID="605">
+      <SourceName>יאמאסאקי</SourceName>
+      <TargetName ID="1">yamasaki</TargetName>
+   </Name>
+   <Name ID="606">
+      <SourceName>טאטארסטאן</SourceName>
+      <TargetName ID="1">tatarstan</TargetName>
+   </Name>
+   <Name ID="607">
+      <SourceName>סויקו</SourceName>
+      <TargetName ID="1">suiko</TargetName>
+   </Name>
+   <Name ID="608">
+      <SourceName>שילקא</SourceName>
+      <TargetName ID="1">shilka</TargetName>
+   </Name>
+   <Name ID="609">
+      <SourceName>ארנסט</SourceName>
+      <TargetName ID="1">ernst</TargetName>
+   </Name>
+   <Name ID="610">
+      <SourceName>טיר</SourceName>
+      <TargetName ID="1">tir</TargetName>
+   </Name>
+   <Name ID="611">
+      <SourceName>אורהאן</SourceName>
+      <TargetName ID="1">orhan</TargetName>
+   </Name>
+   <Name ID="612">
+      <SourceName>דישאמפ</SourceName>
+      <TargetName ID="1">deschamps</TargetName>
+   </Name>
+   <Name ID="613">
+      <SourceName>שירביוס</SourceName>
+      <TargetName ID="1">scherbius</TargetName>
+   </Name>
+   <Name ID="614">
+      <SourceName>גלאדסטון</SourceName>
+      <TargetName ID="1">gladstone</TargetName>
+   </Name>
+   <Name ID="615">
+      <SourceName>אלבראדעי</SourceName>
+      <TargetName ID="1">elbaradei</TargetName>
+   </Name>
+   <Name ID="616">
+      <SourceName>ויו</SourceName>
+      <TargetName ID="1">viv</TargetName>
+   </Name>
+   <Name ID="617">
+      <SourceName>קיטאג'ימא</SourceName>
+      <TargetName ID="1">kitajima</TargetName>
+   </Name>
+   <Name ID="618">
+      <SourceName>קיוב</SourceName>
+      <TargetName ID="1">cube</TargetName>
+   </Name>
+   <Name ID="619">
+      <SourceName>ויסקונטי</SourceName>
+      <TargetName ID="1">visconti</TargetName>
+   </Name>
+   <Name ID="620">
+      <SourceName>אירלנדא</SourceName>
+      <TargetName ID="1">ireland</TargetName>
+   </Name>
+   <Name ID="621">
+      <SourceName>קולודזיטשאק</SourceName>
+      <TargetName ID="1">kolodziejczak</TargetName>
+   </Name>
+   <Name ID="622">
+      <SourceName>דימיטרי</SourceName>
+      <TargetName ID="1">dimitri</TargetName>
+   </Name>
+   <Name ID="623">
+      <SourceName>הירוסו</SourceName>
+      <TargetName ID="1">hirosue</TargetName>
+   </Name>
+   <Name ID="624">
+      <SourceName>פוצו</SourceName>
+      <TargetName ID="1">pozzo</TargetName>
+   </Name>
+   <Name ID="625">
+      <SourceName>הידיאקי</SourceName>
+      <TargetName ID="1">hideaki</TargetName>
+   </Name>
+   <Name ID="626">
+      <SourceName>פוספיך</SourceName>
+      <TargetName ID="1">pospech</TargetName>
+   </Name>
+   <Name ID="627">
+      <SourceName>פולאק</SourceName>
+      <TargetName ID="1">polak</TargetName>
+   </Name>
+   <Name ID="628">
+      <SourceName>האנובר</SourceName>
+      <TargetName ID="1">hanover</TargetName>
+   </Name>
+   <Name ID="629">
+      <SourceName>מאסופסט</SourceName>
+      <TargetName ID="1">masopust</TargetName>
+   </Name>
+   <Name ID="630">
+      <SourceName>מיטאליקא</SourceName>
+      <TargetName ID="1">metallica</TargetName>
+   </Name>
+   <Name ID="631">
+      <SourceName>אלמאלח</SourceName>
+      <TargetName ID="1">elmaleh</TargetName>
+   </Name>
+   <Name ID="632">
+      <SourceName>ויק</SourceName>
+      <TargetName ID="1">vik</TargetName>
+   </Name>
+   <Name ID="633">
+      <SourceName>סאנגר</SourceName>
+      <TargetName ID="1">sanger</TargetName>
+   </Name>
+   <Name ID="634">
+      <SourceName>מאיאמי</SourceName>
+      <TargetName ID="1">miami</TargetName>
+   </Name>
+   <Name ID="635">
+      <SourceName>שאובו</SourceName>
+      <TargetName ID="1">shaobo</TargetName>
+   </Name>
+   <Name ID="636">
+      <SourceName>לינדון</SourceName>
+      <TargetName ID="1">lyndon</TargetName>
+   </Name>
+   <Name ID="637">
+      <SourceName>איראד</SourceName>
+      <TargetName ID="1">irad</TargetName>
+   </Name>
+   <Name ID="638">
+      <SourceName>יאקופו</SourceName>
+      <TargetName ID="1">jacopo</TargetName>
+   </Name>
+   <Name ID="639">
+      <SourceName>פרוקופ</SourceName>
+      <TargetName ID="1">prokop</TargetName>
+   </Name>
+   <Name ID="640">
+      <SourceName>פתחי</SourceName>
+      <TargetName ID="1">fathy</TargetName>
+   </Name>
+   <Name ID="641">
+      <SourceName>בראיט</SourceName>
+      <TargetName ID="1">bright</TargetName>
+   </Name>
+   <Name ID="642">
+      <SourceName>טאוב</SourceName>
+      <TargetName ID="1">taub</TargetName>
+   </Name>
+   <Name ID="643">
+      <SourceName>הידיו</SourceName>
+      <TargetName ID="1">hideo</TargetName>
+   </Name>
+   <Name ID="644">
+      <SourceName>אלברט</SourceName>
+      <TargetName ID="1">albert</TargetName>
+   </Name>
+   <Name ID="645">
+      <SourceName>שפיק</SourceName>
+      <TargetName ID="1">shafiq</TargetName>
+   </Name>
+   <Name ID="646">
+      <SourceName>אראנגו</SourceName>
+      <TargetName ID="1">arango</TargetName>
+   </Name>
+   <Name ID="647">
+      <SourceName>מיטאל</SourceName>
+      <TargetName ID="1">mittal</TargetName>
+   </Name>
+   <Name ID="648">
+      <SourceName>אגוילאר</SourceName>
+      <TargetName ID="1">aguilar</TargetName>
+   </Name>
+   <Name ID="649">
+      <SourceName>נוריו</SourceName>
+      <TargetName ID="1">norio</TargetName>
+   </Name>
+   <Name ID="650">
+      <SourceName>אפופיס</SourceName>
+      <TargetName ID="1">apophis</TargetName>
+   </Name>
+   <Name ID="651">
+      <SourceName>גלבוע</SourceName>
+      <TargetName ID="1">gilboa</TargetName>
+   </Name>
+   <Name ID="652">
+      <SourceName>אטלאנטיק</SourceName>
+      <TargetName ID="1">atlantic</TargetName>
+   </Name>
+   <Name ID="653">
+      <SourceName>מאקנרו</SourceName>
+      <TargetName ID="1">mcenroe</TargetName>
+   </Name>
+   <Name ID="654">
+      <SourceName>האסי</SourceName>
+      <TargetName ID="1">haase</TargetName>
+   </Name>
+   <Name ID="655">
+      <SourceName>ויסואנאתאן</SourceName>
+      <TargetName ID="1">viswanathan</TargetName>
+   </Name>
+   <Name ID="656">
+      <SourceName>מוטוקו</SourceName>
+      <TargetName ID="1">motoko</TargetName>
+   </Name>
+   <Name ID="657">
+      <SourceName>באלמונט</SourceName>
+      <TargetName ID="1">balmont</TargetName>
+   </Name>
+   <Name ID="658">
+      <SourceName>ראול</SourceName>
+      <TargetName ID="1">raul</TargetName>
+   </Name>
+   <Name ID="659">
+      <SourceName>סטאזי</SourceName>
+      <TargetName ID="1">stasi</TargetName>
+   </Name>
+   <Name ID="660">
+      <SourceName>אנטארקטיק</SourceName>
+      <TargetName ID="1">antarctic</TargetName>
+   </Name>
+   <Name ID="661">
+      <SourceName>אדמונד</SourceName>
+      <TargetName ID="1">edmund</TargetName>
+   </Name>
+   <Name ID="662">
+      <SourceName>וולמאר</SourceName>
+      <TargetName ID="1">wolmar</TargetName>
+   </Name>
+   <Name ID="663">
+      <SourceName>ברזוצקי</SourceName>
+      <TargetName ID="1">berezutski</TargetName>
+   </Name>
+   <Name ID="664">
+      <SourceName>סאמפאיו</SourceName>
+      <TargetName ID="1">sampaio</TargetName>
+   </Name>
+   <Name ID="665">
+      <SourceName>דייויס</SourceName>
+      <TargetName ID="1">davis</TargetName>
+   </Name>
+   <Name ID="666">
+      <SourceName>אלעשי</SourceName>
+      <TargetName ID="1">elachi</TargetName>
+   </Name>
+   <Name ID="667">
+      <SourceName>לאנג</SourceName>
+      <TargetName ID="1">lange</TargetName>
+   </Name>
+   <Name ID="668">
+      <SourceName>לערפאוי</SourceName>
+      <TargetName ID="1">larfaoui</TargetName>
+   </Name>
+   <Name ID="669">
+      <SourceName>רותבארד</SourceName>
+      <TargetName ID="1">rothbard</TargetName>
+   </Name>
+   <Name ID="670">
+      <SourceName>מאסאקיו</SourceName>
+      <TargetName ID="1">masakiyo</TargetName>
+   </Name>
+   <Name ID="671">
+      <SourceName>רקס</SourceName>
+      <TargetName ID="1">rex</TargetName>
+   </Name>
+   <Name ID="672">
+      <SourceName>דידייה</SourceName>
+      <TargetName ID="1">didier</TargetName>
+   </Name>
+   <Name ID="673">
+      <SourceName>פראסיודימיום</SourceName>
+      <TargetName ID="1">praseodymium</TargetName>
+   </Name>
+   <Name ID="674">
+      <SourceName>אראטו</SourceName>
+      <TargetName ID="1">erato</TargetName>
+   </Name>
+   <Name ID="675">
+      <SourceName>חדאד</SourceName>
+      <TargetName ID="1">hadad</TargetName>
+   </Name>
+   <Name ID="676">
+      <SourceName>סינקיביטש</SourceName>
+      <TargetName ID="1">sienkiewicz</TargetName>
+   </Name>
+   <Name ID="677">
+      <SourceName>דיברא</SourceName>
+      <TargetName ID="1">debra</TargetName>
+   </Name>
+   <Name ID="678">
+      <SourceName>יורופ</SourceName>
+      <TargetName ID="1">europe</TargetName>
+   </Name>
+   <Name ID="679">
+      <SourceName>האשמיאן</SourceName>
+      <TargetName ID="1">hashemian</TargetName>
+   </Name>
+   <Name ID="680">
+      <SourceName>מירג'לול</SourceName>
+      <TargetName ID="1">mirjalol</TargetName>
+   </Name>
+   <Name ID="681">
+      <SourceName>דחלאן</SourceName>
+      <TargetName ID="1">dahlan</TargetName>
+   </Name>
+   <Name ID="682">
+      <SourceName>קודי</SourceName>
+      <TargetName ID="1">cody</TargetName>
+   </Name>
+   <Name ID="683">
+      <SourceName>אדי</SourceName>
+      <TargetName ID="1">eddie</TargetName>
+   </Name>
+   <Name ID="684">
+      <SourceName>וונדר</SourceName>
+      <TargetName ID="1">wonder</TargetName>
+   </Name>
+   <Name ID="685">
+      <SourceName>אדם</SourceName>
+      <TargetName ID="1">adam</TargetName>
+   </Name>
+   <Name ID="686">
+      <SourceName>קאנטי</SourceName>
+      <TargetName ID="1">kante</TargetName>
+   </Name>
+   <Name ID="687">
+      <SourceName>פיהר</SourceName>
+      <TargetName ID="1">fehr</TargetName>
+   </Name>
+   <Name ID="688">
+      <SourceName>לאסקארינא</SourceName>
+      <TargetName ID="1">laskarina</TargetName>
+   </Name>
+   <Name ID="689">
+      <SourceName>פומיו</SourceName>
+      <TargetName ID="1">fumio</TargetName>
+   </Name>
+   <Name ID="690">
+      <SourceName>סטיפאנאקירט</SourceName>
+      <TargetName ID="1">stepanakert</TargetName>
+   </Name>
+   <Name ID="691">
+      <SourceName>חובארא</SourceName>
+      <TargetName ID="1">houbara</TargetName>
+   </Name>
+   <Name ID="692">
+      <SourceName>סבאסטיאו</SourceName>
+      <TargetName ID="1">sebastiao</TargetName>
+   </Name>
+   <Name ID="693">
+      <SourceName>באטלס</SourceName>
+      <TargetName ID="1">batlles</TargetName>
+   </Name>
+   <Name ID="694">
+      <SourceName>פיי</SourceName>
+      <TargetName ID="1">fey</TargetName>
+   </Name>
+   <Name ID="695">
+      <SourceName>מאנדריבא</SourceName>
+      <TargetName ID="1">mandriva</TargetName>
+   </Name>
+   <Name ID="696">
+      <SourceName>ויוארסון</SourceName>
+      <TargetName ID="1">vioarsson</TargetName>
+   </Name>
+   <Name ID="697">
+      <SourceName>מאניע</SourceName>
+      <TargetName ID="1">manea</TargetName>
+   </Name>
+   <Name ID="698">
+      <SourceName>ויל</SourceName>
+      <TargetName ID="1">will</TargetName>
+   </Name>
+   <Name ID="699">
+      <SourceName>דאגון</SourceName>
+      <TargetName ID="1">dagon</TargetName>
+   </Name>
+   <Name ID="700">
+      <SourceName>גאזיאנטפ</SourceName>
+      <TargetName ID="1">gaziantep</TargetName>
+   </Name>
+   <Name ID="701">
+      <SourceName>אנדרו</SourceName>
+      <TargetName ID="1">andrew</TargetName>
+   </Name>
+   <Name ID="702">
+      <SourceName>זיקלון</SourceName>
+      <TargetName ID="1">zyklon</TargetName>
+   </Name>
+   <Name ID="703">
+      <SourceName>קלינסמאן</SourceName>
+      <TargetName ID="1">klinsmann</TargetName>
+   </Name>
+   <Name ID="704">
+      <SourceName>פיט</SourceName>
+      <TargetName ID="1">piet</TargetName>
+   </Name>
+   <Name ID="705">
+      <SourceName>וילקי</SourceName>
+      <TargetName ID="1">wilkie</TargetName>
+   </Name>
+   <Name ID="706">
+      <SourceName>סאלח</SourceName>
+      <TargetName ID="1">saleh</TargetName>
+   </Name>
+   <Name ID="707">
+      <SourceName>דיפו</SourceName>
+      <TargetName ID="1">defoe</TargetName>
+   </Name>
+   <Name ID="708">
+      <SourceName>נגאטג'זיקו</SourceName>
+      <TargetName ID="1">ngatjizeko</TargetName>
+   </Name>
+   <Name ID="709">
+      <SourceName>זלאטאן</SourceName>
+      <TargetName ID="1">zlatan</TargetName>
+   </Name>
+   <Name ID="710">
+      <SourceName>ארקנסו</SourceName>
+      <TargetName ID="1">arkansas</TargetName>
+   </Name>
+   <Name ID="711">
+      <SourceName>הל</SourceName>
+      <TargetName ID="1">halle</TargetName>
+   </Name>
+   <Name ID="712">
+      <SourceName>קולינז</SourceName>
+      <TargetName ID="1">collins</TargetName>
+   </Name>
+   <Name ID="713">
+      <SourceName>ג'וניור</SourceName>
+      <TargetName ID="1">junior</TargetName>
+   </Name>
+   <Name ID="714">
+      <SourceName>בישר</SourceName>
+      <TargetName ID="1">becher</TargetName>
+   </Name>
+   <Name ID="715">
+      <SourceName>גבעת</SourceName>
+      <TargetName ID="1">givat</TargetName>
+   </Name>
+   <Name ID="716">
+      <SourceName>סימונז</SourceName>
+      <TargetName ID="1">simons</TargetName>
+   </Name>
+   <Name ID="717">
+      <SourceName>טאלבאני</SourceName>
+      <TargetName ID="1">talabani</TargetName>
+   </Name>
+   <Name ID="718">
+      <SourceName>רומאנוס</SourceName>
+      <TargetName ID="1">romanos</TargetName>
+   </Name>
+   <Name ID="719">
+      <SourceName>אגיין</SourceName>
+      <TargetName ID="1">again</TargetName>
+   </Name>
+   <Name ID="720">
+      <SourceName>הידיקאטסו</SourceName>
+      <TargetName ID="1">hidekatsu</TargetName>
+   </Name>
+   <Name ID="721">
+      <SourceName>ג'וג'ירו</SourceName>
+      <TargetName ID="1">jujiro</TargetName>
+   </Name>
+   <Name ID="722">
+      <SourceName>אבחאזיא</SourceName>
+      <TargetName ID="1">abkhazia</TargetName>
+   </Name>
+   <Name ID="723">
+      <SourceName>הארניק</SourceName>
+      <TargetName ID="1">harnik</TargetName>
+   </Name>
+   <Name ID="724">
+      <SourceName>וולטייר</SourceName>
+      <TargetName ID="1">voltaire</TargetName>
+   </Name>
+   <Name ID="725">
+      <SourceName>סינאקי</SourceName>
+      <TargetName ID="1">senaki</TargetName>
+   </Name>
+   <Name ID="726">
+      <SourceName>פקרי</SourceName>
+      <TargetName ID="1">fekri</TargetName>
+   </Name>
+   <Name ID="727">
+      <SourceName>טאטו</SourceName>
+      <TargetName ID="1">tautou</TargetName>
+   </Name>
+   <Name ID="728">
+      <SourceName>גזאל</SourceName>
+      <TargetName ID="1">ghezal</TargetName>
+   </Name>
+   <Name ID="729">
+      <SourceName>בינו</SourceName>
+      <TargetName ID="1">benno</TargetName>
+   </Name>
+   <Name ID="730">
+      <SourceName>בינג</SourceName>
+      <TargetName ID="1">bing</TargetName>
+   </Name>
+   <Name ID="731">
+      <SourceName>חורקיירא</SourceName>
+      <TargetName ID="1">jorquera</TargetName>
+   </Name>
+   <Name ID="732">
+      <SourceName>גונג</SourceName>
+      <TargetName ID="1">gong</TargetName>
+   </Name>
+   <Name ID="733">
+      <SourceName>ספארטא</SourceName>
+      <TargetName ID="1">sparta</TargetName>
+   </Name>
+   <Name ID="734">
+      <SourceName>הופמאן</SourceName>
+      <TargetName ID="1">huffman</TargetName>
+   </Name>
+   <Name ID="735">
+      <SourceName>קול</SourceName>
+      <TargetName ID="1">kohl</TargetName>
+   </Name>
+   <Name ID="736">
+      <SourceName>נובוטל</SourceName>
+      <TargetName ID="1">novotel</TargetName>
+   </Name>
+   <Name ID="737">
+      <SourceName>פיש</SourceName>
+      <TargetName ID="1">fish</TargetName>
+   </Name>
+   <Name ID="738">
+      <SourceName>טראפאלגאר</SourceName>
+      <TargetName ID="1">trafalgar</TargetName>
+   </Name>
+   <Name ID="739">
+      <SourceName>פיפר</SourceName>
+      <TargetName ID="1">pepper</TargetName>
+   </Name>
+   <Name ID="740">
+      <SourceName>טרימולינאס</SourceName>
+      <TargetName ID="1">tremoulinas</TargetName>
+   </Name>
+   <Name ID="741">
+      <SourceName>הוברט</SourceName>
+      <TargetName ID="1">hubbert</TargetName>
+   </Name>
+   <Name ID="742">
+      <SourceName>יאזאלדי</SourceName>
+      <TargetName ID="1">yazalde</TargetName>
+   </Name>
+   <Name ID="743">
+      <SourceName>לאברא</SourceName>
+      <TargetName ID="1">lavra</TargetName>
+   </Name>
+   <Name ID="744">
+      <SourceName>קריסטוב</SourceName>
+      <TargetName ID="1">christov</TargetName>
+   </Name>
+   <Name ID="745">
+      <SourceName>בירגירו</SourceName>
+      <TargetName ID="1">bergeroo</TargetName>
+   </Name>
+   <Name ID="746">
+      <SourceName>ברוקינג</SourceName>
+      <TargetName ID="1">brooking</TargetName>
+   </Name>
+   <Name ID="747">
+      <SourceName>מזאר</SourceName>
+      <TargetName ID="1">mazar</TargetName>
+   </Name>
+   <Name ID="748">
+      <SourceName>תיודוראקיס</SourceName>
+      <TargetName ID="1">theodorakis</TargetName>
+   </Name>
+   <Name ID="749">
+      <SourceName>נהאלפו</SourceName>
+      <TargetName ID="1">nhlapo</TargetName>
+   </Name>
+   <Name ID="750">
+      <SourceName>סאוור</SourceName>
+      <TargetName ID="1">sauer</TargetName>
+   </Name>
+   <Name ID="751">
+      <SourceName>הכובש</SourceName>
+      <TargetName ID="1">hakovesh</TargetName>
+   </Name>
+   <Name ID="752">
+      <SourceName>פירדי</SourceName>
+      <TargetName ID="1">ferdi</TargetName>
+   </Name>
+   <Name ID="753">
+      <SourceName>סארא</SourceName>
+      <TargetName ID="1">sara</TargetName>
+   </Name>
+   <Name ID="754">
+      <SourceName>גויי</SourceName>
+      <TargetName ID="1">gueye</TargetName>
+   </Name>
+   <Name ID="755">
+      <SourceName>רולז</SourceName>
+      <TargetName ID="1">rawls</TargetName>
+   </Name>
+   <Name ID="756">
+      <SourceName>ראדואנסקא</SourceName>
+      <TargetName ID="1">radwanska</TargetName>
+   </Name>
+   <Name ID="757">
+      <SourceName>ג'וזפין</SourceName>
+      <TargetName ID="1">josephine</TargetName>
+   </Name>
+   <Name ID="758">
+      <SourceName>ויין</SourceName>
+      <TargetName ID="1">wayne</TargetName>
+   </Name>
+   <Name ID="759">
+      <SourceName>פראדיק</SourceName>
+      <TargetName ID="1">fradique</TargetName>
+   </Name>
+   <Name ID="760">
+      <SourceName>דאקורט</SourceName>
+      <TargetName ID="1">dacourt</TargetName>
+   </Name>
+   <Name ID="761">
+      <SourceName>גמאל</SourceName>
+      <TargetName ID="1">gamal</TargetName>
+   </Name>
+   <Name ID="762">
+      <SourceName>גבאגבו</SourceName>
+      <TargetName ID="1">gbagbo</TargetName>
+   </Name>
+   <Name ID="763">
+      <SourceName>ראש</SourceName>
+      <TargetName ID="1">rush</TargetName>
+   </Name>
+   <Name ID="764">
+      <SourceName>בליצר</SourceName>
+      <TargetName ID="1">blitzer</TargetName>
+   </Name>
+   <Name ID="765">
+      <SourceName>מאג'ר</SourceName>
+      <TargetName ID="1">madjer</TargetName>
+   </Name>
+   <Name ID="766">
+      <SourceName>קושי</SourceName>
+      <TargetName ID="1">koshi</TargetName>
+   </Name>
+   <Name ID="767">
+      <SourceName>רוני</SourceName>
+      <TargetName ID="1">roni</TargetName>
+   </Name>
+   <Name ID="768">
+      <SourceName>גורפיגי</SourceName>
+      <TargetName ID="1">gurpegui</TargetName>
+   </Name>
+   <Name ID="769">
+      <SourceName>שינג'י</SourceName>
+      <TargetName ID="1">shinji</TargetName>
+   </Name>
+   <Name ID="770">
+      <SourceName>מנצ'ו</SourceName>
+      <TargetName ID="1">menchu</TargetName>
+   </Name>
+   <Name ID="771">
+      <SourceName>דוריף</SourceName>
+      <TargetName ID="1">dourif</TargetName>
+   </Name>
+   <Name ID="772">
+      <SourceName>פראיא</SourceName>
+      <TargetName ID="1">praia</TargetName>
+   </Name>
+   <Name ID="773">
+      <SourceName>לורנז</SourceName>
+      <TargetName ID="1">lorenz</TargetName>
+   </Name>
+   <Name ID="774">
+      <SourceName>ג'ורג'</SourceName>
+      <TargetName ID="1">george</TargetName>
+   </Name>
+   <Name ID="775">
+      <SourceName>פאהד</SourceName>
+      <TargetName ID="1">fahed</TargetName>
+   </Name>
+   <Name ID="776">
+      <SourceName>אתיופיא</SourceName>
+      <TargetName ID="1">ethiopia</TargetName>
+   </Name>
+   <Name ID="777">
+      <SourceName>בובי</SourceName>
+      <TargetName ID="1">bobby</TargetName>
+   </Name>
+   <Name ID="778">
+      <SourceName>איטאלי</SourceName>
+      <TargetName ID="1">italy</TargetName>
+   </Name>
+   <Name ID="779">
+      <SourceName>גאסטון</SourceName>
+      <TargetName ID="1">gaston</TargetName>
+   </Name>
+   <Name ID="780">
+      <SourceName>סדרא</SourceName>
+      <TargetName ID="1">sadra</TargetName>
+   </Name>
+   <Name ID="781">
+      <SourceName>נבון</SourceName>
+      <TargetName ID="1">navon</TargetName>
+   </Name>
+   <Name ID="782">
+      <SourceName>דאיהאטסו</SourceName>
+      <TargetName ID="1">daihatsu</TargetName>
+   </Name>
+   <Name ID="783">
+      <SourceName>זייטוני</SourceName>
+      <TargetName ID="1">zitouni</TargetName>
+   </Name>
+   <Name ID="784">
+      <SourceName>טיאסי</SourceName>
+      <TargetName ID="1">tiasse</TargetName>
+   </Name>
+   <Name ID="785">
+      <SourceName>אנטיגוא</SourceName>
+      <TargetName ID="1">antigua</TargetName>
+   </Name>
+   <Name ID="786">
+      <SourceName>איראקלי</SourceName>
+      <TargetName ID="1">irakli</TargetName>
+   </Name>
+   <Name ID="787">
+      <SourceName>עוואד</SourceName>
+      <TargetName ID="1">awad</TargetName>
+   </Name>
+   <Name ID="788">
+      <SourceName>קארלסן</SourceName>
+      <TargetName ID="1">carlsen</TargetName>
+   </Name>
+   <Name ID="789">
+      <SourceName>קאסיריו</SourceName>
+      <TargetName ID="1">chasseriau</TargetName>
+   </Name>
+   <Name ID="790">
+      <SourceName>הארדין</SourceName>
+      <TargetName ID="1">hardin</TargetName>
+   </Name>
+   <Name ID="791">
+      <SourceName>קיז</SourceName>
+      <TargetName ID="1">kees</TargetName>
+   </Name>
+   <Name ID="792">
+      <SourceName>גוראן</SourceName>
+      <TargetName ID="1">goran</TargetName>
+   </Name>
+   <Name ID="793">
+      <SourceName>גאבריל</SourceName>
+      <TargetName ID="1">gavriil</TargetName>
+   </Name>
+   <Name ID="794">
+      <SourceName>ואיאט</SourceName>
+      <TargetName ID="1">wyatt</TargetName>
+   </Name>
+   <Name ID="795">
+      <SourceName>האלז</SourceName>
+      <TargetName ID="1">halls</TargetName>
+   </Name>
+   <Name ID="796">
+      <SourceName>בוהין</SourceName>
+      <TargetName ID="1">bauhin</TargetName>
+   </Name>
+   <Name ID="797">
+      <SourceName>ג'וליון</SourceName>
+      <TargetName ID="1">joleon</TargetName>
+   </Name>
+   <Name ID="798">
+      <SourceName>פאפוא</SourceName>
+      <TargetName ID="1">papua</TargetName>
+   </Name>
+   <Name ID="799">
+      <SourceName>לוגו</SourceName>
+      <TargetName ID="1">lugo</TargetName>
+   </Name>
+   <Name ID="800">
+      <SourceName>קאטאיאמא</SourceName>
+      <TargetName ID="1">katayama</TargetName>
+   </Name>
+   <Name ID="801">
+      <SourceName>פאדו</SourceName>
+      <TargetName ID="1">fado</TargetName>
+   </Name>
+   <Name ID="802">
+      <SourceName>וילהלמסהייבן</SourceName>
+      <TargetName ID="1">wilhelmshaven</TargetName>
+   </Name>
+   <Name ID="803">
+      <SourceName>סינאן</SourceName>
+      <TargetName ID="1">sinan</TargetName>
+   </Name>
+   <Name ID="804">
+      <SourceName>יולדוש</SourceName>
+      <TargetName ID="1">yo‘ldosh</TargetName>
+   </Name>
+   <Name ID="805">
+      <SourceName>קויני</SourceName>
+      <TargetName ID="1">queeny</TargetName>
+   </Name>
+   <Name ID="806">
+      <SourceName>קאן</SourceName>
+      <TargetName ID="1">cannes</TargetName>
+   </Name>
+   <Name ID="807">
+      <SourceName>מאקאנגא</SourceName>
+      <TargetName ID="1">macanga</TargetName>
+   </Name>
+   <Name ID="808">
+      <SourceName>ואסקי</SourceName>
+      <TargetName ID="1">waske</TargetName>
+   </Name>
+   <Name ID="809">
+      <SourceName>קוסטאקורטא</SourceName>
+      <TargetName ID="1">costacurta</TargetName>
+   </Name>
+   <Name ID="810">
+      <SourceName>סוניס</SourceName>
+      <TargetName ID="1">souness</TargetName>
+   </Name>
+   <Name ID="811">
+      <SourceName>גאלאגר</SourceName>
+      <TargetName ID="1">gallagher</TargetName>
+   </Name>
+   <Name ID="812">
+      <SourceName>קלוביס</SourceName>
+      <TargetName ID="1">clovis</TargetName>
+   </Name>
+   <Name ID="813">
+      <SourceName>סידון</SourceName>
+      <TargetName ID="1">sidon</TargetName>
+   </Name>
+   <Name ID="814">
+      <SourceName>קיניניסא</SourceName>
+      <TargetName ID="1">kenenisa</TargetName>
+   </Name>
+   <Name ID="815">
+      <SourceName>קארלוביטש</SourceName>
+      <TargetName ID="1">karlovic</TargetName>
+   </Name>
+   <Name ID="816">
+      <SourceName>קרימי</SourceName>
+      <TargetName ID="1">karimi</TargetName>
+   </Name>
+   <Name ID="817">
+      <SourceName>הידיטושי</SourceName>
+      <TargetName ID="1">hidetoshi</TargetName>
+   </Name>
+   <Name ID="818">
+      <SourceName>חיסן</SourceName>
+      <TargetName ID="1">hissene</TargetName>
+   </Name>
+   <Name ID="819">
+      <SourceName>וינהוי</SourceName>
+      <TargetName ID="1">wenhui</TargetName>
+   </Name>
+   <Name ID="820">
+      <SourceName>באלל</SourceName>
+      <TargetName ID="1">balel</TargetName>
+   </Name>
+   <Name ID="821">
+      <SourceName>באלטי</SourceName>
+      <TargetName ID="1">balti</TargetName>
+   </Name>
+   <Name ID="822">
+      <SourceName>באס</SourceName>
+      <TargetName ID="1">bass</TargetName>
+   </Name>
+   <Name ID="823">
+      <SourceName>בנסון</SourceName>
+      <TargetName ID="1">benson</TargetName>
+   </Name>
+   <Name ID="824">
+      <SourceName>ברנאל</SourceName>
+      <TargetName ID="1">bernal</TargetName>
+   </Name>
+   <Name ID="825">
+      <SourceName>גוטאמא</SourceName>
+      <TargetName ID="1">gautama</TargetName>
+   </Name>
+   <Name ID="826">
+      <SourceName>לימארי</SourceName>
+      <TargetName ID="1">lymari</TargetName>
+   </Name>
+   <Name ID="827">
+      <SourceName>סטריפ</SourceName>
+      <TargetName ID="1">streep</TargetName>
+   </Name>
+   <Name ID="828">
+      <SourceName>מימי</SourceName>
+      <TargetName ID="1">mimi</TargetName>
+   </Name>
+   <Name ID="829">
+      <SourceName>צ'יפולא</SourceName>
+      <TargetName ID="1">cipolla</TargetName>
+   </Name>
+   <Name ID="830">
+      <SourceName>אברסט</SourceName>
+      <TargetName ID="1">everest</TargetName>
+   </Name>
+   <Name ID="831">
+      <SourceName>סוגיהארא</SourceName>
+      <TargetName ID="1">sugihara</TargetName>
+   </Name>
+   <Name ID="832">
+      <SourceName>פידרלאין</SourceName>
+      <TargetName ID="1">federline</TargetName>
+   </Name>
+   <Name ID="833">
+      <SourceName>דראמאני</SourceName>
+      <TargetName ID="1">dramani</TargetName>
+   </Name>
+   <Name ID="834">
+      <SourceName>אמציה</SourceName>
+      <TargetName ID="1">amatzia</TargetName>
+   </Name>
+   <Name ID="835">
+      <SourceName>ורזאזאת</SourceName>
+      <TargetName ID="1">ouarzazate</TargetName>
+   </Name>
+   <Name ID="836">
+      <SourceName>נובטושי</SourceName>
+      <TargetName ID="1">nobutoshi</TargetName>
+   </Name>
+   <Name ID="837">
+      <SourceName>יאנקוביטש</SourceName>
+      <TargetName ID="1">jankovic</TargetName>
+   </Name>
+   <Name ID="838">
+      <SourceName>ויניק</SourceName>
+      <TargetName ID="1">weinek</TargetName>
+   </Name>
+   <Name ID="839">
+      <SourceName>טיקריט</SourceName>
+      <TargetName ID="1">tikrit</TargetName>
+   </Name>
+   <Name ID="840">
+      <SourceName>גזא</SourceName>
+      <TargetName ID="1">geza</TargetName>
+   </Name>
+   <Name ID="841">
+      <SourceName>קוינטו</SourceName>
+      <TargetName ID="1">quinto</TargetName>
+   </Name>
+   <Name ID="842">
+      <SourceName>מודיבו</SourceName>
+      <TargetName ID="1">modibo</TargetName>
+   </Name>
+   <Name ID="843">
+      <SourceName>טראיס</SourceName>
+      <TargetName ID="1">trice</TargetName>
+   </Name>
+   <Name ID="844">
+      <SourceName>בינוש</SourceName>
+      <TargetName ID="1">binoche</TargetName>
+   </Name>
+   <Name ID="845">
+      <SourceName>ליסטראד</SourceName>
+      <TargetName ID="1">lestrade</TargetName>
+   </Name>
+   <Name ID="846">
+      <SourceName>האדג'נז</SourceName>
+      <TargetName ID="1">hudgens</TargetName>
+   </Name>
+   <Name ID="847">
+      <SourceName>דיסקין</SourceName>
+      <TargetName ID="1">diskin</TargetName>
+   </Name>
+   <Name ID="848">
+      <SourceName>וליד</SourceName>
+      <TargetName ID="1">waleed</TargetName>
+   </Name>
+   <Name ID="849">
+      <SourceName>בלומנתאל</SourceName>
+      <TargetName ID="1">blumenthal</TargetName>
+   </Name>
+   <Name ID="850">
+      <SourceName>זבולון</SourceName>
+      <TargetName ID="1">zevulun</TargetName>
+   </Name>
+   <Name ID="851">
+      <SourceName>אסלאן</SourceName>
+      <TargetName ID="1">aslan</TargetName>
+   </Name>
+   <Name ID="852">
+      <SourceName>פסיירו</SourceName>
+      <TargetName ID="1">peseiro</TargetName>
+   </Name>
+   <Name ID="853">
+      <SourceName>זהא</SourceName>
+      <TargetName ID="1">zaha</TargetName>
+   </Name>
+   <Name ID="854">
+      <SourceName>אתנאסיוס</SourceName>
+      <TargetName ID="1">athanasius</TargetName>
+   </Name>
+   <Name ID="855">
+      <SourceName>דבוז</SourceName>
+      <TargetName ID="1">debbouze</TargetName>
+   </Name>
+   <Name ID="856">
+      <SourceName>בר</SourceName>
+      <TargetName ID="1">barr</TargetName>
+   </Name>
+   <Name ID="857">
+      <SourceName>ליבני</SourceName>
+      <TargetName ID="1">livni</TargetName>
+   </Name>
+   <Name ID="858">
+      <SourceName>שוירינג</SourceName>
+      <TargetName ID="1">scheuring</TargetName>
+   </Name>
+   <Name ID="859">
+      <SourceName>פירינק</SourceName>
+      <TargetName ID="1">ferenc</TargetName>
+   </Name>
+   <Name ID="860">
+      <SourceName>בלומי</SourceName>
+      <TargetName ID="1">belloumi</TargetName>
+   </Name>
+   <Name ID="861">
+      <SourceName>גיליאד</SourceName>
+      <TargetName ID="1">gilead</TargetName>
+   </Name>
+   <Name ID="862">
+      <SourceName>ויקאש</SourceName>
+      <TargetName ID="1">vikash</TargetName>
+   </Name>
+   <Name ID="863">
+      <SourceName>פיריני</SourceName>
+      <TargetName ID="1">ferrini</TargetName>
+   </Name>
+   <Name ID="864">
+      <SourceName>בו</SourceName>
+      <TargetName ID="1">bo</TargetName>
+   </Name>
+   <Name ID="865">
+      <SourceName>יפים</SourceName>
+      <TargetName ID="1">yefim</TargetName>
+   </Name>
+   <Name ID="866">
+      <SourceName>אמסאעד</SourceName>
+      <TargetName ID="1">imsaad</TargetName>
+   </Name>
+   <Name ID="867">
+      <SourceName>קריסטובאל</SourceName>
+      <TargetName ID="1">cristobal</TargetName>
+   </Name>
+   <Name ID="868">
+      <SourceName>ליבנת</SourceName>
+      <TargetName ID="1">livnat</TargetName>
+   </Name>
+   <Name ID="869">
+      <SourceName>זהרא</SourceName>
+      <TargetName ID="1">zahra</TargetName>
+   </Name>
+   <Name ID="870">
+      <SourceName>פרר</SourceName>
+      <TargetName ID="1">ferrer</TargetName>
+   </Name>
+   <Name ID="871">
+      <SourceName>בם</SourceName>
+      <TargetName ID="1">bem</TargetName>
+   </Name>
+   <Name ID="872">
+      <SourceName>מוזפר</SourceName>
+      <TargetName ID="1">mudhafar</TargetName>
+   </Name>
+   <Name ID="873">
+      <SourceName>גבי</SourceName>
+      <TargetName ID="1">gabi</TargetName>
+   </Name>
+   <Name ID="874">
+      <SourceName>איגנץ</SourceName>
+      <TargetName ID="1">ignac</TargetName>
+   </Name>
+   <Name ID="875">
+      <SourceName>טומאסו</SourceName>
+      <TargetName ID="1">tommaso</TargetName>
+   </Name>
+   <Name ID="876">
+      <SourceName>שאמס</SourceName>
+      <TargetName ID="1">shams</TargetName>
+   </Name>
+   <Name ID="877">
+      <SourceName>אסטבאן</SourceName>
+      <TargetName ID="1">esteban</TargetName>
+   </Name>
+   <Name ID="878">
+      <SourceName>גור</SourceName>
+      <TargetName ID="1">goor</TargetName>
+   </Name>
+   <Name ID="879">
+      <SourceName>יאסין</SourceName>
+      <TargetName ID="1">yacine</TargetName>
+   </Name>
+   <Name ID="880">
+      <SourceName>סארינאנא</SourceName>
+      <TargetName ID="1">sarinana</TargetName>
+   </Name>
+   <Name ID="881">
+      <SourceName>סיבאסטיאן</SourceName>
+      <TargetName ID="1">sebastien</TargetName>
+   </Name>
+   <Name ID="882">
+      <SourceName>גילארדינו</SourceName>
+      <TargetName ID="1">gilardino</TargetName>
+   </Name>
+   <Name ID="883">
+      <SourceName>ראמאז</SourceName>
+      <TargetName ID="1">ramaz</TargetName>
+   </Name>
+   <Name ID="884">
+      <SourceName>אביוקוטא</SourceName>
+      <TargetName ID="1">abeokuta</TargetName>
+   </Name>
+   <Name ID="885">
+      <SourceName>פרידי</SourceName>
+      <TargetName ID="1">freddy</TargetName>
+   </Name>
+   <Name ID="886">
+      <SourceName>פאסילינא</SourceName>
+      <TargetName ID="1">paasilinna</TargetName>
+   </Name>
+   <Name ID="887">
+      <SourceName>קושניר</SourceName>
+      <TargetName ID="1">kushnir</TargetName>
+   </Name>
+   <Name ID="888">
+      <SourceName>הדי</SourceName>
+      <TargetName ID="1">hedi</TargetName>
+   </Name>
+   <Name ID="889">
+      <SourceName>גארודי</SourceName>
+      <TargetName ID="1">garaudy</TargetName>
+   </Name>
+   <Name ID="890">
+      <SourceName>לאו</SourceName>
+      <TargetName ID="1">lau</TargetName>
+   </Name>
+   <Name ID="891">
+      <SourceName>בירל</SourceName>
+      <TargetName ID="1">berl</TargetName>
+   </Name>
+   <Name ID="892">
+      <SourceName>בוסון</SourceName>
+      <TargetName ID="1">buson</TargetName>
+   </Name>
+   <Name ID="893">
+      <SourceName>סיליטש</SourceName>
+      <TargetName ID="1">cilic</TargetName>
+   </Name>
+   <Name ID="894">
+      <SourceName>אסטודיאנטיס</SourceName>
+      <TargetName ID="1">estudiantes</TargetName>
+   </Name>
+   <Name ID="895">
+      <SourceName>קולומבוס</SourceName>
+      <TargetName ID="1">columbus</TargetName>
+   </Name>
+   <Name ID="896">
+      <SourceName>הונג</SourceName>
+      <TargetName ID="1">hong</TargetName>
+   </Name>
+   <Name ID="897">
+      <SourceName>מאלארין</SourceName>
+      <TargetName ID="1">malaren</TargetName>
+   </Name>
+   <Name ID="898">
+      <SourceName>ראבא</SourceName>
+      <TargetName ID="1">rabbah</TargetName>
+   </Name>
+   <Name ID="899">
+      <SourceName>האיטי</SourceName>
+      <TargetName ID="1">haiti</TargetName>
+   </Name>
+   <Name ID="900">
+      <SourceName>הומאיון</SourceName>
+      <TargetName ID="1">homayoun</TargetName>
+   </Name>
+   <Name ID="901">
+      <SourceName>קאפארוני</SourceName>
+      <TargetName ID="1">capparoni</TargetName>
+   </Name>
+   <Name ID="902">
+      <SourceName>ג'יג'י</SourceName>
+      <TargetName ID="1">gigi</TargetName>
+   </Name>
+   <Name ID="903">
+      <SourceName>סטילא</SourceName>
+      <TargetName ID="1">stella</TargetName>
+   </Name>
+   <Name ID="904">
+      <SourceName>מולייר</SourceName>
+      <TargetName ID="1">moliere</TargetName>
+   </Name>
+   <Name ID="905">
+      <SourceName>קאניזאריס</SourceName>
+      <TargetName ID="1">canizares</TargetName>
+   </Name>
+   <Name ID="906">
+      <SourceName>שוברט</SourceName>
+      <TargetName ID="1">schubert</TargetName>
+   </Name>
+   <Name ID="907">
+      <SourceName>טולדו</SourceName>
+      <TargetName ID="1">toldo</TargetName>
+   </Name>
+   <Name ID="908">
+      <SourceName>ספיר</SourceName>
+      <TargetName ID="1">speer</TargetName>
+   </Name>
+   <Name ID="909">
+      <SourceName>סוסוקה</SourceName>
+      <TargetName ID="1">sosuke</TargetName>
+   </Name>
+   <Name ID="910">
+      <SourceName>יאן</SourceName>
+      <TargetName ID="1">jan</TargetName>
+   </Name>
+   <Name ID="911">
+      <SourceName>שאנון</SourceName>
+      <TargetName ID="1">shannon</TargetName>
+   </Name>
+   <Name ID="912">
+      <SourceName>אוגאנדא</SourceName>
+      <TargetName ID="1">uganda</TargetName>
+   </Name>
+   <Name ID="913">
+      <SourceName>הילברט</SourceName>
+      <TargetName ID="1">hilbert</TargetName>
+   </Name>
+   <Name ID="914">
+      <SourceName>תיודורוס</SourceName>
+      <TargetName ID="1">theodoros</TargetName>
+   </Name>
+   <Name ID="915">
+      <SourceName>טומוהירו</SourceName>
+      <TargetName ID="1">tomohiro</TargetName>
+   </Name>
+   <Name ID="916">
+      <SourceName>ואלאדאריס</SourceName>
+      <TargetName ID="1">valladares</TargetName>
+   </Name>
+   <Name ID="917">
+      <SourceName>מרום</SourceName>
+      <TargetName ID="1">merom</TargetName>
+   </Name>
+   <Name ID="918">
+      <SourceName>ג'אסיק</SourceName>
+      <TargetName ID="1">jacek</TargetName>
+   </Name>
+   <Name ID="919">
+      <SourceName>סיאגריוס</SourceName>
+      <TargetName ID="1">syagrius</TargetName>
+   </Name>
+   <Name ID="920">
+      <SourceName>דוומוה</SourceName>
+      <TargetName ID="1">dwomoh</TargetName>
+   </Name>
+   <Name ID="921">
+      <SourceName>דאלי</SourceName>
+      <TargetName ID="1">dali</TargetName>
+   </Name>
+   <Name ID="922">
+      <SourceName>באלבוא</SourceName>
+      <TargetName ID="1">balboa</TargetName>
+   </Name>
+   <Name ID="923">
+      <SourceName>בעל</SourceName>
+      <TargetName ID="1">baal</TargetName>
+   </Name>
+   <Name ID="924">
+      <SourceName>פיישאנס</SourceName>
+      <TargetName ID="1">patience</TargetName>
+   </Name>
+   <Name ID="925">
+      <SourceName>סאביר</SourceName>
+      <TargetName ID="1">sabeer</TargetName>
+   </Name>
+   <Name ID="926">
+      <SourceName>ביטיגא</SourceName>
+      <TargetName ID="1">bettega</TargetName>
+   </Name>
+   <Name ID="927">
+      <SourceName>הארגריבז</SourceName>
+      <TargetName ID="1">hargreaves</TargetName>
+   </Name>
+   <Name ID="928">
+      <SourceName>ויסילינוביטש</SourceName>
+      <TargetName ID="1">veselinovic</TargetName>
+   </Name>
+   <Name ID="929">
+      <SourceName>פאסטון</SourceName>
+      <TargetName ID="1">paston</TargetName>
+   </Name>
+   <Name ID="930">
+      <SourceName>סאבינא</SourceName>
+      <TargetName ID="1">sabina</TargetName>
+   </Name>
+   <Name ID="931">
+      <SourceName>ג'וליטי</SourceName>
+      <TargetName ID="1">giolitti</TargetName>
+   </Name>
+   <Name ID="932">
+      <SourceName>לוביט</SourceName>
+      <TargetName ID="1">lovett</TargetName>
+   </Name>
+   <Name ID="933">
+      <SourceName>קונרז</SourceName>
+      <TargetName ID="1">connors</TargetName>
+   </Name>
+   <Name ID="934">
+      <SourceName>יאסא</SourceName>
+      <TargetName ID="1">yassa</TargetName>
+   </Name>
+   <Name ID="935">
+      <SourceName>פראו</SourceName>
+      <TargetName ID="1">frau</TargetName>
+   </Name>
+   <Name ID="936">
+      <SourceName>פילופוניז</SourceName>
+      <TargetName ID="1">peloponnese</TargetName>
+   </Name>
+   <Name ID="937">
+      <SourceName>ראי</SourceName>
+      <TargetName ID="1">rai</TargetName>
+   </Name>
+   <Name ID="938">
+      <SourceName>באנטון</SourceName>
+      <TargetName ID="1">bunton</TargetName>
+   </Name>
+   <Name ID="939">
+      <SourceName>בובלה</SourceName>
+      <TargetName ID="1">buble</TargetName>
+   </Name>
+   <Name ID="940">
+      <SourceName>גומיס</SourceName>
+      <TargetName ID="1">gomis</TargetName>
+   </Name>
+   <Name ID="941">
+      <SourceName>סארין</SourceName>
+      <TargetName ID="1">sarin</TargetName>
+   </Name>
+   <Name ID="942">
+      <SourceName>מיקהיו</SourceName>
+      <TargetName ID="1">mchugh</TargetName>
+   </Name>
+   <Name ID="943">
+      <SourceName>יאסקילאינן</SourceName>
+      <TargetName ID="1">jaaskelainen</TargetName>
+   </Name>
+   <Name ID="944">
+      <SourceName>סקלטון</SourceName>
+      <TargetName ID="1">skelton</TargetName>
+   </Name>
+   <Name ID="945">
+      <SourceName>ואלדיר</SourceName>
+      <TargetName ID="1">valdir</TargetName>
+   </Name>
+   <Name ID="946">
+      <SourceName>חאריס</SourceName>
+      <TargetName ID="1">haris</TargetName>
+   </Name>
+   <Name ID="947">
+      <SourceName>ויקראם</SourceName>
+      <TargetName ID="1">vikram</TargetName>
+   </Name>
+   <Name ID="948">
+      <SourceName>איזאק</SourceName>
+      <TargetName ID="1">isaac</TargetName>
+   </Name>
+   <Name ID="949">
+      <SourceName>טג'לי</SourceName>
+      <TargetName ID="1">tajalli</TargetName>
+   </Name>
+   <Name ID="950">
+      <SourceName>פאמא</SourceName>
+      <TargetName ID="1">fama</TargetName>
+   </Name>
+   <Name ID="951">
+      <SourceName>לומיר</SourceName>
+      <TargetName ID="1">lemerre</TargetName>
+   </Name>
+   <Name ID="952">
+      <SourceName>בדריש</SourceName>
+      <TargetName ID="1">bedrich</TargetName>
+   </Name>
+   <Name ID="953">
+      <SourceName>קאר</SourceName>
+      <TargetName ID="1">carr</TargetName>
+   </Name>
+   <Name ID="954">
+      <SourceName>קאסם</SourceName>
+      <TargetName ID="1">qassem</TargetName>
+   </Name>
+   <Name ID="955">
+      <SourceName>מקסיס</SourceName>
+      <TargetName ID="1">mexes</TargetName>
+   </Name>
+   <Name ID="956">
+      <SourceName>באטס</SourceName>
+      <TargetName ID="1">bats</TargetName>
+   </Name>
+   <Name ID="957">
+      <SourceName>סינדי</SourceName>
+      <TargetName ID="1">cindy</TargetName>
+   </Name>
+   <Name ID="958">
+      <SourceName>מלרוז</SourceName>
+      <TargetName ID="1">melrose</TargetName>
+   </Name>
+   <Name ID="959">
+      <SourceName>יאניס</SourceName>
+      <TargetName ID="1">yannis</TargetName>
+   </Name>
+   <Name ID="960">
+      <SourceName>יאסר</SourceName>
+      <TargetName ID="1">yasser</TargetName>
+   </Name>
+   <Name ID="961">
+      <SourceName>בורסילינו</SourceName>
+      <TargetName ID="1">borsellino</TargetName>
+   </Name>
+   <Name ID="962">
+      <SourceName>טירנר</SourceName>
+      <TargetName ID="1">turner</TargetName>
+   </Name>
+   <Name ID="963">
+      <SourceName>לובודזינסקי</SourceName>
+      <TargetName ID="1">lobodzinski</TargetName>
+   </Name>
+   <Name ID="964">
+      <SourceName>סואנק</SourceName>
+      <TargetName ID="1">swank</TargetName>
+   </Name>
+   <Name ID="965">
+      <SourceName>בירנארט</SourceName>
+      <TargetName ID="1">beernaert</TargetName>
+   </Name>
+   <Name ID="966">
+      <SourceName>דיס</SourceName>
+      <TargetName ID="1">diss</TargetName>
+   </Name>
+   <Name ID="967">
+      <SourceName>וריסן</SourceName>
+      <TargetName ID="1">vreijsen</TargetName>
+   </Name>
+   <Name ID="968">
+      <SourceName>דיינס</SourceName>
+      <TargetName ID="1">danes</TargetName>
+   </Name>
+   <Name ID="969">
+      <SourceName>דיץ</SourceName>
+      <TargetName ID="1">dietz</TargetName>
+   </Name>
+   <Name ID="970">
+      <SourceName>קוסרי</SourceName>
+      <TargetName ID="1">cossery</TargetName>
+   </Name>
+   <Name ID="971">
+      <SourceName>חלילוביטש</SourceName>
+      <TargetName ID="1">halilovic</TargetName>
+   </Name>
+   <Name ID="972">
+      <SourceName>אורל</SourceName>
+      <TargetName ID="1">aurel</TargetName>
+   </Name>
+   <Name ID="973">
+      <SourceName>פורלונג</SourceName>
+      <TargetName ID="1">furlong</TargetName>
+   </Name>
+   <Name ID="974">
+      <SourceName>מיט</SourceName>
+      <TargetName ID="1">mit</TargetName>
+   </Name>
+   <Name ID="975">
+      <SourceName>אשל</SourceName>
+      <TargetName ID="1">eshel</TargetName>
+   </Name>
+   <Name ID="976">
+      <SourceName>בורן</SourceName>
+      <TargetName ID="1">born</TargetName>
+   </Name>
+   <Name ID="977">
+      <SourceName>הילמאן</SourceName>
+      <TargetName ID="1">hellman</TargetName>
+   </Name>
+   <Name ID="978">
+      <SourceName>בוש</SourceName>
+      <TargetName ID="1">bosch</TargetName>
+   </Name>
+   <Name ID="979">
+      <SourceName>גרימי</SourceName>
+      <TargetName ID="1">grimi</TargetName>
+   </Name>
+   <Name ID="980">
+      <SourceName>בורא</SourceName>
+      <TargetName ID="1">bora</TargetName>
+   </Name>
+   <Name ID="981">
+      <SourceName>סויר</SourceName>
+      <TargetName ID="1">soyer</TargetName>
+   </Name>
+   <Name ID="982">
+      <SourceName>רוטלאנד</SourceName>
+      <TargetName ID="1">rutland</TargetName>
+   </Name>
+   <Name ID="983">
+      <SourceName>אשר</SourceName>
+      <TargetName ID="1">asher</TargetName>
+   </Name>
+   <Name ID="984">
+      <SourceName>פאנטוליאנו</SourceName>
+      <TargetName ID="1">pantoliano</TargetName>
+   </Name>
+   <Name ID="985">
+      <SourceName>ג'ילאלי</SourceName>
+      <TargetName ID="1">djilali</TargetName>
+   </Name>
+   <Name ID="986">
+      <SourceName>מארייט</SourceName>
+      <TargetName ID="1">mariette</TargetName>
+   </Name>
+   <Name ID="987">
+      <SourceName>זונגול</SourceName>
+      <TargetName ID="1">zungul</TargetName>
+   </Name>
+   <Name ID="988">
+      <SourceName>ג'אקוב</SourceName>
+      <TargetName ID="1">jakob</TargetName>
+   </Name>
+   <Name ID="989">
+      <SourceName>הארטרי</SourceName>
+      <TargetName ID="1">hartree</TargetName>
+   </Name>
+   <Name ID="990">
+      <SourceName>גאזאנקולו</SourceName>
+      <TargetName ID="1">gazankulu</TargetName>
+   </Name>
+   <Name ID="991">
+      <SourceName>גינתון</SourceName>
+      <TargetName ID="1">ginaton</TargetName>
+   </Name>
+   <Name ID="992">
+      <SourceName>פאן</SourceName>
+      <TargetName ID="1">fan</TargetName>
+   </Name>
+   <Name ID="993">
+      <SourceName>דיב</SourceName>
+      <TargetName ID="1">dib</TargetName>
+   </Name>
+   <Name ID="994">
+      <SourceName>טאיניו</SourceName>
+      <TargetName ID="1">tainio</TargetName>
+   </Name>
+   <Name ID="995">
+      <SourceName>קופור</SourceName>
+      <TargetName ID="1">kufuor</TargetName>
+   </Name>
+   <Name ID="996">
+      <SourceName>דואלא</SourceName>
+      <TargetName ID="1">douala</TargetName>
+   </Name>
+   <Name ID="997">
+      <SourceName>פרליטו</SourceName>
+      <TargetName ID="1">ferlito</TargetName>
+   </Name>
+   <Name ID="998">
+      <SourceName>דין</SourceName>
+      <TargetName ID="1">dean</TargetName>
+   </Name>
+   <Name ID="999">
+      <SourceName>דורסן</SourceName>
+      <TargetName ID="1">dorsin</TargetName>
+   </Name>
+   <Name ID="1000">
+      <SourceName>סנטורי</SourceName>
+      <TargetName ID="1">centauri</TargetName>
+   </Name>
+</TransliterationTaskResults>

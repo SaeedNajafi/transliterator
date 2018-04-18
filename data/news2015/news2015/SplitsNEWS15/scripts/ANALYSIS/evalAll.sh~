@@ -1,0 +1,25 @@
+#!/usr/bin/env bash  
+
+cd ~/NEWS15/
+
+declare -A language
+language=([ArEn]=aren [ChEn]=chen [EnBa]=enba [EnCh]=ench [EnHe]=enhe [EnHi]=enhi [EnJa]=enja [EnKa]=enka [EnKo]=enko [EnPe]=enpe [EnTa]=enta [EnTh]=enth [JnJk]=jnjk [ThEn]=then )
+
+for key in ${!language[@]}
+do
+    cd ${key}/Folds
+    echo ${key} 
+    echo DTL
+    evalDirecTL.sh ${language[${key}]}Dev.phraseOut ../dev.xml   
+    echo
+    echo Sequitur
+    evalSequitur.sh ${language[${key}]}.dev.seq.out ../dev.xml   
+    echo
+    echo SMT
+    evalSMT.sh ${key}.dev.smt.out ../dev.xml
+    echo
+    echo ======================================================================
+    echo
+    cd ../..
+#    echo ${key} ${language[${key}]}   
+done

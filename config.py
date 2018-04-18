@@ -14,13 +14,13 @@ class Configuration(object):
     seed = 125
 
     """path to different files"""
-    src_alphabet = './data/' + 'src.alphabet'
-    trg_alphabet = './data/' + 'trg.alphabet'
+    src_alphabet = './data/news2015/news2015/' + 'SplitsNEWS15/EnPe/src.alphabet'
+    trg_alphabet = './data/news2015/news2015/' + 'SplitsNEWS15/EnPe/trg.alphabet'
 
-    train_raw = './data/' + 'train.raw'
-    train_ref = './data/' + 'train.ref'
-    dev_raw = './data/' + 'dev.raw'
-    dev_ref_xml = './data/' + 'dev.ref.xml'
+    train_raw = './data/news2015/news2015/' + 'SplitsNEWS15/EnPe/enpe.0-7.tst.src'
+    train_ref = 'data/news2015/news2015/' + 'SplitsNEWS15/EnPe/enpe.0-7.tst.trg'
+    dev_raw = 'data/news2015/news2015/' + 'SplitsNEWS15/EnPe/enpe.tune.src'
+    dev_ref_xml = 'data/news2015/news2015/' + 'SplitsNEWS15/EnPe/enpe.tune.xml'
 
     """ Model Type """
     #Conditional Random Field

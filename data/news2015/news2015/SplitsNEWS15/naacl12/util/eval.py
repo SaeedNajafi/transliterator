@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+'''Evaluate a set of key-value pairs for word accuracy, character accuracy, and
+oracle re-ranker accuracy.'''
+
+from collections import defaultdict
+from optparse import OptionParser
+from subprocess import getoutput
+from sys import stdin
+
+__author__ = 'Aditya Bhargava'
+__license__ = 'FreeBSD'
+__version__ = '1.0.0'
+__email__ = 'aditya@cs.toronto.edu'
+
+
+def errordie(msg, exitcode):
+    print(argv[0], ': error: ', msg, sep='', file=stderr)
+    exit(exitcode)
+
+parser = OptionParser(usage='usage: %prog [options] REFERENCE [SUB] < TEST')
+
+(options, args) = parser.parse_args()
+
+subsetfile = ''
+if len(args) == 0:
+    errordie('no reference file specified', 2)
+elif len(args) == 2:
+    subsetfile = args[1]
+elif len(args) > 2:
+    errordie('too many options specified', 2)
+
+reffile = args[0]
+
+
+refdata = defaultdict(list)
+with open(reffile) as inp:
+    for line in inp:
+        k, v = line.replace(' ', '').strip().split('\t')
+        refdata[k].append(v)
+
+subset = set()
+if subsetfile:
+    with open(subsetfile) as inp:
+        for line in inp:
+            subset.add(line.replace(' ', '').strip().split('\t')[0])
+
+data = defaultdict(list)
+for line in stdin.readlines():
+    k, v = line.strip().split('\t')[0:2]
+    data[k].append(v)
+
+
+def levenshtein(x, y):
+    lenx, leny = len(x), len(y)
+
+    # init
+    dist = [[0 for j in range(leny + 1)] for i in range(lenx + 1)]
+    for i in range(lenx + 1):
+        dist[i][0] = i
+    for j in range(leny + 1):
+        dist[0][j] = j
+
+    # loop
+    for i in range(lenx):
+        for j in range(leny):
+            cost = 0 if x[i] == y[j] else 1
+            dist[i + 1][j + 1] = min(dist[i][j] + cost, dist[i + 1][j] + 1,
+                                     dist[i][j + 1] + 1)
+
+    return 1 - dist[lenx][leny] / max(lenx, leny)
+
+
+print(data)
+print()
+print(refdata)
+
+wacc = 0
+phacc = 0
+mrr = 0
+oracle = 0
+divisor = 0
+for key in data:
+    if not subsetfile or key in subset:
+        tst = data[key][0] # ADAM: I think test is the top transliteration candidate
+        divisor += 1
+
+
+        # ADAM: if any of key's candidate transliterations then oracle += 1 since possible to rerank for accuracy
+        for p in data[key]:
+            if p in refdata[key]:
+                oracle += 1
+                break
+
+        # ADAM: is the top candidate in the reference data as any transliteration (all are equally good to match)
+        if tst in refdata[key]:
+            print("a match with {0} in {1}".format(tst, refdata[key]))
+            wacc += 1
+            phacc += 1
+            mrr += 1
+        else:
+            edit = 0
+            for wd in refdata[key]:
+                tedit = levenshtein(tst, wd)
+                edit = max(edit, tedit)
+            phacc += edit
+
+            for i in range(1, len(data[key])):
+                if data[key][i] in refdata[key]:
+                    mrr += 1 / (i + 1)
+                    break
+
+#divisor = len(data)
+''' Adam adding this if statement since getting divide by zero problems '''
+if divisor == 0:
+    print("Divisor = 0, would have divided by 0!")
+
+else:
+    print('Word accuracy: {:.2%}'.format(wacc / divisor))
+    print('Character accuracy: {:.2%}'.format(phacc / divisor))
+    print('Oracly re-ranked word accuracy: {:.2%}'.format(oracle / divisor))
+    print('Total words: {}'.format(divisor))

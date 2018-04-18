@@ -1,0 +1,32 @@
+# this script runs all the necessary scripts to do system combination of dtl and sequitur
+# should be ran from a directory within the Folds directory of a language
+# expects to find an m2m model two directories up
+
+
+# the inputs are the paths from the current directory to the corresponding sets                                                                                                   
+# the actual sets we working with                                                                                                                                                 
+trainset=$1
+testset=$2
+
+# the outputs on those sets from the original system                                                                                                                              
+trainoriginal=$3
+testoriginal=$4
+#originalcoords=$5 # the coordinates of the answers from these files (examples for dtl = 1,2 and seq = 1,4)                                                                        
+
+# the outputs on those sets from the system we will use to rerank the origial with                                                                                                
+trainextra=$5
+testextra=$6
+extracoords=$7
+
+# the language pair we are working with (for example enhe)                                                                                                                        
+language=$8 # e.g. enko
+
+languagefront=$9 #en
+languageend=$10 # ko
+
+needalign=$11 # "yes" or "no" (yes if sequitur or smt i think, no if original system is dtl)
+YES="yes"
+NO="no"
+features=$12 # "scores" or "all" (which features to use for featurizer)
+
+general

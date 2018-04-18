@@ -1,0 +1,77 @@
+echo .full.trn
+echo .dev
+echo
+echo spaces
+grep "   " *.full.trn | wc -l
+grep "   " *.dev | wc -l
+echo
+
+echo underscore
+grep " _ " *.full.trn | wc -l
+grep " _ " *.dev | wc -l
+echo
+
+echo ampersand
+grep " & " *.full.trn | wc -l
+grep " & " *.dev | wc -l
+echo
+
+echo hash
+grep " # " *.full.trn | wc -l
+grep " # " *.dev | wc -l
+echo
+
+echo apost
+grep " ' " *.full.trn | wc -l
+grep " ' " *.dev | wc -l
+echo
+
+echo comma
+grep " , " *.full.trn | wc -l
+grep " , " *.dev | wc -l
+echo
+
+echo period
+grep " \. " *.full.trn | wc -l
+grep " \. " *.dev | wc -l
+echo
+
+echo ==================================
+echo 11.tst
+echo 12.tst
+echo
+
+echo spaces
+grep " " *11.tst | wc -l
+grep " " *12.tst | wc -l
+echo
+
+echo underscore
+grep "_" *11.tst | wc -l
+grep "_" *12.tst | wc -l
+echo
+
+echo ampersand
+grep "&" *11.tst | wc -l
+grep "&" *12.tst | wc -l
+echo
+
+echo hash
+grep "#" *11.tst | wc -l
+grep "#" *12.tst | wc -l
+echo
+
+echo apost
+grep "'" *11.tst | wc -l
+grep "'" *12.tst | wc -l
+echo
+
+echo comma
+grep "," *11.tst | wc -l
+grep "," *12.tst | wc -l
+
+echo
+echo period
+grep "\." *11.tst | wc -l
+grep "\." *12.tst | wc -l
+echo

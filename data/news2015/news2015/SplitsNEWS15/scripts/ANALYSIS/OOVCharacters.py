@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+
+''' script to analyze the out of vocabulary (OOV) characters in the test set versus training and dev '''
+
+import sys
+
+language = sys.argv[1] # ex: ench
+
+# want to look at files like ex: ench.full.trn, ench.dev, ench11.tst, ench12.tst
+
+
+def processTrainOrDev(fileName):
+    sourceChars = set()
+    targetChars = set()
+    with open(fileName) as file:
+        for line in file:
+            source, target = line.strip().split('\t')
+            for char in source.split():
+                sourceChars.add(char)
+            for char in target.split():
+                targetChars.add(char)
+
+    return sourceChars, targetChars
+
+
+def processTest(fileName):
+    sourceChars = set()
+    with open(fileName) as file:
+        for line in file:
+            for char in line.strip():
+                sourceChars.add(char)
+
+    return sourceChars
+
+
+# sets for keeping track of the chars in each file
+trainSource, trainTarget = processTrainOrDev(language + '.full.trn')
+devSource, devTarget = processTrainOrDev(language + '.dev')
+
+test11 = processTest(language + '11.tst')
+test12 = processTest(language + '12.tst')
+
+
+trainOrDevSource = trainSource | devSource
+OOVDevSource = devSource - trainSource
+OOVDevTarget = devTarget - trainTarget
+OOV11 = test11 - trainOrDevSource
+OOV12 = test12 - trainOrDevSource
+
+print("Number of chars in training source = {0} and training target = {1}".format(len(trainSource), len(trainTarget)))
+print("Number of chars in dev source = {0} and dev target = {1}".format(len(devSource), len(devTarget)))
+print("Number of chars in test11 = {0} and test12 = {1}".format(len(test11), len(test12)))
+print()
+print("Number of OOV chars in dev source = {0}".format(len(OOVDevSource)))
+print("Number of OOV chars in dev target = {0}".format(len(OOVDevTarget)))
+print("Number of OOV chars in test11 = {0}".format(len(OOV11)))
+print("Number of OOV chars in test12 = {0}".format(len(OOV12)))
+
+print(OOVDevTarget)

@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+
+# script to anyalyze how many sources only have a single supplemental or multi
+
+import sys
+
+lower = sys.argv[1]
+
+trn = lower + ".trn.ext"
+dev = lower + ".tst.ext.matched"
+
+
+def analyze(fileName, lower, name):
+    print(lower, name)
+    with open(fileName, 'r') as file:
+        totalSupps = 0
+        numOneSuppers = 0 # the number of sources which only have a single supplemental
+        numMultiSuppers = 0
+        suppDict  = {}
+        for line in file:
+            supps = line.strip().split("\t")[1:]
+            numSupps = len(supps)
+            if numSupps == 1:
+                numOneSuppers +=1
+            else:
+                numMultiSuppers += 1
+
+            totalSupps += numSupps
+            if numSupps in suppDict:
+                suppDict[numSupps] += 1
+            else:
+                suppDict[numSupps] = 1
+
+                
+        #print(fileName)
+        #print("Total number of supplemental translits = {0}, and the number of sources with a single supplemental = {1}".format(totalSupps,numOneSuppers))
+        print("Number of single supplemental = {0}".format(numOneSuppers))
+        print("Number of multiple supplemental = {0}".format(numMultiSuppers))
+        #print(suppDict)
+        print("")
+
+analyze(dev, lower, "dev")
+analyze(trn, lower, "train")        

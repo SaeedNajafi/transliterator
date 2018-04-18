@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+export PATH=$PATH:~/naacl12COPY/naacl12/util
+
+
+# the inputs are the paths from the current directory to the corresponding sets
+# the actual sets we working with
+trainset=$1
+testset=$2
+
+# the outputs on those sets from the original system
+trainoriginal=$3
+testoriginal=$4
+
+
+# the outputs on those sets from the system we will use to rerank the origial with
+trainextra=$5
+testextra=$6
+extracoords=$7 # the coordinates of the answers from these files (examples for dtl = 1,2 and seq = 1,4 and smt = 2,3)
+
+# the language pair we are working with (for example enhe)
+language=$8 
+langfront=$9
+langend=${10}
+
+cat $trainset | sed -e 's/_/#/g' -e 's/   / % /g' >  $language.trn
+cat $testset | sed -e 's/_/#/g' -e 's/   / % /g'  > $language.tst
+cat $trainoriginal | sed -e 's/_/#/g' -e 's/ /%/g' > ${language}.trn.orig
+cat $trainextra | sed -e 's/_/#/g' -e 's/ /%/g' > ${language}.trn.extra
+cat $testoriginal | sed -e 's/_/#/g' -e 's/ /%/g' > ${language}.tst.orig
+cat $testextra | sed -e 's/_/#/g' -e 's/ /%/g' > ${language}.tst.extra
+
+# get the top one resuts from the extra outputs
+#cut -f 1,2 ${language}.trn.orig | sed -e 's/[|_]//g' -e '/^$/d' | getTop1.py > ${language}.trn.orig.top1
+#cut -f 1,2 ${language}.tst.orig | sed -e 's/[|_]//g' -e '/^$/d' | getTop1.py > ${language}.tst.orig.top1
+cut -f $extracoords ${language}.trn.extra | sed -e '/^$/d' | getTop1.py > ${language}.trn.extra.top1
+cut -f $extracoords ${language}.tst.extra | sed -e '/^$/d' | getTop1.py > ${language}.tst.extra.top1
+
+mkdir suppl; cd suppl
+#declare -A sups
+#sups=([dtlp]=dt [seq]=sq)
+#for sup in ${!sups[@]}
+#do
+    getSupplemental.py ../${language}.trn.extra.top1 < ../${language}.trn | pysort.py -u | \
+        tee ${langfront}ext${langend}.trn | cut -f 2,3 | pysort.py -u > \
+	ext${langend}.trn
+    getSupplemental.py ../${language}.tst.extra.top1 < ../${language}.tst | pysort.py -u | \
+        tee ${langfront}ext${langend}.tst | cut -f 2,3 | pysort.py -u > \
+        ext${langend}.tst
+    ~/m2m-aligner-1.2/m2m-aligner --delX -i ext${langend}.trn
+#done
+#rm ??${langend}.{trn,tst} *.align!(.model) # not useful
+
+
+cd ..

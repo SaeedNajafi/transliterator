@@ -149,7 +149,8 @@ def process_batch(cfg, batch):
     Y_Len = []
     Y_Mask = []
 
-    for (in_W, out_W) in batch:
+    for (in_Word, out_Word) in batch:
+        in_W = in_Word.replace("   ", "_@_").replace(" ","").replace("_@_", " ")
 
         #in_W is one word.
         Raw_X.append(in_W)
@@ -158,6 +159,7 @@ def process_batch(cfg, batch):
         X_Len.append(len(X_chars))
 
         if hasY:
+            out_W = out_Word.replace("   ", "_@_").replace(" ","").replace("_@_", " ")
             #out_W is one word.
             Raw_Y.append(out_W)
             Y_chars = map_chars_to_ids(cfg, out_W, 'trg')

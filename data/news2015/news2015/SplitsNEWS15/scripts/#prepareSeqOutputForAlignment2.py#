@@ -1,0 +1,3 @@
+FILE=$1
+
+cut -f 1,4 $FILE | sed -e 's/ /%/g' -e 's/_/!/g' | cat

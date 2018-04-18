@@ -1,0 +1,9 @@
+# gives the wc of trn, tst, and ext files
+
+lower=$1
+
+wc -l $lower.trn
+wc -l $lower.trn.ext
+wc -l $lower.tst
+wc -l $lower.tst.ext
+wc -l $lower.tst.words.matched
