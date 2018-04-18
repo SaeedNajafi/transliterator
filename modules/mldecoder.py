@@ -347,9 +347,9 @@ class MLDecoder(nn.Module):
         zeros = torch.zeros(cfg.d_batch_size, cfg.trg_em_size)
         Go_symbol = Variable(zeros.cuda()) if hasCuda else Variable(zeros)
 
-        pads = torch.zeros(cfg.d_batch_size)
-        Pads = Variable(pads.cuda()) if hasCuda else Variable(pads)
-        Pads.data.fill_(cfg.trg_pad_id)
+	very_negative = torch.zeros(cfg.d_batch_size)
+        V_Neg = Variable(very_negative.cuda()) if hasCuda else Variable(very_negative)
+        V_Neg.data.fill_(-10**10)
 
         lprob_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize)
         lprob_c = Variable(lprob_candidates.cuda()) if hasCuda else Variable(lprob_candidates)
@@ -360,13 +360,13 @@ class MLDecoder(nn.Module):
         y_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize).long()
         y_c = Variable(y_candidates.cuda()) if hasCuda else Variable(y_candidates)
 
-        h_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize, cfg.h_units)
+        h_candidates = torch.zeros(cfg.d_batch_size, beamsize, cfg.h_units)
         h_c = Variable(h_candidates.cuda()) if hasCuda else Variable(h_candidates)
 
-        c_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize, cfg.h_units)
+        c_candidates = torch.zeros(cfg.d_batch_size, beamsize, cfg.h_units)
         c_c = Variable(c_candidates.cuda()) if hasCuda else Variable(c_candidates)
 
-        context_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize, cfg.h_units)
+        context_candidates = torch.zeros(cfg.d_batch_size, beamsize, cfg.h_units)
         context_c = Variable(context_candidates.cuda()) if hasCuda else Variable(context_candidates)
 
         if cfg.atten=='soft-general':
@@ -406,9 +406,6 @@ class MLDecoder(nn.Module):
             else:
                 isEnd = torch.eq(prev_y, cfg.trg_end_id).long()
                 isEnd_f = isEnd.float()
-                isPad = torch.eq(prev_y, cfg.trg_pad_id).long()
-                isComplete = isEnd + isPad
-                isComplete_f = isComplete.float()
                 prev_output = self.trg_em(prev_y)
                 for b in range(beamsize):
                     input = torch.cat((prev_output[:,b,:], context[:,b,:]), dim=1)
@@ -427,18 +424,19 @@ class MLDecoder(nn.Module):
 
                     log_prob = nn.functional.log_softmax(score, dim=1)
                     kprob, kidx = torch.topk(log_prob, beamsize, dim=1, largest=True, sorted=True)
-
+		    h_c[:,b,:] = output
+                    c_c[:,b,:] = temp_c
+                    context_c[:,b,:] = temp_context
                     for bb in range(beamsize):
-                        new_lprob = prev_lprob[:,b] + (1.0 - isComplete_f[:,b]) * kprob[:,bb]
+                        new_lprob = prev_lprob[:,b] + (1.0 - isEnd_c[:,beamsize*b + bb]) * kprob[:,bb]
                         normalized_new_lprob = torch.div(new_lprob, i+1)
                         final_new_lprob = isEnd_f[:,b] * normalized_new_lprob + (1.0 - isEnd_f[:,b]) * new_lprob
-                        isEnd_c.data[:,beamsize*b + bb] = isEnd_f[:,b].data
-                        lprob_c.data[:,beamsize*b + bb] = final_new_lprob.data
-                        y_c.data[:,beamsize*b + bb] = ((1.0 - isComplete_f[:,b]) * kidx[:,bb] + isComplete_f[:,b] * Pads).data
-                        h_c.data[:,beamsize*b + bb,:] = ((1.0 - isComplete_f[:,b]).view(-1,1).expand(-1, cfg.h_units) * output).data
-                        c_c.data[:,beamsize*b + bb,:] = ((1.0 - isComplete_f[:,b]).view(-1,1).expand(-1, cfg.h_units) * temp_c).data
-                        context_c.data[:,beamsize*b + bb,:] = ((1.0 - isComplete_f[:,b]).view(-1,1).expand(-1, cfg.h_units) * temp_context).data
-
+                        isEnd_c[:,beamsize*b + bb] = isEnd_f[:,b]
+                        lprob_c[:,beamsize*b + bb] = final_new_lprob
+                        y_c[:,beamsize*b + bb] = kidx[:,bb]
+		    for bb in range(1, beamsize):
+			lprob_c.data[:,beamsize*b + bb].add_((isEnd_c[:,beamsize*b + bb] * V_Neg).data)
+  
                 formalized_lprob_c = torch.div(lprob_c, i+1)
                 _, maxidx = torch.topk(isEnd_c * lprob_c + (1.0-isEnd_c) * formalized_lprob_c, beamsize, dim=1, largest=True, sorted=True)
 
@@ -450,9 +448,9 @@ class MLDecoder(nn.Module):
                 #For next step
                 prev_y = y
                 prev_lprob = torch.gather(lprob_c, 1, maxidx)
-                h = torch.gather(h_c, 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
-                c = torch.gather(c_c, 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
-                context = torch.gather(context_c, 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
+                h = torch.gather(h_c, 1, which_parent_ids.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
+                c = torch.gather(c_c, 1, which_parent_ids.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
+                context = torch.gather(context_c, 1, which_parent_ids.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
 
         beam.append(prev_y)
         preds = torch.stack(beam, dim=2)
