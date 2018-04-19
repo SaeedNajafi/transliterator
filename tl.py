@@ -62,9 +62,11 @@ def save_predictions(cfg, batch, preds, confidence, f):
         w = batch['raw_x'][w_idx]
         for rank in range(nbest):
             end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
+            start_idx = pred[rank].index(cfg.trg_start_id) if cfg.trg_start_id in pred[rank] else 0
             target = []
             #do not print end symbol
-            for id in range(0, end_idx):
+            #do not print start symbol
+            for id in range(start_idx+1, end_idx):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
             target_w = ''.join(target)
