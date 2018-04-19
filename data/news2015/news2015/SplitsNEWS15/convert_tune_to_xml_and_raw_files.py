@@ -1,4 +1,3 @@
-#!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
 from xml.etree import ElementTree as ET
@@ -23,7 +22,7 @@ TargetLang='Default'
 def to_xml():
     dic = collections.OrderedDict()
     for line in in_f.readlines():
-        line = line.strip().decode('utf-8')
+        line = line.strip()
         if len(line)!=0: #ignore newline
             line_lst = line.split('\t')
             try:
@@ -43,7 +42,7 @@ def to_xml():
 
     for source in dic:
         raw_line = ' '.join(list(source))+'\n'
-        out_f_raw.write(raw_line.encode('utf-8'))
+        out_f_raw.write(raw_line)
         targets = dic[source]
         ranks = [str(rank) for rank in range(1, len(targets)+1)]
         dic[source] = (targets, ranks)
@@ -74,12 +73,9 @@ def to_xml():
             targetName.set('ID', str(r))
             targetName.text = t
 
-    xml = ET.tostring(root)
-    xmlstr = minidom.parseString(xml).toprettyxml(indent="   ")
-    xmlstr_lines = xmlstr.split("\n")
-    xmlstr_lines[0] = '<?xml version="1.0" encoding="utf-8"?>'
-    xmlstr_final = '\n'.join(xmlstr_lines)
-    out_f.write(xmlstr_final.encode("utf-8"))
+    xml = ET.tostring(root, encoding="utf-8", method="xml")
+    xml = '<?xml version="1.0" encoding="utf-8"?>' + xml.decode('utf-8')
+    out_f.write(xml)
     out_f.close()
 
 if __name__ == '__main__':

@@ -59,17 +59,24 @@ def save_predictions(cfg, batch, preds, confidence, f):
     nbest = cfg.nbest
     w_idx = 0
     for pred in preds:
-        w = batch['raw_x'][w_idx].encode('utf-8')
+        w = batch['raw_x'][w_idx]
         for rank in range(nbest):
             end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
             target = []
             #do not print end symbol
             for id in range(0, end_idx):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
-
-            target_w = ''.join(target).replace(cfg.space, ' ').encode('utf-8')
-            to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
-            f.write(to_write.encode('utf-8'))
+	    
+            target_w = ''.join(target).replace(cfg.space, " ")
+            w = w.replace(cfg.space, ' ')
+	    try:
+	    	to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
+            	f.write(to_write)
+	    except UnicodeDecodeError:
+		to_write = "DUMMY_" + str(w_idx) + '\t' + "DUMMY_" + str(w_idx) + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
+		f.write(to_write)
+		print "INFO: Find unicode error"
+        	pass
         w_idx += 1
     return
 
@@ -182,7 +189,7 @@ def predict(cfg, o_file):
         mldecoder.eval()
 
     #file stream to save predictions
-    f = codecs.open(o_file, 'w', 'utf-8')
+    f = codecs.open(o_file, 'w','utf-8')
     for batch in load_data(cfg):
         cfg.d_batch_size = batch['d_batch_size']
 

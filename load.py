@@ -15,7 +15,7 @@ def load_embeddings(cfg):
     #Creates random vectors for source and target characters.
     f = open(cfg.src_alphabet, 'r')
     src_chars = [line.strip().decode('utf-8') for line in f.readlines()]
-    src_chars.append(cfg.space.decode('utf-8'))
+    src_chars.append(cfg.space)
     src_chars.append(cfg.unk)
     src_chars.append(cfg.end)
     src_chars.append(cfg.pad)
@@ -24,7 +24,7 @@ def load_embeddings(cfg):
 
     f = open(cfg.trg_alphabet, 'r')
     trg_chars = [line.strip().decode('utf-8') for line in f.readlines()]
-    trg_chars.append(cfg.space.decode('utf-8'))
+    trg_chars.append(cfg.space)
     trg_chars.append(cfg.unk)
     trg_chars.append(cfg.end)
     trg_chars.append(cfg.pad)
