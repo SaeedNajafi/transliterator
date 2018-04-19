@@ -354,10 +354,6 @@ class MLDecoder(nn.Module):
         pads = torch.zeros(cfg.d_batch_size).long()
         Pads = Variable(pads.cuda()) if hasCuda else Variable(pads)
         Pads.data.fill_(cfg.trg_pad_id)
-	
-	ends = torch.zeros(cfg.d_batch_size, beamsize).long()
-        Ends = Variable(ends.cuda()) if hasCuda else Variable(ends)
-        Ends.data.fill_(cfg.trg_end_id)
 
         lprob_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize)
         lprob_c = Variable(lprob_candidates.cuda()) if hasCuda else Variable(lprob_candidates)
@@ -376,11 +372,11 @@ class MLDecoder(nn.Module):
 
         context_candidates = torch.zeros(cfg.d_batch_size, beamsize*beamsize, cfg.h_units)
         context_c = Variable(context_candidates.cuda()) if hasCuda else Variable(context_candidates)
-	
+
         if cfg.atten=='soft-general':
             #global general attention as https://nlp.stanford.edu/pubs/emnlp15_attn.pdf
             states_mapped = torch.mm(H.view(-1, cfg.h_units), self.atten_W).view(-1, cfg.max_length, cfg.h_units)
-	
+
         for i in range(cfg.max_length):
             Hi = H[:,i,:]
             if i==0:
@@ -409,15 +405,13 @@ class MLDecoder(nn.Module):
                 context = torch.stack([temp_context] * beamsize, dim=1)
                 prev_y = kidx
                 prev_lprob = kprob
-		hasEnd = kprob - kprob #zeros
-		beam = kidx.view(-1, beamsize, 1)	
-		
+                hasEnd = kprob - kprob #zeros
+                beam = kidx.view(-1, beamsize, 1)
+
             else:
-		beam_candidates = []
+                beam_candidates = []
                 isEnd = torch.eq(prev_y, cfg.trg_end_id).long()
                 isEnd_f = isEnd.float()
-                isPad = torch.eq(prev_y, cfg.trg_pad_id).long()
-                isPad_f = isPad.float()
                 prev_output = self.trg_em(prev_y)
                 for b in range(beamsize):
                     input = torch.cat((prev_output[:,b,:], context[:,b,:]), dim=1)
@@ -439,7 +433,7 @@ class MLDecoder(nn.Module):
                     kprob, kidx = torch.topk(log_prob, beamsize, dim=1, largest=True, sorted=True)
                     h_c.data[:,b,:] = output.data
                     c_c.data[:,b,:] = temp_c.data
-                    context_c.data[:,b,:] = temp_context.data	
+                    context_c.data[:,b,:] = temp_context.data
                     for bb in range(beamsize):
                         hasEnd_c.data[:,beamsize*b + bb] = torch.gt(hasEnd[:,b] + isEnd_f[:,b], 0).float().data
                         new_lprob = prev_lprob[:,b] + (1.0 - hasEnd_c[:,beamsize*b + bb]) * kprob[:,bb]
@@ -447,28 +441,26 @@ class MLDecoder(nn.Module):
                         final_new_lprob = isEnd_f[:,b] * normalized_new_lprob + (1.0 - isEnd_f[:,b]) * new_lprob
                         lprob_c.data[:,beamsize*b + bb] = final_new_lprob.data
                         y_c.data[:,beamsize*b + bb] = ((1 - hasEnd_c[:,beamsize*b + bb].long()) * kidx[:,bb] + hasEnd_c[:,beamsize*b + bb].long() * Pads).data
-			h_c.data[:,beamsize*b + bb,:] = output.data
+                        h_c.data[:,beamsize*b + bb,:] = output.data
                     	c_c.data[:,beamsize*b + bb,:] = temp_c.data
                     	context_c.data[:,beamsize*b + bb,:] = temp_context.data
-			beam_candidates.append(torch.cat((beam[:,b], y_c[:,beamsize*b + bb].contiguous().view(-1, 1)), 1))
- 
+                        beam_candidates.append(torch.cat((beam[:,b], y_c[:,beamsize*b + bb].contiguous().view(-1, 1)), 1))
+
                     for bb in range(1, beamsize):
                         lprob_c.data[:,beamsize*b + bb] = (lprob_c[:,beamsize*b + bb] + hasEnd_c[:,beamsize*b + bb] * V_Neg).data
 
                 formalized_lprob_c = torch.div(lprob_c, i+1)
                 _, maxidx = torch.topk(hasEnd_c * lprob_c + (1.0-hasEnd_c) * formalized_lprob_c, beamsize, dim=1, largest=True, sorted=True)
-		
-		beam = torch.gather(torch.stack(beam_candidates, dim=1), 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, i+1))
-                y = torch.gather(y_c, 1, maxidx)
-		prev_lprob = torch.gather(lprob_c, 1, maxidx)
+
+                beam = torch.gather(torch.stack(beam_candidates, dim=1), 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, i+1))
+                prev_y = torch.gather(y_c, 1, maxidx)
+                prev_lprob = torch.gather(lprob_c, 1, maxidx)
                 hasEnd = torch.gather(hasEnd_c, 1, maxidx)
                 h = torch.gather(h_c, 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
                 c = torch.gather(c_c, 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
                 context = torch.gather(context_c, 1, maxidx.view(-1, beamsize, 1).expand(-1, beamsize, cfg.h_units))
 
-                #For next step
-                prev_y = y
-				
+
         preds = beam
         confidence = prev_lprob
         #confidence is of size (batch size, beam size)

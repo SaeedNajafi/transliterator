@@ -34,16 +34,13 @@ r_opt = None
 def batch_to_tensors(cfg, in_B):
     o_B = {}
     o_B['x'] = torch.LongTensor(in_B['x'])
-    o_B['x_len'] = torch.LongTensor(in_B['x_len'])
     o_B['x_mask'] = torch.FloatTensor(in_B['x_mask'])
 
     if in_B['y'] is not None:
         o_B['y'] = torch.LongTensor(in_B['y'])
-        o_B['y_len'] = torch.LongTensor(in_B['y_len'])
         o_B['y_mask'] = torch.FloatTensor(in_B['y_mask'])
     else:
         o_B['y'] = None
-        o_B['y_len'] = None
         o_B['y_mask'] = None
 
     if in_B['y'] is not None:
@@ -64,15 +61,12 @@ def save_predictions(cfg, batch, preds, confidence, f):
     for pred in preds:
         w = batch['raw_x'][w_idx]
         for rank in range(nbest):
-            #end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
+            end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
             target = []
             #do not print end symbol
-            for id in range(0, cfg.max_length):
+            for id in range(0, end_idx):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
-            target_w = ''.join(target)
-            if target_w==' ' or target_w=='':
-                target_w = 'EMPTY'
             to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
             f.write(to_write.encode('utf-8'))
         w_idx += 1
@@ -291,7 +285,7 @@ def run_model(mode, path, in_file, o_file):
         best_val_epoch = 0
         first_start = time.time()
         epoch=0
-        cfg.true_batch_size = cfg.batch_size
+        cfg.nbest = 1
         while (epoch < cfg.max_epochs):
             print
             print 'Model:{} | Epoch:{}'.format(cfg.model_type, epoch)
@@ -305,9 +299,7 @@ def run_model(mode, path, in_file, o_file):
                 cfg.greedy_bias = np.minimum(10**8, (2)**epoch)
 
             start = time.time()
-            cfg.batch_size = cfg.true_batch_size
             run_epoch(cfg)
-            cfg.batch_size = 512
             print '\nValidation:'
             predict(cfg, o_file)
             val_cost = 1.0 - evaluate(cfg, cfg.dev_ref_xml, o_file)
@@ -334,7 +326,7 @@ def run_model(mode, path, in_file, o_file):
         print 'Total training time:{} seconds'.format(time.time() - first_start)
 
     elif mode=='test':
-        cfg.batch_size = 512
+        cfg.batch_size = 1024
         encoder.load_state_dict(torch.load(path + cfg.model_type + '_encoder'))
         if cfg.model_type=='CRF': crf.load_state_dict(torch.load(path + cfg.model_type + '_predictor'))
         elif cfg.model_type=='TF-RNN' or cfg.model_type=='SS-RNN' or cfg.model_type=='DS-RNN':

@@ -7,6 +7,7 @@ def load_embeddings(cfg):
     cfg.data = {}
 
     #Defining some constants.
+    cfg.start = 'STARTSTART'
     cfg.end = 'ENDEND'
     cfg.pad = 'PADPAD'
     cfg.unk = 'UNKUNK'
@@ -14,6 +15,7 @@ def load_embeddings(cfg):
     #Creates random vectors for source and target characters.
     f = open(cfg.src_alphabet, 'r')
     src_chars = [line.strip().decode('utf-8') for line in f.readlines()]
+    src_chars.append(cfg.start)
     src_chars.append(cfg.unk)
     src_chars.append(cfg.end)
     src_chars.append(cfg.pad)
@@ -22,6 +24,7 @@ def load_embeddings(cfg):
 
     f = open(cfg.trg_alphabet, 'r')
     trg_chars = [line.strip().decode('utf-8') for line in f.readlines()]
+    trg_chars.append(cfg.start)
     trg_chars.append(cfg.unk)
     trg_chars.append(cfg.end)
     trg_chars.append(cfg.pad)
@@ -55,10 +58,12 @@ def load_embeddings(cfg):
     cfg.data['trg_id_ch'] = trg_id_to_char
     cfg.data['trg_ch_id'] = trg_char_to_id
 
+    cfg.src_start_id = cfg.data['src_ch_id'][cfg.start]
     cfg.src_unk_id = cfg.data['src_ch_id'][cfg.unk]
     cfg.src_pad_id = cfg.data['src_ch_id'][cfg.pad]
     cfg.src_end_id = cfg.data['src_ch_id'][cfg.end]
 
+    cfg.trg_start_id = cfg.data['trg_ch_id'][cfg.start]
     cfg.trg_unk_id = cfg.data['trg_ch_id'][cfg.unk]
     cfg.trg_pad_id = cfg.data['trg_ch_id'][cfg.pad]
     cfg.trg_end_id = cfg.data['trg_ch_id'][cfg.end]
@@ -72,7 +77,7 @@ def map_chars_to_ids(cfg, word, src_or_trg):
     elif src_or_trg=='trg':
         ch_id = cfg.data['trg_ch_id']
 
-    lst = []
+    lst = [ch_id[cfg.start]]
     for ch in list(word.decode('utf-8')):
         if ch in ch_id:
             lst.append(ch_id[ch])
@@ -185,7 +190,6 @@ def process_batch(cfg, batch):
     B = {
         'raw_x': Raw_X,
         'x': X,
-        'x_len': X_Len,
         'x_mask': X_Mask,
         'd_batch_size': d_batch_size
         }
@@ -193,13 +197,11 @@ def process_batch(cfg, batch):
     if hasY:
         B['raw_y'] = Raw_Y
         B['y'] = Y
-        B['y_len'] = Y_Len
         B['y_mask'] = Y_Mask
 
     else:
         B['raw_y'] = None
         B['y'] = None
-        B['y_len'] = None
         B['y_mask'] = None
 
     pad(cfg, B)
