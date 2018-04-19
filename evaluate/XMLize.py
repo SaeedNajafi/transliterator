@@ -99,9 +99,9 @@ def to_xml():
     xml = ET.tostring(root)
     xmlstr = minidom.parseString(xml).toprettyxml(indent="   ")
     xmlstr_lines = xmlstr.split("\n")
-    xmlstr_lines[0] = '<?xml version="1.0" encoding="UTF-8"?>'
+    xmlstr_lines[0] = '<?xml version="1.0" encoding="utf-8"?>'
     xmlstr_final = '\n'.join(xmlstr_lines)
-    out_f.write(xmlstr_final.encode("UTF-8"))
+    out_f.write(xmlstr_final.encode("utf-8"))
     out_f.close()
 
 

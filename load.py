@@ -7,15 +7,15 @@ def load_embeddings(cfg):
     cfg.data = {}
 
     #Defining some constants.
-    cfg.start = 'STARTSTART'
     cfg.end = 'ENDEND'
     cfg.pad = 'PADPAD'
     cfg.unk = 'UNKUNK'
+    cfg.space = '@'
 
     #Creates random vectors for source and target characters.
     f = open(cfg.src_alphabet, 'r')
     src_chars = [line.strip().decode('utf-8') for line in f.readlines()]
-    src_chars.append(cfg.start)
+    src_chars.append(cfg.space.decode('utf-8'))
     src_chars.append(cfg.unk)
     src_chars.append(cfg.end)
     src_chars.append(cfg.pad)
@@ -24,7 +24,7 @@ def load_embeddings(cfg):
 
     f = open(cfg.trg_alphabet, 'r')
     trg_chars = [line.strip().decode('utf-8') for line in f.readlines()]
-    trg_chars.append(cfg.start)
+    trg_chars.append(cfg.space.decode('utf-8'))
     trg_chars.append(cfg.unk)
     trg_chars.append(cfg.end)
     trg_chars.append(cfg.pad)
@@ -58,12 +58,10 @@ def load_embeddings(cfg):
     cfg.data['trg_id_ch'] = trg_id_to_char
     cfg.data['trg_ch_id'] = trg_char_to_id
 
-    cfg.src_start_id = cfg.data['src_ch_id'][cfg.start]
     cfg.src_unk_id = cfg.data['src_ch_id'][cfg.unk]
     cfg.src_pad_id = cfg.data['src_ch_id'][cfg.pad]
     cfg.src_end_id = cfg.data['src_ch_id'][cfg.end]
 
-    cfg.trg_start_id = cfg.data['trg_ch_id'][cfg.start]
     cfg.trg_unk_id = cfg.data['trg_ch_id'][cfg.unk]
     cfg.trg_pad_id = cfg.data['trg_ch_id'][cfg.pad]
     cfg.trg_end_id = cfg.data['trg_ch_id'][cfg.end]
@@ -77,7 +75,7 @@ def map_chars_to_ids(cfg, word, src_or_trg):
     elif src_or_trg=='trg':
         ch_id = cfg.data['trg_ch_id']
 
-    lst = [ch_id[cfg.start]]
+    lst = []
     for ch in list(word.decode('utf-8')):
         if ch in ch_id:
             lst.append(ch_id[ch])
@@ -156,7 +154,7 @@ def process_batch(cfg, batch):
     Y_Mask = []
 
     for (in_Word, out_Word) in batch:
-        in_W = in_Word.replace("   ", "_@_").replace(" ","").replace("_@_", " ")
+        in_W = in_Word.replace("   ", "_@_").replace(" ","").replace("_@_", "@")
         #in_W is one word.
         Raw_X.append(in_W)
         X_chars = map_chars_to_ids(cfg, in_W, 'src')
@@ -164,7 +162,7 @@ def process_batch(cfg, batch):
         X_Len.append(len(X_chars))
 
         if hasY:
-            out_W = out_Word.replace("   ", "_@_").replace(" ","").replace("_@_", " ")
+            out_W = out_Word.replace("   ", "_@_").replace(" ","").replace("_@_", "@")
             #out_W is one word.
             Raw_Y.append(out_W)
             Y_chars = map_chars_to_ids(cfg, out_W, 'trg')

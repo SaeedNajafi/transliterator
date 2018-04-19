@@ -59,17 +59,15 @@ def save_predictions(cfg, batch, preds, confidence, f):
     nbest = cfg.nbest
     w_idx = 0
     for pred in preds:
-        w = batch['raw_x'][w_idx]
+        w = batch['raw_x'][w_idx].encode('utf-8')
         for rank in range(nbest):
             end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
-            start_idx = pred[rank].index(cfg.trg_start_id) if cfg.trg_start_id in pred[rank] else 0
             target = []
             #do not print end symbol
-            #do not print start symbol
-            for id in range(start_idx+1, end_idx):
+            for id in range(0, end_idx):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
-            target_w = ''.join(target)
+            target_w = ''.join(target).replace(cfg.space, ' ').encode('utf-8')
             to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
             f.write(to_write.encode('utf-8'))
         w_idx += 1
@@ -79,7 +77,7 @@ def evaluate(cfg, ref_file, pred_file):
     pred_file_xml = pred_file + '.xml'
     os.system("python %s %s %s" % ('./evaluate/XMLize.py', pred_file, pred_file_xml))
     os.system("python %s -i %s -t %s > %s" % ('./evaluate/news_evaluation.py', pred_file_xml, ref_file, 'temp.score_' + cfg.model_type))
-    result_lines = [line.strip() for line in codecs.open('temp.score_' + cfg.model_type, 'r', 'utf8')]
+    result_lines = [line.strip() for line in codecs.open('temp.score_' + cfg.model_type, 'r', 'utf-8')]
     acc = float(result_lines[0].split('\t')[1])
     return acc
 
@@ -184,7 +182,7 @@ def predict(cfg, o_file):
         mldecoder.eval()
 
     #file stream to save predictions
-    f = open(o_file, 'w')
+    f = codecs.open(o_file, 'w', 'utf-8')
     for batch in load_data(cfg):
         cfg.d_batch_size = batch['d_batch_size']
 

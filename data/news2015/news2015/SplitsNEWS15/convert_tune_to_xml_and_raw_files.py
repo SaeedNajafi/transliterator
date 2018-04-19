@@ -5,11 +5,12 @@ from xml.etree import ElementTree as ET
 from xml.dom import minidom
 import sys
 import collections
+import codecs
 
 
-in_f = open(sys.argv[1], 'r') #Input Tab Separated File:
-out_f = open(sys.argv[2], 'w') #Output XML File:
-out_f_raw = open(sys.argv[3], 'w') #This will be the source side of the XML
+in_f = codecs.open(sys.argv[1], 'r') #Input Tab Separated File:
+out_f = codecs.open(sys.argv[2], 'w') #Output XML File:
+out_f_raw = codecs.open(sys.argv[3], 'w') #This will be the source side of the XML
 
 CorpusFormat='Default'
 CorpusID='Default'
@@ -41,10 +42,10 @@ def to_xml():
     CorpusSize = str(len(dic))
 
     for source in dic:
-	raw_line = ' '.join(list(source))+'\n'
-	out_f_raw.write(raw_line.encode('utf-8'))
+        raw_line = ' '.join(list(source))+'\n'
+        out_f_raw.write(raw_line.encode('utf-8'))
         targets = dic[source]
-	ranks = [str(rank) for rank in range(1, len(targets)+1)]
+        ranks = [str(rank) for rank in range(1, len(targets)+1)]
         dic[source] = (targets, ranks)
 
     out_f_raw.close()
@@ -76,9 +77,9 @@ def to_xml():
     xml = ET.tostring(root)
     xmlstr = minidom.parseString(xml).toprettyxml(indent="   ")
     xmlstr_lines = xmlstr.split("\n")
-    xmlstr_lines[0] = '<?xml version="1.0" encoding="UTF-8"?>'
+    xmlstr_lines[0] = '<?xml version="1.0" encoding="utf-8"?>'
     xmlstr_final = '\n'.join(xmlstr_lines)
-    out_f.write(xmlstr_final.encode("UTF-8"))
+    out_f.write(xmlstr_final.encode("utf-8"))
     out_f.close()
 
 if __name__ == '__main__':
