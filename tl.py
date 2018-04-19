@@ -67,6 +67,7 @@ def save_predictions(cfg, batch, preds, confidence, f):
             for id in range(0, end_idx):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
 
+            target_w = ''.join(target)
             to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
             f.write(to_write.encode('utf-8'))
         w_idx += 1
