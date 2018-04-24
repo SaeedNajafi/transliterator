@@ -98,6 +98,7 @@ class RLTrain(nn.Module):
         dec_rnn = mldecoder.dec_rnn
         affine = mldecoder.affine
         trg_em = mldecoder.trg_em
+        
         if cfg.atten=='soft-general':
             atten_W = mldecoder.atten_W
             atten_affine = mldecoder.atten_affine

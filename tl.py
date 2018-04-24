@@ -16,6 +16,7 @@ import os
 import sys
 import time
 import codecs
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -41,6 +42,7 @@ def batch_to_tensors(cfg, in_B):
     if in_B['y'] is not None:
         o_B['y'] = torch.LongTensor(in_B['y'])
         o_B['y_mask'] = torch.FloatTensor(in_B['y_mask'])
+
     else:
         o_B['y'] = None
         o_B['y_mask'] = None
@@ -61,24 +63,25 @@ def save_predictions(cfg, batch, preds, confidence, f):
     nbest = cfg.nbest
     w_idx = 0
     for pred in preds:
-        w = batch['raw_x'][w_idx]
+        w = batch['raw_x'][w_idx].replace(cfg.space, " ")
         for rank in range(nbest):
             end_idx = pred[rank].index(cfg.trg_end_id) if cfg.trg_end_id in pred[rank] else cfg.max_length-1
             target = []
             #do not print end symbol
             for id in range(0, end_idx):
                 target.append(cfg.data['trg_id_ch'][pred[rank][id]])
-	    
+
             target_w = ''.join(target).replace(cfg.space, " ")
-            w = w.replace(cfg.space, ' ')
-	    try:
-	    	to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
-            	f.write(to_write)
-	    except UnicodeDecodeError:
-		to_write = "DUMMY_" + str(w_idx) + '\t' + "DUMMY_" + str(rank+1) + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
-		f.write(to_write)
-		print "INFO: Find unicode error"
-        	pass
+            try:
+                to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
+                f.write(to_write)
+
+            except UnicodeDecodeError:
+                to_write = "DUMMY_SOURCE_" + str(w_idx) + '\t' + "DUMMY_TARGET_" + str(rank+1) + '\t' + str(rank+1) + '\t' + str(0.0) + '\n'
+                f.write(to_write)
+                print "INFO: Found unicode error!"
+                pass
+
         w_idx += 1
     return
 
@@ -350,6 +353,7 @@ def run_model(mode, path, in_file, o_file):
         start = time.time()
         predict(cfg, o_file)
         print 'Total prediction time:{} seconds'.format(time.time() - start)
+
     return
 
 """

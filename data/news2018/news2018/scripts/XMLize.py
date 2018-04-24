@@ -4,10 +4,14 @@
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
 import sys
+import codecs
+import collections
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
-in_f = open(sys.argv[1], 'r') #Input Tab Separated File:
-out_f = open(sys.argv[2], 'w') #Output XML File:
+in_f = codecs.open(sys.argv[1], 'r', 'utf-8') #Input Tab Separated File:
+out_f = codecs.open(sys.argv[2], 'w', 'utf-8') #Output XML File:
 
 """ Input Format:
         This script maps a tab separated file to the required XML format.
@@ -43,9 +47,9 @@ Comments = 'Default'
 TaskID = 'Default'
 
 def to_xml():
-    dic = {}
+    dic = collections.OrderedDict()
     for line in in_f.readlines():
-        line = line.strip().decode('utf-8')
+        line = line.strip()
         if len(line)!=0: #ignore newline
             line_lst = line.split('\t')
             try:
@@ -60,7 +64,7 @@ def to_xml():
                     ranks = [rank] #create rank list
                     dic[source] = (targets, ranks)
             except:
-                print("Format error in the input file!")
+                print("INFO: Format error in the input file!")
 
     in_f.close()
 
@@ -99,9 +103,9 @@ def to_xml():
     xml = ET.tostring(root)
     xmlstr = minidom.parseString(xml).toprettyxml(indent="   ")
     xmlstr_lines = xmlstr.split("\n")
-    xmlstr_lines[0] = '<?xml version="1.0" encoding="UTF-8"?>'
+    xmlstr_lines[0] = '<?xml version="1.0" encoding="utf-8"?>'
     xmlstr_final = '\n'.join(xmlstr_lines)
-    out_f.write(xmlstr_final.encode("UTF-8"))
+    out_f.write(xmlstr_final)
     out_f.close()
 
 

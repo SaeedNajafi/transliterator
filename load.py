@@ -8,10 +8,10 @@ def load_embeddings(cfg):
     cfg.data = {}
 
     #Defining some constants.
-    cfg.end = 'ENDEND'
-    cfg.pad = 'PADPAD'
-    cfg.unk = 'UNKUNK'
-    cfg.space = '@'
+    cfg.end = 'END'
+    cfg.pad = 'PAD'
+    cfg.unk = 'UNK'
+    cfg.space = 'SPACE'
 
     #Creates random vectors for source and target characters.
     f = codecs.open(cfg.src_alphabet, 'r', 'utf-8')
@@ -155,7 +155,7 @@ def process_batch(cfg, batch):
     Y_Mask = []
 
     for (in_Word, out_Word) in batch:
-        in_W = in_Word.replace("   ", "_@_").replace(" ","").replace("_@_", "@")
+        in_W = in_Word.replace("   ", "_@_").replace(" ","").replace("_@_", cfg.space)
         #in_W is one word.
         Raw_X.append(in_W)
         X_chars = map_chars_to_ids(cfg, in_W, 'src')
@@ -163,7 +163,7 @@ def process_batch(cfg, batch):
         X_Len.append(len(X_chars))
 
         if hasY:
-            out_W = out_Word.replace("   ", "_@_").replace(" ","").replace("_@_", "@")
+            out_W = out_Word.replace("   ", "_@_").replace(" ","").replace("_@_", cfg.space)
             #out_W is one word.
             Raw_Y.append(out_W)
             Y_chars = map_chars_to_ids(cfg, out_W, 'trg')

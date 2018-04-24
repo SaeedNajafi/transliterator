@@ -6,7 +6,7 @@ class Configuration(object):
     dropout = 0.5
     learning_rate = 0.0005
     actor_step_size = 0.5
-    max_gradient_norm = 15.
+    max_gradient_norm = 10.
     max_epochs = 256
     max_length = 64
     early_stopping = 10

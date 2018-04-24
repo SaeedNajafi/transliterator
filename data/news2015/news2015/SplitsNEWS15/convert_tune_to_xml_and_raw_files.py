@@ -6,10 +6,12 @@ import sys
 import collections
 import codecs
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
-in_f = codecs.open(sys.argv[1], 'r') #Input Tab Separated File:
-out_f = codecs.open(sys.argv[2], 'w') #Output XML File:
-out_f_raw = codecs.open(sys.argv[3], 'w') #This will be the source side of the XML
+in_f = codecs.open(sys.argv[1], 'r', 'utf-8') #Input Tab Separated File:
+out_f = codecs.open(sys.argv[2], 'w', 'utf-8') #Output XML File:
+out_f_raw = codecs.open(sys.argv[3], 'w', 'utf-8') #This will be the source side of the XML
 
 CorpusFormat='Default'
 CorpusID='Default'
@@ -26,8 +28,8 @@ def to_xml():
         if len(line)!=0: #ignore newline
             line_lst = line.split('\t')
             try:
-                source = line_lst[0].replace("   ", "_@_").replace(' ', '').replace("_@_", " ")
-                target = line_lst[1].replace("   ", "_@_").replace(' ', '').replace("_@_", " ")
+                source = line_lst[0].replace("   ", "_@_").replace(" ", "").replace("_@_", " ")
+                target = line_lst[1].replace("   ", "_@_").replace(" ", "").replace("_@_", " ")
                 if source in dic:
                     dic[source].append(target) #add target to targets list
                 else:
@@ -74,7 +76,7 @@ def to_xml():
             targetName.text = t
 
     xml = ET.tostring(root, encoding="utf-8", method="xml")
-    xml = '<?xml version="1.0" encoding="utf-8"?>' + xml.decode('utf-8')
+    xml = '<?xml version="1.0" encoding="utf-8"?>' + xml
     out_f.write(xml)
     out_f.close()
 

@@ -431,9 +431,7 @@ class MLDecoder(nn.Module):
                     log_prob = nn.functional.log_softmax(score, dim=1)
                     log_prob.data[:, cfg.trg_pad_id] = V_Neg.data #never select pad
                     kprob, kidx = torch.topk(log_prob, beamsize, dim=1, largest=True, sorted=True)
-                    h_c.data[:,b,:] = output.data
-                    c_c.data[:,b,:] = temp_c.data
-                    context_c.data[:,b,:] = temp_context.data
+
                     for bb in range(beamsize):
                         hasEnd_c.data[:,beamsize*b + bb] = torch.gt(hasEnd[:,b] + isEnd_f[:,b], 0).float().data
                         new_lprob = prev_lprob[:,b] + (1.0 - hasEnd_c[:,beamsize*b + bb]) * kprob[:,bb]
