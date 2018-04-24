@@ -11,7 +11,7 @@ def load_embeddings(cfg):
     cfg.end = 'END'
     cfg.pad = 'PAD'
     cfg.unk = 'UNK'
-    cfg.space = 'SPACE'
+    cfg.space = ' '
 
     #Creates random vectors for source and target characters.
     f = codecs.open(cfg.src_alphabet, 'r', 'utf-8')
@@ -81,6 +81,7 @@ def map_chars_to_ids(cfg, word, src_or_trg):
         if ch in ch_id:
             lst.append(ch_id[ch])
         else:
+	    print word
             lst.append(ch_id[cfg.unk])
             print "INFO: Could not find the following char and replaced it with the unk char: ", ch
 
