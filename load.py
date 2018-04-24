@@ -1,6 +1,7 @@
 import itertools
 import re
 import numpy as np
+import codecs
 
 def load_embeddings(cfg):
     #This is where we will keep embeddings data.
@@ -13,8 +14,8 @@ def load_embeddings(cfg):
     cfg.space = '@'
 
     #Creates random vectors for source and target characters.
-    f = open(cfg.src_alphabet, 'r')
-    src_chars = [line.strip().decode('utf-8') for line in f.readlines()]
+    f = codecs.open(cfg.src_alphabet, 'r', 'utf-8')
+    src_chars = [line.strip() for line in f.readlines()]
     src_chars.append(cfg.space)
     src_chars.append(cfg.unk)
     src_chars.append(cfg.end)
@@ -22,8 +23,8 @@ def load_embeddings(cfg):
     cfg.src_alphabet_size = len(src_chars)
     f.close()
 
-    f = open(cfg.trg_alphabet, 'r')
-    trg_chars = [line.strip().decode('utf-8') for line in f.readlines()]
+    f = codecs.open(cfg.trg_alphabet, 'r', 'utf-8')
+    trg_chars = [line.strip() for line in f.readlines()]
     trg_chars.append(cfg.space)
     trg_chars.append(cfg.unk)
     trg_chars.append(cfg.end)
@@ -76,7 +77,7 @@ def map_chars_to_ids(cfg, word, src_or_trg):
         ch_id = cfg.data['trg_ch_id']
 
     lst = []
-    for ch in list(word.decode('utf-8')):
+    for ch in list(word):
         if ch in ch_id:
             lst.append(ch_id[ch])
         else:
@@ -113,8 +114,8 @@ def load_data(cfg):
 
 
     batch = []
-    fd_raw = open(f_raw, 'r')
-    if hasY: fd_ref = open(f_ref, 'r')
+    fd_raw = codecs.open(f_raw, 'r', 'utf-8')
+    if hasY: fd_ref = codecs.open(f_ref, 'r', 'utf-8')
 
     x_line = None
     y_line = None

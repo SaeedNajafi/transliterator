@@ -16,6 +16,8 @@ import os
 import sys
 import time
 import codecs
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 hasCuda = torch.cuda.is_available()
 
@@ -73,7 +75,7 @@ def save_predictions(cfg, batch, preds, confidence, f):
 	    	to_write = w + '\t' + target_w + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
             	f.write(to_write)
 	    except UnicodeDecodeError:
-		to_write = "DUMMY_" + str(w_idx) + '\t' + "DUMMY_" + str(w_idx) + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
+		to_write = "DUMMY_" + str(w_idx) + '\t' + "DUMMY_" + str(rank+1) + '\t' + str(rank+1) + '\t' + str(confidence[w_idx][rank]) + '\n'
 		f.write(to_write)
 		print "INFO: Find unicode error"
         	pass

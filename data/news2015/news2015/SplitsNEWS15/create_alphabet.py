@@ -11,10 +11,10 @@ src = []
 trg = []
 for line in lines:
 	s, t = line.strip().split('\t')
-	for each_s in list(s):
+	for each_s in list(s.strip()):
 		if each_s not in src:
 			src.append(each_s)
-	for each_t in list(t):
+	for each_t in list(t.strip()):
                 if each_t not in trg:
                         trg.append(each_t)
 
