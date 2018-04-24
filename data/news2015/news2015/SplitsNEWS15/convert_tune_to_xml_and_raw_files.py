@@ -6,8 +6,6 @@ import sys
 import collections
 import codecs
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 in_f = codecs.open(sys.argv[1], 'r', 'utf-8') #Input Tab Separated File:
 out_f = codecs.open(sys.argv[2], 'w', 'utf-8') #Output XML File:
@@ -76,7 +74,7 @@ def to_xml():
             targetName.text = t
 
     xml = ET.tostring(root, encoding="utf-8", method="xml")
-    xml = '<?xml version="1.0" encoding="utf-8"?>' + xml
+    xml = '<?xml version="1.0" encoding="utf-8"?>' + xml.decode('utf-8')
     out_f.write(xml)
     out_f.close()
 
